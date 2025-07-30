@@ -345,7 +345,7 @@
 		    z-index: 2;
 		  }
 		  .intro-logo img {
-		    width: 900px;
+		    width: 1125px;
 		    max-width: 98vw;
 		    height: auto;
 		    display: block;
@@ -354,6 +354,11 @@
 		    border: none !important;
 		    outline: none !important;
 		    background: none !important;
+		  }
+		  @media screen and (max-width: 768px) {
+			.intro-logo img {
+			  min-width: 431px; /* 345px + 25% */
+			}
 		  }
 		</style>
 	</head>
@@ -418,7 +423,7 @@
 							</header>
 							<div style="width: 100vw; margin: 2rem 0 2rem 50%; transform: translateX(-50%);">
 							  <div style="width: 100%; max-width: 72rem; margin: 0 auto;">
-							    <img src="images/angelo.png" alt="Scuola SUP" style="width: 100%; height: auto; box-shadow: 0 2px 16px rgba(0,0,0,0.08); object-fit: contain;" />
+							    <img src="images/angelo.png" alt="Scuola SUP" style="width: 100%; aspect-ratio: 16 / 3; box-shadow: 0 2px 16px rgba(0,0,0,0.08); object-fit: cover;" />
 							  </div>
 							</div>
 							<ul class="actions special" style="margin-top: 2rem; margin-bottom: 0;">
@@ -580,7 +585,7 @@
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="https://wa.me/5511999999999" class="icon brands alt fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+									<li><a href="https://wa.me/393463446699?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20de%20SUP." class="icon brands alt fa-whatsapp"><span class="label">WhatsApp</span></a></li>
 									<li><a href="https://instagram.com/direct/t/seu_usuario" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
 							</section>
@@ -610,7 +615,7 @@
 			<script src="assets/js/main.js"></script>
 
 	<!-- Botão flutuante WhatsApp -->
-<a href="https://wa.me/5511999999999" target="_blank" id="whatsapp-float" style="position:fixed;z-index:9999;bottom:32px;right:32px;width:60px;height:60px;background:#25d366;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;transition:box-shadow 0.2s;">
+<a href="https://wa.me/393463446699?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20de%20SUP." target="_blank" id="whatsapp-float" style="position:fixed;z-index:9999;bottom:32px;right:32px;width:60px;height:60px;background:#25d366;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;transition:box-shadow 0.2s;">
   <img src="images/wpp.png" alt="WhatsApp" style="width:36px;height:36px;display:block;" />
 </a>
 
