@@ -345,23 +345,15 @@
 		    z-index: 2;
 		  }
 		  .intro-logo img {
-		    width: 1125px;
-		    max-width: 98vw;
-		    height: auto;
-		    display: block;
-		    margin: 0 auto;
-		    box-shadow: none !important;
-		    border: none !important;
-		        outline: none !important;
+    display: block;
+    width: 90%; /* Ocupa 90% do contêiner pai */
+    max-width: 1125px; /* Limite máximo para telas grandes */
+    height: auto; /* ESSENCIAL: mantém a proporção correta */
+    margin: 0 auto;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
     background: none !important;
-  }
-
-  @media screen and (max-width: 768px) {
-    .intro-logo img {
-      width: 80vw !important; /* Garante que a logo seja grande em telas menores */
-      max-width: 80vw !important;
-      height: auto !important; /* Garante que a proporção seja mantida */
-    }
   }
 		  
 		</style>
