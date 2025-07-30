@@ -346,14 +346,21 @@
 		  }
 		  .intro-logo img {
     display: block;
-    width: 90%; /* Ocupa 90% do contêiner pai */
-    max-width: 1125px; /* Limite máximo para telas grandes */
-    height: auto; /* ESSENCIAL: mantém a proporção correta */
+    width: 90%; /* Largura padrão para telas maiores */
+    max-width: 1125px; /* Limite máximo */
+    height: auto; /* Mantém a proporção */
     margin: 0 auto;
     box-shadow: none !important;
     border: none !important;
     outline: none !important;
     background: none !important;
+  }
+
+  /* Regra específica para garantir o tamanho em telas pequenas sem distorção */
+  @media screen and (max-width: 768px) {
+    .intro-logo img {
+      width: 85vw; /* Ocupa 85% da largura da tela do celular */
+    }
   }
 		  
 		</style>
