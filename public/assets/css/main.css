@@ -3504,7 +3504,8 @@ input, select, textarea {
 				}
 
 				#intro .intro-logo img {
-					max-height: 4rem;
+					max-width: 25rem;
+					max-height: 25rem;
 				}
 
 				#intro .actions {
