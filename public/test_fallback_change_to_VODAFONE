@@ -1,0 +1,461 @@
+
+
+I (38162) LTE_NRF9151: [PRECONNECT] CEREG stat = 2
+I (38168) LTE_NRF9151: [PRECONNECT] Not registered (stat=2)
+W (38674) LTE_NRF9151: [PRECONNECT] Attempt 2/6 failed, retrying
+I (38674) LTE_NRF9151: [PRECONNECT] Attempt 3/6 start
+I (38675) LTE_NRF9151: [PRECONNECT] Disabling modem (CFUN=0)
+I (39845) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ESP_OK
+I (39845) LTE_NRF9151: [PRECONNECT] Enabling modem (CFUN=1)
+W (40227) BHY2: Motion detected
+W (40228) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749696836119 ms, reporting to server: 0 
+W (40478) AEM13920: Epeas current temperature 36
+W (40478) AEM13920: Initial IRQ Status, skipping any actions EPEAS Initial Status: outOfReset:0, chargeReady:0, discharge:0, overcharge:0, sleepThresh:0, tempChThresh:0, tempDisThresh:0, src1MPPTStart:0, src1MPPTDone:0, src2MPPTStart:0, src2MPPTDone:0, tempDone:1, APMError:0, APMDone:0, storageDone:0
+I (40941) LTE_NRF9151: [PRECONNECT] AT+CFUN=1 -> ESP_OK
+I (42941) LTE_NRF9151: [PRECONNECT] Polling CEREG and CGATT for up to 10000 ms
+I (42941) LTE_NRF9151: [PRECONNECT] elapsed 0ms, checking CEREG
+I (43104) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (43104) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (43106) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (43112) LTE_NRF9151: [PRECONNECT] Not registered (stat=4)
+I (43618) LTE_NRF9151: [PRECONNECT] elapsed 677ms, checking CEREG
+I (43778) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (43778) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (43780) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (43786) LTE_NRF9151: [PRECONNECT] Not registered (stat=4)
+I (44292) LTE_NRF9151: [PRECONNECT] elapsed 1351ms, checking CEREG
+I (44452) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (44452) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (44454) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (44460) LTE_NRF9151: [PRECONNECT] Not registered (stat=4)
+I (44966) LTE_NRF9151: [PRECONNECT] elapsed 2025ms, checking CEREG
+I (45126) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (45126) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (45128) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (45134) LTE_NRF9151: [PRECONNECT] Not registered (stat=4)
+I (45640) LTE_NRF9151: [PRECONNECT] elapsed 2699ms, checking CEREG
+I (45800) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (45800) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (45802) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (45808) LTE_NRF9151: [PRECONNECT] Not registered (stat=4)
+I (46314) LTE_NRF9151: [PRECONNECT] elapsed 3373ms, checking CEREG
+I (46474) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (46474) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (46476) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (46482) LTE_NRF9151: [PRECONNECT] Not registered (stat=4)
+I (46988) LTE_NRF9151: [PRECONNECT] elapsed 4047ms, checking CEREG
+I (47148) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (47148) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (47150) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (47156) LTE_NRF9151: [PRECONNECT] Not registered (stat=4)
+W (47595) AEM13920: Epeas current temperature 36
+I (47596) AEM13920: Temperature ADC Done
+I (47662) LTE_NRF9151: [PRECONNECT] elapsed 4721ms, checking CEREG
+I (47822) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (47822) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (47824) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (47830) LTE_NRF9151: [PRECONNECT] Not registered (stat=4)
+I (48336) LTE_NRF9151: [PRECONNECT] elapsed 5395ms, checking CEREG
+I (48496) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (48496) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,4
+
+OK
+
+I (48498) LTE_NRF9151: [PRECONNECT] CEREG stat = 4
+I (48504) LTE_NRF9151: [PRECONNECT] PS detached (stat=4) after 5395ms, selecting fallback PLMN
+I (49013) LTE_NRF9151: [PLMN_SCAN] Clearing app buffer
+I (49013) LTE_NRF9151: [PLMN_SCAN] Sending AT%COPS=?
+W (50110) BHY2: Motion detected
+W (50112) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749696846002 ms, reporting to server: 0 
+W (54714) AEM13920: Epeas current temperature 36
+I (54715) AEM13920: Temperature ADC Done
+W (61830) AEM13920: Epeas current temperature 36
+I (61831) AEM13920: Temperature ADC Done
+I (65506) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+W (68946) AEM13920: Epeas current temperature 36
+I (68947) AEM13920: Temperature ADC Done
+W (76061) AEM13920: Epeas current temperature 36
+I (76062) AEM13920: Temperature ADC Done
+W (83175) AEM13920: Epeas current temperature 36
+I (83176) AEM13920: Temperature ADC Done
+W (90290) AEM13920: Epeas current temperature 36
+I (90291) AEM13920: Temperature ADC Done
+I (95519) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+W (97404) AEM13920: Epeas current temperature 36
+I (97405) AEM13920: Temperature ADC Done
+W (104518) AEM13920: Epeas current temperature 36
+I (104519) AEM13920: Temperature ADC Done
+W (111632) AEM13920: Epeas current temperature 36
+I (111633) AEM13920: Temperature ADC Done
+W (118746) AEM13920: Epeas current temperature 36
+I (118747) AEM13920: Temperature ADC Done
+I (125531) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+W (125860) AEM13920: Epeas current temperature 36
+I (125861) AEM13920: Temperature ADC Done
+W (132974) AEM13920: Epeas current temperature 36
+I (132975) AEM13920: Temperature ADC Done
+W (140088) AEM13920: Epeas current temperature 36
+I (140089) AEM13920: Temperature ADC Done
+W (147202) AEM13920: Epeas current temperature 36
+I (147203) AEM13920: Temperature ADC Done
+W (154315) AEM13920: Epeas current temperature 36
+I (154316) AEM13920: Temperature ADC Done
+I (155543) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+W (161429) AEM13920: Epeas current temperature 36
+I (161430) AEM13920: Temperature ADC Done
+W (168543) AEM13920: Epeas current temperature 36
+I (168544) AEM13920: Temperature ADC Done
+W (175657) AEM13920: Epeas current temperature 36
+I (175658) AEM13920: Temperature ADC Done
+W (182771) AEM13920: Epeas current temperature 36
+I (182772) AEM13920: Temperature ADC Done
+I (185555) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+W (189883) AEM13920: Epeas current temperature 36
+I (189884) AEM13920: Temperature ADC Done
+W (196996) AEM13920: Epeas current temperature 36
+I (196997) AEM13920: Temperature ADC Done
+W (204109) AEM13920: Epeas current temperature 36
+I (204110) AEM13920: Temperature ADC Done
+W (211222) AEM13920: Epeas current temperature 36
+I (211223) AEM13920: Temperature ADC Done
+I (215567) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+W (218335) AEM13920: Epeas current temperature 36
+I (218336) AEM13920: Temperature ADC Done
+W (225447) AEM13920: Epeas current temperature 36
+I (225448) AEM13920: Temperature ADC Done
+W (232560) AEM13920: Epeas current temperature 36
+I (232561) AEM13920: Temperature ADC Done
+W (239674) AEM13920: Epeas current temperature 36
+I (239675) AEM13920: Temperature ADC Done
+I (245579) AEM13920: STORAGE Voltage  4.106000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+W (246787) AEM13920: Epeas current temperature 36
+I (246788) AEM13920: Temperature ADC Done
+W (253900) AEM13920: Epeas current temperature 36
+I (253901) AEM13920: Temperature ADC Done
+W (261013) AEM13920: Epeas current temperature 36
+I (261014) AEM13920: Temperature ADC Done
+W (268126) AEM13920: Epeas current temperature 36
+I (268127) AEM13920: Temperature ADC Done
+W (275239) AEM13920: Epeas current temperature 36
+I (275240) AEM13920: Temperature ADC Done
+I (275591) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+I (277848) LTE_NRF9151: [PLMN_SCAN] app_buf contents:
+
++COPS: (1,"","","26801",7)
+
+OK
+
+I (277848) LTE_NRF9151: [PLMN_SCAN] Result code: ESP_OK
+I (277852) LTE_NRF9151: [PRECONNECT] Selecting fallback - MEO
+I (277859) LTE_NRF9151: [PLMN_SELECT] Clearing app buffer
+I (277865) LTE_NRF9151: [PLMN_SELECT] Sending manual COPS command → AT+COPS=1,2,"26801"
+
+W (282351) AEM13920: Epeas current temperature 36
+I (282352) AEM13920: Temperature ADC Done
+W (289463) AEM13920: Epeas current temperature 36
+I (289464) AEM13920: Temperature ADC Done
+W (296576) AEM13920: Epeas current temperature 36
+I (296577) AEM13920: Temperature ADC Done
+W (303687) AEM13920: Epeas current temperature 36
+I (303688) AEM13920: Temperature ADC Done
+I (305603) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+W (310799) AEM13920: Epeas current temperature 36
+I (310800) AEM13920: Temperature ADC Done
+W (317911) AEM13920: Epeas current temperature 38
+I (317912) AEM13920: Temperature ADC Done
+W (325023) AEM13920: Epeas current temperature 36
+I (325024) AEM13920: Temperature ADC Done
+W (332136) AEM13920: Epeas current temperature 36
+I (332137) AEM13920: Temperature ADC Done
+I (335615) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+I (338044) LTE_NRF9151: LTE Response Check Timeout
+W (339248) AEM13920: Epeas current temperature 36
+I (339249) AEM13920: Temperature ADC Done
+I (345091) LTE_NRF9151: [PLMN_SELECT] Result code: ESP_OK
+I (345091) LTE_NRF9151: [PRECONNECT] Manual COPS MEO -> ESP_OK
+W (345592) LTE_NRF9151: [PRECONNECT] Attempt 3/6 failed, retrying
+I (345592) LTE_NRF9151: [PRECONNECT] Attempt 4/6 start
+I (345593) LTE_NRF9151: [PRECONNECT] Disabling modem (CFUN=0)
+W (346361) AEM13920: Epeas current temperature 36
+I (346362) AEM13920: Temperature ADC Done
+I (346370) LTE_NRF9151: LTE Response Check Timeout
+I (348240) LTE_NRF9151: LTE Response Check Timeout
+I (350340) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ERROR
+W (350340) LTE_NRF9151: [PRECONNECT] CFUN=0 failed, retrying next attempt
+I (350342) LTE_NRF9151: [PRECONNECT] Attempt 5/6 start
+I (350348) LTE_NRF9151: [PRECONNECT] Disabling modem (CFUN=0)
+I (351415) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ESP_OK
+I (351415) LTE_NRF9151: [PRECONNECT] Enabling modem (CFUN=1)
+I (352511) LTE_NRF9151: [PRECONNECT] AT+CFUN=1 -> ESP_OK
+W (353475) AEM13920: Epeas current temperature 36
+I (353476) AEM13920: Temperature ADC Done
+I (354511) LTE_NRF9151: [PRECONNECT] Polling CEREG and CGATT for up to 10000 ms
+I (354511) LTE_NRF9151: [PRECONNECT] elapsed 0ms, checking CEREG
+I (354675) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (354675) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,2,"002B","07A7A80C",7
+
+OK
+
+I (354679) LTE_NRF9151: [PRECONNECT] CEREG stat = 2
+I (354685) LTE_NRF9151: [PRECONNECT] Not registered (stat=2)
+I (355191) LTE_NRF9151: [PRECONNECT] elapsed 680ms, checking CEREG
+I (355351) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (355351) LTE_NRF9151: [PRECONNECT] CEREG response: 
++CEREG: 0,5,"002B","07A7A80C",7
+
+OK
+
+I (355355) LTE_NRF9151: [PRECONNECT] CEREG stat = 5
+I (355361) LTE_NRF9151: [PRECONNECT] Registered (stat=5)
+I (355367) LTE_NRF9151: [PRECONNECT] Checking CGATT status
+I (355533) LTE_NRF9151: [PRECONNECT] AT+CGATT? -> ESP_OK
+I (355533) LTE_NRF9151: [PRECONNECT] CGATT response: 
++CEREG: 0,5,"002B","07A7A80C",7
+
+OK
+
++CGATT: 1
+
+OK
+
+I (355539) LTE_NRF9151: [PRECONNECT] Attached (CGATT=1)
+I (355545) LTE_NRF9151: [PRECONNECT] Delay before PDP context checks
+I (356552) LTE_NRF9151: [PRECONNECT] Starting PDP context retrieval
+I (356552) LTE_NRF9151: [PRECONNECT] CGDCONT attempt 1/5
+I (357622) LTE_NRF9151: [PRECONNECT] AT+CGDCONT? -> ESP_OK
+I (357622) LTE_NRF9151: [PRECONNECT] CGDCONT response: 
++CEREG: 0,5,"002B","07A7A80C",7
+
+OK
+
++CGATT: 1
+
+OK
+
++CGDCONT: 0,"IP","tm","10.5.46.120",0,0
+
+OK
+
+W (357633) LTE_NRF9151: [PRECONNECT] PDP context found, IP assigned
+I (358140) LTE_NRF9151: [PRECONNECT] CGDCONT attempt 2/5
+I (359208) LTE_NRF9151: [PRECONNECT] AT+CGDCONT? -> ESP_OK
+I (359208) LTE_NRF9151: [PRECONNECT] CGDCONT response: 
++CGDCONT: 0,"IP","tm","10.5.46.120",0,0
+
+OK
+
+W (359213) LTE_NRF9151: [PRECONNECT] PDP context found, IP assigned
+I (359720) LTE_NRF9151: [PRECONNECT] CGDCONT attempt 3/5
+W (360589) AEM13920: Epeas current temperature 36
+I (360590) AEM13920: Temperature ADC Done
+I (360788) LTE_NRF9151: [PRECONNECT] AT+CGDCONT? -> ESP_OK
+I (360788) LTE_NRF9151: [PRECONNECT] CGDCONT response: 
++CGDCONT: 0,"IP","tm","10.5.46.120",0,0
+
+OK
+
+W (360793) LTE_NRF9151: [PRECONNECT] PDP context found, IP assigned
+I (361300) LTE_NRF9151: [PRECONNECT] CGDCONT attempt 4/5
+I (362368) LTE_NRF9151: [PRECONNECT] AT+CGDCONT? -> ESP_OK
+I (362368) LTE_NRF9151: [PRECONNECT] CGDCONT response: 
++CGDCONT: 0,"IP","tm","10.5.46.120",0,0
+
+OK
+
+W (362373) LTE_NRF9151: [PRECONNECT] PDP context found, IP assigned
+I (362880) LTE_NRF9151: [PRECONNECT] CGDCONT attempt 5/5
+I (363948) LTE_NRF9151: [PRECONNECT] AT+CGDCONT? -> ESP_OK
+I (363948) LTE_NRF9151: [PRECONNECT] CGDCONT response: 
++CGDCONT: 0,"IP","tm","10.5.46.120",0,0
+
+OK
+
+W (363953) LTE_NRF9151: [PRECONNECT] PDP context found, IP assigned
+W (364460) LTE_NRF9151: [CONNECT] Registered and attached successfully
+I (364460) LTE: Configure for network ok
+W (364460) LTE: ========== Beginner phase of sending messages via MQTT ==========
+W (365260) CHECKPOINT: Storing checkpoint: 19 at 365260
+E (365265) SYSTEM: Waiting for comunications - Timeout occurred, no event was set within 360000 seconds - at time 2025-06-12 02:59:21
+W (365268) CHECKPOINT: Storing checkpoint: 21 at 365268
+W (365277) CHECKPOINT: Storing checkpoint: 21 at 365277
+W (365281) CHECKPOINT: Storing checkpoint: 22 at 365282
+I (365290) CONFIG ULP: Before timer setup - Current time: 2025-06-12 02:59:21 
+I (365294) CONFIG ULP: Current interval is 15 minutes, delay due to low power:0 seconds, total:900 seconds
+I (365406) CONFIG ULP: Timer registers - CTRL1: 0x86, Timer value: 900 (0x0384)
+I (365407) CONFIG ULP: CurrentTimer configuration:
+- Enabled: Yes
+- Repeat mode: Yes
+- Frequency: 1/3600 Hz
+- Interval: 900 ticks
+I (365416) CONFIG ULP: Setting timer: repeat=1, freq=1 Hz,  value thicks=900, new value thicks=900 ticks, 15 minutes (900 seconds)
+W (365428) CONFIG ULP: Timer value is the same, not setting it
+W (365435) SYSTEM: POWER CHECK DONE, STARTING TASKS
+I (365441) BASETASK: Start Task COMMS_HANDLER_TASK priority: 1
+I (365447) BASETASK: Task COMMS_HANDLER_TASK created successfully. Handle: 0x3fceda1c
+I (365456) SYSTEM TASKS: Task created and added to list
+I (365462) BASETASK: Start Task SYSTEM_EVENTS_TASK priority: 7
+I (365468) CoreBD: Starting to synch nvs storage
+I (365468) BASETASK: Task SYSTEM_EVENTS_TASK created successfully. Handle: 0x3fceeb98
+I (365482) SYSTEM TASKS: Task created and added to list
+I (365488) BASETASK: Start Task RESPOND_TO_QUERY_TASK priority: 4
+I (365495) BASETASK: Task RESPOND_TO_QUERY_TASK created successfully. Handle: 0x3fcc81bc
+I (365503) SYSTEM TASKS: Task created and added to list
+W (365509) CHECKPOINT: Storing checkpoint: 26 at 365510
+I (365516) CoreBD: Ready to respond to query
+I (365522) CONFIG: Session duration: 146s (Session duration with bonus: 146s, without bonus: 112s) (Batt: 95%, Hour: 2, Month: 6, TimeBonus: 0%, MonthBonus: 30%, TotalBonus: 30%)
+W (365537) CAYENNE: Maximum session duration: 146250ms exceeded
+I (365543) LTE_NRF9151: LTE network info: XMONITOR: 5,"","","26801","002B",7,20,"07A7A80C",22,6300,37,20,"","11100000","11100000","01001001"
+
+OK
+
+I (365544) CORE TASK MANAGER: Active tasks: 0, Sleep mode: 1, BLE: 0, Wifi: 0, LTE: 0, OTA mode: 0, GNSS:(Initialized: 0, Acquisition finished: 0), Force shutdown: 0, Max session duration exceeded: 1, config fields: 1, 365544/5000  | Expected features processed: 4, Current features: 4
+I (365563) CoreBD: Done synch nvs storage
+W (365583) CHECKPOINT: Storing checkpoint: 27 at 365584
+I (365588) CoreBD: Ready to collect events
+W (365597) TASKMANAGER: Shutting down task MOTION_TASK
+I (365605) BASETASK: Initiating Shutdown on Task MOTION_TASK
+W (365611) TASKMANAGER: Shutting down task MICROPHONE_TASK
+I (365617) BASETASK: Initiating Shutdown on Task MICROPHONE_TASK
+W (365624) CORE TASK MANAGER: -------------------------- STARTING SHUTDOWN PROCESS --------------------------
+W (365634) TASKS QUEUE: SENDING CAYENNE DATA at the end of the tasks
+I (365635) LTE_NRF9151: Parsed LTE time: Thu Jun 12 02:59:23 2025
+
+I (365641) STORAGE: firmwareTimestamp: 2025-06-11T21:20:49Z
+I (365648) NFC: Setting NFC URL to: F412FA817108
+I (365655) STORAGE: Converted timestamp: 1749676849
+I (365666) CAYENNE: Adding network info: Localbuild
+I (365672) CONFIG ULP: Before timer setup - Current time: 2025-06-12 02:59:21 
+I (365679) CONFIG ULP: Current interval is 15 minutes, delay due to low power:0 seconds, total:900 seconds
+I (365656) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.000000V SOURCE 2: 0.000000V Coulomb Counter 0 APM1:0 APM2:0
+I (365702) TASKMANAGER: Starting to remove task MICROPHONE_TASK
+I (365707) TASKMANAGER: Task removed from list
+I (365791) CONFIG ULP: Timer registers - CTRL1: 0x86, Timer value: 900 (0x0384)
+I (365792) CONFIG ULP: CurrentTimer configuration:
+- Enabled: Yes
+- Repeat mode: Yes
+- Frequency: 1/3600 Hz
+- Interval: 900 ticks
+I (365801) CONFIG ULP: Setting timer: repeat=1, freq=1 Hz,  value thicks=900, new value thicks=900 ticks, 15 minutes (900 seconds)
+W (365813) CONFIG ULP: Timer value is the same, not setting it
+W (365828) SYSTEM: Reporting system data took 187ms
+W (365829) TASKS QUEUE: Reporting system/config data
+I (365832) WAKEUPREASONS: Current count: 1901
+I (365836) WAKEUPREASONS: Incrementing count to: 1902
+I (365844) WAKEUPREASONS: Successfully saved count: 1902
+I (365848) SENSOR: getSystemData - Type: 2 
+W (365853) SENSOR: No reading found for SYSTEM/SSID
+W (365859) SENSOR: No reading found for SYSTEM/SIM_ICCID
+I (365864) CAYENNE: Message size: 111 bytes
+I (365869) EVENTS: Copying payload vector of size 122
+W (365875) TASKS QUEUE: Reporting sensor data using cayenne
+I (365882) WAKEUPREASONS: Current count: 1902
+I (365886) WAKEUPREASONS: Incrementing count to: 1903
+E (365892) MESSAGE_QUEUE: Message lost topic:F412FA817108/cayenne/2 size:122
+I (365894) WAKEUPREASONS: Successfully saved count: 1903
+W (365906) SENSOR: Feature presence bitmap: 0x001B
+W (365911) SENSOR:   MICROPHONE: PRESENT
+W (365916) SENSOR:   BME280: PRESENT
+W (365920) SENSOR:   BME688: ABSENT
+W (365924) SENSOR:   BHI_ACCELEROMETER: PRESENT
+W (365929) SENSOR:   BHI_MOTION: PRESENT
+W (365934) SENSOR:   ANEMOMETER: ABSENT
+W (365938) SENSOR:   GNSS: ABSENT
+I (365943) CAYENNE: Message size: 72 bytes
+I (365947) EVENTS: Copying payload vector of size 83
+W (365953) TASKS QUEUE: Checking unsent messages
+I (365958) CORE TASK MANAGER: Retrieving unsent messages: Wifi:0 BLE:0 LTE:0 Lora:0
+I (365967) CORE TASK MANAGER: No more messages to retrieve or skipping due to connection status
+I (365976) CORE TASK MANAGER: Waiting for all messages delivered. LoRa:0 Events:1 MQTT:0 LTE:0 TOTAL:1 - Task Running 1 messages on qb waiting: 0
+I (365990) CoreBD: Preparing failed messages table
+E (365990) MESSAGE_QUEUE: Message lost topic:F412FA817108/cayenne/1 size:83
+I (366048) CoreBD: Preparing failed messages table
+I (366260) NFC: Successfully wrote URL to NFC tag
+W (366261) TIME: Time from rtc         : Thu Jun 12 02:59:23 2025 
+W (366262) TIME: Time from LTE : Thu Jun 12 02:59:23 2025
+W (366267) TIME: No Update Needed! LTE:1749697163 CURRENT:1749697163 DIFF: 0
+I (366415) LTE_NRF9151: MQTT is not connected
+I (366415) LTE_NRF9151: AT_MQTT_CONNECT: AT#XMQTTCON=1,"node","ASASA-asa2-533s22-","37.27.43.234",1883
+
+I (367989) BASETASK: Initiating Shutdown on Task LTE_TASK
+I (367990) CORE TASK MANAGER: Waiting for LTE_TASK task to complete...
+I (368849) LTE: Connected to MQTT
+I (369849) LTE: Subscribing to topic: F412FA817108/command/exec
+I (369849) LTE_NRF9151: Subscribing to topic: AT#XMQTTSUB="F412FA817108/command/exec",1
+
+I (370174) LTE: Subscribe MQTT ok
+I (370174) LTE: Subscribing to messages ack topic: F412FA817108/cayenne/received/ack
+I (370175) LTE_NRF9151: Subscribing to topic: AT#XMQTTSUB="F412FA817108/cayenne/received/ack",1
+
+I (370632) LTE: Subscribe ack MQTT ok
+I (371706) LTE_NRF9151: Payload received: 
+#XMQTTREAD: 1,"F412FA817108/command/exec","{"a":5,"p":{"wkm":"15"},"rid":1634433,"u":1748988371534}"
+
+OK
+
+I (371709) LTE_NRF9151: Payload:
+{"a":5,"p":{"wkm":"15"},"rid":1634433,"u":1748988371534}"
+
+W (371719) LTE_NRF9151: Extracted JSON Payload: {"a":5,"p":{"wkm":"15"},"rid":1634433,"u":1748988371534}
+W (371729) CONFIGURATOR: Shutdown initiated, skipping configuration
+I (371973) LTE_NRF9151: Initiating LTE module shutdown sequence
+I (374043) LTE_NRF9151: LTE module shutdown complete
+I (375992) CORE TASK MANAGER: LTE_TASK completed successfully
+W (375993) TASKMANAGER: Task not found 23
+W (375993) CoreBD: SD card not inserted, skipping copy of unsent DB from SPIFFS to SD card
+I (381002) ULP: Turn off and schedule wake up
+W (381203) ULP: Calling the Turn Off method
+W (381404) POWER: Calling the Turn Off method turnOffSystem, forced: No
+W (381405) TIME-CHECK: Current device time: 1749697177 s
+W (381407) TIME-CHECK: Last saved time    : 1749696800 s
+I (381426) CONFIG ULP: Before timer setup - Current time: 2025-06-12 02:59:37 
+I (381427) CONFIG ULP: Current interval is 15 minutes, delay due to low power:0 seconds, total:900 seconds
+I (381535) CONFIG ULP: Timer registers - CTRL1: 0x86, Timer value: 900 (0x0384)
+I (381536) CONFIG ULP: CurrentTimer configuration:
+- Enabled: Yes
+- Repeat mode: Yes
+- Frequency: 1/3600 Hz
+- Interval: 900 ticks
+I (381545) CONFIG ULP: Setting timer: repeat=1, freq=1 Hz,  value thicks=900, new value thicks=900 ticks, 15 minutes (900 seconds)
+W (381557) CONFIG ULP: Timer value is the same, not setting it
+W (381577) POWER: Sending FIFO_EMPTY_NOTIFICATION_SENDER_BIT to BHI Observer. Requesting FIFO status update.
+I (381578) POWER: observerBhiReadyForShutdown() called: Waiting for BHI to confirm FIFO is empty
+W (381591) BHY2: Wakeup FIFO and Non-wakeup FIFO is empty
+W (381592) BHY2: BHI indicates FIFO is empty. Notifying shutdown task with FIFO_EMPTY_NOTIFICATION_RECEIVER_BIT.
+I (381603) POWER: Notification received - FIFO_EMPTY_NOTIFICATION_RECEIVER_BIT - BHI confirms FIFO is empty.
+I (381614) POWER: Proceeding with immediate shutdown action.
+W (381620) SESSION: This session took 381 seconds
+I (381637) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 

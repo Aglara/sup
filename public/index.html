@@ -1,0 +1,1624 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		  .post.featured .image.main {
+		    width: 100vw;
+		    max-width: 100vw;
+		    position: relative;
+		    left: 50%;
+		    right: 50%;
+		    margin-left: -50vw;
+		    margin-right: -50vw;
+		  }
+		  .post.featured .image.main img {
+		    width: 100%;
+		    max-width: 1600px;
+		    height: auto;
+		    display: block;
+		    margin: 0 auto;
+		    border-radius: 1.5rem;
+		    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+		  }
+		  .calendar-times-grid {
+		    display: grid;
+		    grid-template-columns: repeat(2, 1fr);
+		    gap: 0.8rem 1rem;
+		    margin: 1.2rem 0 0 0;
+		    justify-items: center;
+		    align-items: center;
+		    width: 100%;
+		    max-width: 260px;
+		    margin-left: auto;
+		    margin-right: auto;
+		  }
+		  .calendar-time-btn {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    background: #d1f7e8;
+		    color: #1e8566;
+		    border: 2px solid #18bfef;
+		    border-radius: 0.7rem;
+		    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+		    font-weight: 700;
+		    font-size: 1.01rem;
+		    padding: 0.6rem 1rem;
+		    min-width: 70px;
+		    min-height: 2.1rem;
+		    box-shadow: 0 1px 4px rgba(24,191,239,0.08);
+		    cursor: pointer;
+		    transition: background 0.18s, color 0.18s, box-shadow 0.18s, border 0.18s;
+		    outline: none;
+		    margin: 0;
+		    text-align: center;
+		    letter-spacing: 0.01em;
+		  }
+		  .calendar-time-btn.selected {
+		    background: #18bfef;
+		    color: #fff;
+		    border: 2px solid #18bfef;
+		    box-shadow: 0 2px 12px rgba(24,191,239,0.18);
+		  }
+		  .calendar-time-btn:hover, .calendar-time-btn:focus {
+		    background: #e0f4fa;
+		    color: #18bfef;
+		    border: 2px solid #18bfef;
+		  }
+		  .calendar-times-actions {
+		    display: flex;
+		    justify-content: center;
+		    gap: 1.2rem;
+		    margin-top: 1.5rem;
+		  }
+		  .calendar-times-btn {
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    background: #18bfef;
+		    color: #fff;
+		    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+		    font-weight: 700;
+		    font-size: 1.08rem;
+		    border: none;
+		    border-radius: 0.7rem;
+		    padding: 0.85rem 1.5rem;
+		    min-width: 140px;
+		    box-shadow: 0 2px 8px rgba(24,191,239,0.10);
+		    cursor: pointer;
+		    transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+		    text-align: center;
+		    outline: none;
+		    letter-spacing: 0.01em;
+		    text-transform: none;
+		    margin: 0;
+		  }
+		  .calendar-times-btn:disabled {
+		    opacity: 0.5;
+		    cursor: not-allowed;
+		  }
+		  .calendar-times-btn:hover, .calendar-times-btn:focus {
+		    background: #139dc7;
+		    color: #fff;
+		    box-shadow: 0 4px 16px rgba(24,191,239,0.16);
+		  }
+		  .calendar-legend-small {
+		    margin-top: 0.5rem;
+		    display: flex;
+		    justify-content: center;
+		    gap: 1.2rem;
+		    font-size: 0.93rem;
+		    color: #717981;
+		    align-items: center;
+		    opacity: 0.85;
+		  }
+		  .calendar-legend-sample {
+		    display: inline-block;
+		    width: 1.2em;
+		    height: 1.2em;
+		    border-radius: 0.4em;
+		    margin-right: 0.3em;
+		    vertical-align: middle;
+		    box-shadow: 0 1px 4px rgba(24,191,239,0.08);
+		  }
+		  .calendar-legend-sample.free { background: #d1f7e8; border: 2px solid #18bfef; }
+		  .calendar-legend-sample.selected { background: #18bfef; border: 2px solid #18bfef; }
+		  @media (max-width: 900px) {
+		    .calendar-modal { max-width: 100vw; padding: 1rem 0.2rem 1rem 0.2rem; }
+		    .calendar-table th, .calendar-table td { font-size: 0.95rem; width: 2.1rem; height: 2.1rem; }
+		    .calendar-next-btn { padding: 0.7rem 1.2rem; font-size: 0.97rem; }
+		  }
+		  .calendar-content-center {
+		    width: 100%;
+		    min-height: 340px;
+		    margin: 0 auto;
+		    display: flex;
+		    flex-direction: column;
+		    align-items: center;
+		    justify-content: center;
+		    background: none;
+		  }
+		  /* Imagens maiores na seção LA PAGAIA */
+		  #pagaia .coluna-esquerda img,
+		  #pagaia .coluna-direita img {
+		    width: 100%;
+		    max-width: 600px;
+		    height: auto;
+		    aspect-ratio: 3/2;
+		    object-fit: cover;
+		    border-radius: 1.2rem;
+		    margin-bottom: 1.5rem;
+		    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+		    cursor: pointer;
+		    transition: box-shadow 0.18s, transform 0.18s;
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		  }
+		  #pagaia .coluna-esquerda img:hover,
+		  #pagaia .coluna-direita img:hover {
+		    box-shadow: 0 4px 32px rgba(24,191,239,0.18);
+		    transform: scale(1.04);
+		  }
+		  /* Lightbox para imagem expandida */
+		  .lightbox-overlay {
+		    position: fixed;
+		    top: 0; left: 0; width: 100vw; height: 100vh;
+		    background: rgba(30,37,45,0.85);
+		    z-index: 99999;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    animation: calendarFadeIn 0.18s;
+		  }
+		  .lightbox-img {
+		    max-width: 92vw;
+		    max-height: 82vh;
+		    border-radius: 1.2rem;
+		    box-shadow: 0 8px 32px rgba(24,191,239,0.18), 0 2px 16px rgba(0,0,0,0.18);
+		    background: #fff;
+		    display: block;
+		    object-fit: contain;
+		    animation: calendarFadeIn 0.18s;
+		  }
+		  .lightbox-close {
+		    position: absolute;
+		    top: 2.5vh;
+		    right: 4vw;
+		    background: #fff;
+		    color: #18bfef;
+		    border: none;
+		    font-size: 2.1rem;
+		    border-radius: 50%;
+		    width: 2.7rem;
+		    height: 2.7rem;
+		    display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    box-shadow: 0 4px 16px rgba(24,191,239,0.13), 0 1px 4px rgba(0,0,0,0.08);
+		    cursor: pointer;
+		    z-index: 100000;
+		    transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+		    font-family: 'Arial', 'Helvetica Neue', Arial, sans-serif;
+		    font-weight: 900;
+		    letter-spacing: 0.02em;
+		    outline: none;
+		  }
+		  .lightbox-close:hover, .lightbox-close:focus {
+		    background: #18bfef;
+		    color: #fff;
+		    box-shadow: 0 8px 32px rgba(24,191,239,0.18);
+		    transform: scale(1.08);
+		  }
+		  #pagaia .duas-colunas {
+		    display: flex;
+		    flex-direction: row;
+		    gap: 2.2rem;
+		    align-items: flex-start;
+		    justify-content: center;
+		  }
+		  #pagaia .coluna-esquerda,
+		  #pagaia .coluna-direita {
+		    width: 50%;
+		    max-width: 700px;
+		    margin: 0 auto;
+		    display: block;
+		  }
+		  #pagaia .coluna-esquerda img,
+		  #pagaia .coluna-direita img {
+		    width: 100%;
+		    max-width: 700px;
+		    height: auto;
+		    object-fit: contain;
+		    border-radius: 1.2rem;
+		    margin-bottom: 1.5rem;
+		    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+		    cursor: pointer;
+		    transition: box-shadow 0.18s, transform 0.18s;
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		  }
+		  @media (max-width: 900px) {
+		    #pagaia .duas-colunas {
+		      flex-direction: column;
+		      gap: 2.2rem;
+		      align-items: center;
+		    }
+		    #pagaia .coluna-esquerda,
+		    #pagaia .coluna-direita {
+		      width: 100%;
+		      max-width: 98vw;
+		    }
+		    #pagaia .coluna-esquerda img,
+		    #pagaia .coluna-direita img {
+		      max-width: 98vw;
+		    }
+		  }
+		  #teorica-pratica .duas-colunas {
+		    display: flex;
+		    flex-direction: row;
+		    gap: 2.2rem;
+		    align-items: flex-start;
+		    justify-content: center;
+		  }
+		  #teorica-pratica .coluna-esquerda,
+		  #teorica-pratica .coluna-direita {
+		    width: 50%;
+		    max-width: 700px;
+		    margin: 0 auto;
+		    display: block;
+		  }
+		  #teorica-pratica .coluna-esquerda img,
+		  #teorica-pratica .coluna-direita img {
+		    width: 100%;
+		    max-width: 700px;
+		    height: auto;
+		    object-fit: contain;
+		    border-radius: 1.2rem;
+		    margin-bottom: 1.5rem;
+		    box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+		    cursor: pointer;
+		    transition: box-shadow 0.18s, transform 0.18s;
+		    display: block;
+		    margin-left: auto;
+		    margin-right: auto;
+		    background: #fff;
+		  }
+		  @media (max-width: 900px) {
+		    #teorica-pratica .duas-colunas {
+		      flex-direction: column;
+		      gap: 2.2rem;
+		      align-items: center;
+		    }
+		    #teorica-pratica .coluna-esquerda,
+		    #teorica-pratica .coluna-direita {
+		      width: 100%;
+		      max-width: 98vw;
+		    }
+		    #teorica-pratica .coluna-esquerda img,
+		    #teorica-pratica .coluna-direita img {
+		      max-width: 98vw;
+		    }
+		  }
+		  .post.featured {
+		    margin-bottom: 1.2rem !important;
+		    padding-bottom: 0.5rem !important;
+		  }
+		  .post.featured header.major {
+		    margin-bottom: 0.7rem !important;
+		  }
+		  .post.featured .image.main {
+		    margin: 1rem 0 1rem 50% !important;
+		  }
+		  .post.featured ul.actions.special {
+		    margin-top: 1rem !important;
+		    margin-bottom: 0.2rem !important;
+		  }
+		  .post.featured p {
+		    margin-bottom: 0.5rem !important;
+		    margin-top: 0.5rem !important;
+		  }
+		  .intro-logo {
+		    position: relative;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    width: 100vw;
+		    max-width: 100vw;
+		    display: flex;
+		    justify-content: center;
+		    align-items: center;
+		    margin: 0 auto 1.2rem auto;
+		    background: none !important;
+		    box-shadow: none !important;
+		    padding: 0;
+		    z-index: 2;
+		  }
+		  .intro-logo img {
+		    width: 900px;
+		    max-width: 98vw;
+		    height: auto;
+		    display: block;
+		    margin: 0 auto;
+		    box-shadow: none !important;
+		    border: none !important;
+		    outline: none !important;
+		    background: none !important;
+		  }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<!-- Logo moved here -->
+						<div class="intro-logo">
+							<img src="images/logo4.png" alt="Logo Stand Up Paddle">
+						</div>
+						<h1>Standd Up<br />
+							Paddle Experience</h1>
+						<p>Dalla teoria in riva al relax su calette nascoste: tutto l'occorrente incluso. <a href="https://html5up.net/license"></a>.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+				<header id="header">
+					<!-- Logo moved to intro section -->
+				</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">This is Massively</a></li>
+							<li><a href="#teorica-pratica" class="scrolly">Teoria e Pratica</a></li>
+							<li><a href="#pagaia" class="scrolly">La Pagaia</a></li>
+							<li><a href="#" id="open-calendar-modal">Calendario</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+						<article class="post featured" style="margin-bottom: 0.5rem;">
+							<header class="major">
+							  <span class="date">Informazioni:</span>
+							  <h2>Un'esperienza unica tra mare, sport e natura!</h2>
+							  <p>
+								Le nostre lezioni di SUP iniziano con un briefing introduttivo di circa 10 minuti, durante il quale parleremo della sicurezza in mare, dei fondamenti dello Stand Up Paddle e dell'anatomia di tavola e pagaia.<br>
+								Subito dopo, si passa alla parte più divertente: la pratica in mare!<br><br>
+						
+								Durante il tour, faremo una sosta rilassante su una delle spiagge limitrofe, perfetta per ricaricare le energie e godersi il paesaggio.<br>
+								Su richiesta anticipata, un biologo marino potrà accompagnarci per raccontarci curiosità su flora e fauna della meravigliosa costa ionica.<br><br>
+						
+								L'esperienza dura circa 1 ora e 30 minuti ed è comprensiva di tutta l'attrezzatura necessaria: tavola, pagaia, giubbotto salvagente, bevande rinfrescanti, snack e tante foto ricordo!<br><br>
+						
+								Le attività sono adatte a tutti, a partire dagli 8 anni, con gruppi fino a un massimo di 10 partecipanti.<br>
+								Le lezioni sono disponibili in italiano, inglese, portoghese e spagnolo.
+							  </p>
+							</header>
+							<div style="width: 100vw; margin: 2rem 0 2rem 50%; transform: translateX(-50%);">
+							  <div style="width: 100%; max-width: 72rem; margin: 0 auto;">
+							    <img src="images/angelo.png" alt="Scuola SUP" style="width: 100%; height: auto; box-shadow: 0 2px 16px rgba(0,0,0,0.08); object-fit: contain;" />
+							  </div>
+							</div>
+							<ul class="actions special" style="margin-top: 2rem; margin-bottom: 0;">
+							  <li><a href="#" class="button large" id="prenota-btn">Prenota Ora</a></li>
+							</ul>
+						  </article>
+
+						<!-- Posts -->
+							<section class="posts" style="margin-top: 0;">
+								<article id="teorica-pratica">
+									<header>
+										<span class="date"></span>
+										<h2>PARTE TEORICA e PRATICA</h2>
+									</header>
+									<div class="duas-colunas">
+										<div class="coluna-esquerda">
+											<img src="images/supSand2.jpeg" alt="Teoria" style="width: 100%; height: 400px; object-fit: contain; border-radius:1rem; margin-bottom:1rem; display: block; margin-left: auto; margin-right: auto;" />
+											<strong>PARTE TEORICA a terra</strong><br>
+											&bull; Anatomia della tavola, anatomia della pagaia e loro modalità di utilizzo<br>
+											&bull; Uso del leash<br>
+											&bull; Considerazioni sul meteo, sulle condizioni del mare, sui venti, sulle brezze costiere e sui punti di ingresso in mare prima di entrare in acqua<br>
+											&bull; Principali ordinanze della capitaneria di porto che regolano la condotta del rider nelle acque interne<br>
+										</div>
+										<div class="coluna-direita">
+											<img src="images/pratica.jpeg" alt="Pratica" style="width: 100%; height: 400px; object-fit: contain; border-radius:1rem; margin-bottom:1rem; display: block; margin-left: auto; margin-right: auto;" />
+											<strong>PARTE PRATICA in mare</strong><br>
+											&bull; Ripresa degli argomenti tecnici<br>
+											&bull; Dopo aver regolato la pagaia ed allacciato il leash si procede all'ambientamento, uscita contro vento/corrente e ritorno a favore<br>
+											&bull; Primi movimenti di pagaiata in ginocchio<br>
+											&bull; Pagaiata base in posizione eretta sulla tavola<br>
+											&bull; Manovra base per virare<br>
+											&bull; Ritorno inginocchiandosi in prossimità della riva
+										</div>
+									</div>
+								</article>
+								<article id="pagaia">
+									<header>
+										<span class="date"></span>
+										<h2>LA PAGAIA (paddle)</h2>
+									</header>
+									<div class="duas-colunas">
+										<div class="coluna-esquerda">
+											<img src="images/tbar.png" alt="Pagaia 1" style="max-width:100%;border-radius:1rem;" />
+										</div>
+										<div class="coluna-direita">
+											<img src="images/tbar2.png" alt="Pagaia 2" style="max-width:100%;border-radius:1rem;" />
+										</div>
+									</div>
+									<div class="texto-sombreado">
+										<p style="margin:2rem 0 0 0; text-align:center; font-size:1.15rem;">
+											Una pagaia si distingue da un remo per il fatto che, diversamente da quest'ultimo, la pagaia non ha un appoggio (scalmo) che la lega allo scafo. La pagaia infatti è tenuta nelle mani del rider.
+										</p>
+									</div>
+								</article>
+								<!--
+								<article>
+									<header>
+										<span class="date">April 22, 2017</span>
+										<h2><a href="#">Primis eget<br />
+										imperdiet lorem</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 18, 2017</span>
+										<h2><a href="#">Ante mattis<br />
+										interdum dolor</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 14, 2017</span>
+										<h2><a href="#">Tempus sed<br />
+										nulla imperdiet</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 11, 2017</span>
+										<h2><a href="#">Odio magna<br />
+										sed consectetur</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								<article>
+									<header>
+										<span class="date">April 7, 2017</span>
+										<h2><a href="#">Augue lorem<br />
+										primis vestibulum</a></h2>
+									</header>
+									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
+									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
+									<ul class="actions special">
+										<li><a href="#" class="button">Full Story</a></li>
+									</ul>
+								</article>
+								-->
+							</section>
+
+							<!-- Footer removido: paginação excluída definitivamente -->
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Nome</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Messaggio</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Invia messaggio" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Indirizzo</h3>
+								<p>Viale dei Micenei, 124, 74026 Marina di Pulsano TA</p>
+							</section>
+							<section>
+								<h3>Telefono</h3>
+								<p><a href="tel:+393463446699">+39 3463446699</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:Silvanalocalsup@virgilio.it">Silvanalocalsup@virgilio.it</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://wa.me/5511999999999" class="icon brands alt fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+									<li><a href="https://instagram.com/direct/t/seu_usuario" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+		<!-- Localização / Google Maps -->
+		<div style="width: 100vw; margin: 0 0 0 50%; transform: translateX(-50%);">
+		  <div style="width: 100%; height: 400px; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.08); margin-bottom: 0;">
+			<iframe
+			  src="https://www.google.com/maps?q=Viale+dei+Micenei,+124,+74026+Marina+di+Pulsano+TA,+Italy&z=17&output=embed"
+			  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+		</div>
+
+		<!-- Copyright removido para o mapa ser o último elemento -->
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	<!-- Botão flutuante WhatsApp -->
+<a href="https://wa.me/5511999999999" target="_blank" id="whatsapp-float" style="position:fixed;z-index:9999;bottom:32px;right:32px;width:60px;height:60px;background:#25d366;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;transition:box-shadow 0.2s;">
+  <img src="images/wpp.png" alt="WhatsApp" style="width:36px;height:36px;display:block;" />
+</a>
+
+	<!-- Botão flutuante Instagram -->
+<a href="https://instagram.com/direct/t/seu_usuario" target="_blank" id="instagram-float" style="position:fixed;z-index:9999;bottom:104px;right:32px;width:60px;height:60px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;transition:box-shadow 0.2s;">
+  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="16" fill="#fff"/>
+    <rect x="7" y="7" width="18" height="18" rx="5" stroke="#E1306C" stroke-width="2"/>
+    <circle cx="16" cy="16" r="5" stroke="#E1306C" stroke-width="2"/>
+    <circle cx="22.5" cy="9.5" r="1.5" fill="#E1306C"/>
+  </svg>
+</a>
+
+<!-- Modal Calendário -->
+<style>
+  .calendar-modal-overlay {
+    display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(30,37,45,0.55); z-index: 9998;
+  }
+  .calendar-modal {
+    display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    z-index: 9999;
+    width: 520px;
+    min-height: 520px;
+    max-width: 95vw;
+    max-height: 95vh;
+    background: #fff;
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 32px rgba(24,191,239,0.10), 0 2px 16px rgba(0,0,0,0.10);
+    padding: 2.5rem 1rem 2rem 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    animation: calendarFadeIn 0.25s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .calendar-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #18bfef;
+    cursor: pointer;
+    padding: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background 0.18s, color 0.18s;
+    z-index: 1;
+  }
+  .calendar-modal-close:hover {
+    background: #f6fafd;
+    color: #139dc7;
+  }
+  .calendar-title-row {
+    display: flex; align-items: center; justify-content: center; gap: 2.5rem; margin-bottom: 1.2rem;
+    flex-shrink: 0;
+  }
+  .calendar-arrow {
+    background: #f6fafd; border: none; color: #18bfef; font-size: 2.1rem; cursor: pointer; padding: 0 0.7rem; border-radius: 50%; transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 2px 8px rgba(24,191,239,0.08);
+    outline: none;
+    border: 2px solid #e0f4fa;
+  }
+  .calendar-arrow:active, .calendar-arrow:focus {
+    background: #e0f4fa;
+    color: #1e8566;
+    box-shadow: 0 4px 16px rgba(24,191,239,0.18);
+    border-color: #18bfef;
+  }
+  .calendar-arrow[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background: #f6fafd;
+    color: #b3dbe7;
+    border-color: #e0f4fa;
+    box-shadow: none;
+  }
+  .calendar-title {
+    text-align: center; font-weight: 900; color: #18bfef; font-size: 1.7rem; letter-spacing: 0.04em;
+    flex: none;
+    margin: 0 1rem;
+  }
+  #calendar-table-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+  }
+  .calendar-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0.5rem 0.2rem;
+    text-align: center;
+    font-family: 'Source Sans Pro', Helvetica, sans-serif;
+    font-size: 1.08rem;
+    background: none;
+    margin-bottom: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 340px;
+  }
+  .calendar-table th, .calendar-table td {
+    font-size: 0.98rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0;
+  }
+  .calendar-table th {
+    color: #18bfef; font-weight: 900; font-size: 1.15rem; padding-bottom: 0.7rem; background: none;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+  .calendar-table td {
+    background: #f6fafd; border-radius: 0.9rem; box-shadow: 0 1px 4px rgba(24,191,239,0.04);
+    width: 3.7rem; height: 2.3rem; vertical-align: middle; color: #212931; font-weight: 600;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+    cursor: pointer; position: relative;
+    outline: none;
+    border: none;
+    user-select: none;
+    text-align: center;
+    font-size: 1.13rem;
+  }
+  .calendar-table td.free {
+    background: #d1f7e8;
+    color: #1e8566;
+    font-weight: 900;
+    border: 2px solid #18bfef;
+    box-shadow: 0 2px 8px rgba(24,191,239,0.08);
+  }
+  .calendar-table td:hover {
+    background: #e0f4fa;
+    color: #18bfef;
+    box-shadow: 0 2px 8px rgba(24,191,239,0.13);
+    z-index: 2;
+  }
+  .calendar-table td.selected {
+    background: #18bfef !important;
+    color: #fff !important;
+    font-weight: 900;
+    box-shadow: 0 2px 12px rgba(24,191,239,0.18);
+    border: 2px solid #18bfef;
+  }
+  .calendar-legend {
+    margin-top: 0.7rem; color: #1e8566; font-size: 1.07rem; text-align: center;
+    letter-spacing: 0.01em;
+    flex-shrink: 0;
+  }
+  .calendar-next-btn {
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+  }
+  .calendar-next-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-width: 140px;
+    padding: 0.85rem 1.5rem;
+    background: #18bfef;
+    color: #fff;
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.08rem;
+    border: none;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 8px rgba(24,191,239,0.10);
+    cursor: pointer;
+    transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+    text-align: center;
+    outline: none;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    line-height: 1.2;
+  }
+  .calendar-next-btn:hover, .calendar-next-btn:focus {
+    background: #139dc7;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(24,191,239,0.16);
+  }
+  .calendar-next-btn .icon {
+    font-size: 1.2em;
+    margin-left: 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.18s;
+  }
+  .calendar-next-btn:hover .icon, .calendar-next-btn:focus .icon {
+    transform: translateX(3px);
+  }
+  .calendar-legend-small {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 0.93rem;
+    color: #717981;
+    align-items: center;
+    opacity: 0.85;
+    flex-shrink: 0;
+  }
+  .calendar-legend-sample {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 0.4em;
+    margin-right: 0.3em;
+    vertical-align: middle;
+    box-shadow: 0 1px 4px rgba(24,191,239,0.08);
+  }
+  .calendar-legend-sample.free { background: #d1f7e8; border: 2px solid #18bfef; }
+  .calendar-legend-sample.selected { background: #18bfef; border: 2px solid #18bfef; }
+  @media (max-width: 900px) {
+    .calendar-modal { max-width: 100vw; padding: 1rem 0.2rem 1rem 0.2rem; min-height: 480px; }
+    .calendar-table th, .calendar-table td { font-size: 0.95rem; width: 2.1rem; height: 2.1rem; }
+    .calendar-next-btn { padding: 0.7rem 1.2rem; font-size: 0.97rem; }
+  }
+  @media (max-width: 600px) {
+    .calendar-modal {
+      width: 98vw;
+      min-height: 420px;
+      padding: 1.2rem 0.2rem 1.2rem 0.2rem;
+    }
+  }
+</style>
+<div id="calendar-modal-overlay" class="calendar-modal-overlay"></div>
+<div id="calendar-modal" class="calendar-modal">
+  <button id="close-calendar-modal" class="calendar-modal-close" title="Chiudi">&times;</button>
+  <div class="calendar-title-row">
+    <button id="calendar-prev" class="calendar-arrow" title="Mese precedente">&lt;</button>
+    <div id="calendar-title" class="calendar-title">Giugno 2024</div>
+    <button id="calendar-next" class="calendar-arrow" title="Mese successivo">&gt;</button>
+  </div>
+  <div id="calendar-table-wrapper">
+    <!-- Calendar table will be rendered here -->
+  </div>
+</div>
+<script>
+// Calendar logic
+const calendarMonths = [
+  { name: 'Maggio', year: 2025, month: 4 },
+  { name: 'Giugno', year: 2025, month: 5 },
+  { name: 'Luglio', year: 2025, month: 6 },
+  { name: 'Agosto', year: 2025, month: 7 },
+  { name: 'Settembre', year: 2025, month: 8 }
+];
+let calendarIndex = 1; // Start at Giugno
+const calendarTitle = document.getElementById('calendar-title');
+const calendarTableWrapper = document.getElementById('calendar-table-wrapper');
+const calendarPrev = document.getElementById('calendar-prev');
+const calendarNext = document.getElementById('calendar-next');
+
+let calendarStep = 'days'; // 'days' ou 'times'
+let selectedTime = null;
+
+function renderCalendar() {
+  if (calendarStep !== 'days') return;
+  const { name, year, month } = calendarMonths[calendarIndex];
+  calendarTitle.textContent = `${name} ${year}`;
+  // Disable prev/next if at limits
+  calendarPrev.disabled = calendarIndex === 0;
+  calendarNext.disabled = calendarIndex === calendarMonths.length - 1;
+  // Show navigation arrows only for calendar view
+  calendarPrev.style.display = 'block';
+  calendarNext.style.display = 'block';
+
+  // Days of week: 0=Dom, 1=Lun, ...
+  const daysOfWeek = ['Lun', 'Mar', 'Mer', 'Gio', 'Ven', 'Sab', 'Dom'];
+  let firstDay = new Date(year, month, 1).getDay();
+  firstDay = firstDay === 0 ? 6 : firstDay - 1; // Ajusta para começar em segunda
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  let lastDay = daysInMonth;
+  if (month === 8) lastDay = 10; // Setembro só até dia 10
+
+  let html = '<div class="calendar-content-center">';
+  html += '<table class="calendar-table"><thead><tr>';
+  for (let d = 0; d < 7; d++) html += `<th>${daysOfWeek[d]}</th>`;
+  html += '</tr></thead><tbody>';
+  let day = 1;
+  for (let w = 0; w < 6 && day <= lastDay; w++) {
+    html += '<tr>';
+    for (let d = 0; d < 7; d++) {
+      if ((w === 0 && d < firstDay) || day > lastDay) {
+        html += '<td></td>';
+      } else {
+        // Free days: terça a domingo (d !== 0)
+        let free = (d !== 0) ? 'free' : '';
+        html += `<td class="${free}" data-day="${day}">${day}</td>`;
+        day++;
+      }
+    }
+    html += '</tr>';
+  }
+  html += '</tbody></table>';
+  html += '</div>';
+  // Botão Avanti sempre visível, desabilitado até selecionar
+  html += '<button id="calendar-next-btn" class="calendar-next-btn" disabled>Avanti <span class="icon">&#8594;</span></button>';
+  calendarTableWrapper.innerHTML = html;
+  // Seleção visual e botão Avanti
+  const calendarNextBtn = document.getElementById('calendar-next-btn');
+  document.querySelectorAll('.calendar-table td').forEach(function(td) {
+    td.addEventListener('click', function(e) {
+      if (!td.textContent.trim()) return;
+      document.querySelectorAll('.calendar-table td.selected').forEach(function(sel) {
+        sel.classList.remove('selected');
+      });
+      td.classList.add('selected');
+      calendarNextBtn.disabled = false;
+    });
+  });
+  calendarNextBtn.onclick = function() {
+    if (!calendarNextBtn.disabled) {
+      calendarStep = 'times';
+      renderTimes();
+    }
+  };
+}
+
+function renderTimes() {
+  calendarTableWrapper.innerHTML = '';
+  // Hide navigation arrows for times view
+  calendarPrev.style.display = 'none';
+  calendarNext.style.display = 'none';
+  calendarTitle.textContent = 'Scegli orario';
+  
+  // Horários disponíveis
+  const times = ['10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
+  let html = '<div class="calendar-content-center">';
+  html += '<div class="calendar-times-grid">';
+  times.forEach(time => {
+    html += `<button class="calendar-time-btn" data-time="${time}">${time}</button>`;
+  });
+  html += '</div>';
+  html += '<div class="calendar-legend-small" style="margin-top:1.2rem;">'
+    + '<span><span class="calendar-legend-sample free"></span>Libero</span>'
+    + '<span><span class="calendar-legend-sample selected"></span>Selezionato</span>'
+    + '</div>';
+  html += '<div class="calendar-times-actions">'
+    + '<button class="calendar-times-btn" id="calendar-back-btn">Indietro</button>'
+    + '<button class="calendar-times-btn" id="calendar-confirm-btn" disabled>Conferma</button>'
+    + '</div>';
+  html += '</div>';
+  calendarTableWrapper.innerHTML = html;
+  // Seleção de horário
+  selectedTime = null;
+  document.querySelectorAll('.calendar-time-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.calendar-time-btn.selected').forEach(function(sel) {
+        sel.classList.remove('selected');
+      });
+      btn.classList.add('selected');
+      selectedTime = btn.getAttribute('data-time');
+      document.getElementById('calendar-confirm-btn').disabled = false;
+    });
+  });
+  // Voltar para dias
+  document.getElementById('calendar-back-btn').onclick = function() {
+    calendarStep = 'days';
+    renderCalendar();
+  };
+  // Conferma (avança para o formulário)
+  document.getElementById('calendar-confirm-btn').onclick = function() {
+    calendarStep = 'form';
+    renderForm();
+  };
+}
+
+function renderForm() {
+  calendarTableWrapper.innerHTML = '';
+  // Hide navigation arrows for form view
+  calendarPrev.style.display = 'none';
+  calendarNext.style.display = 'none';
+  calendarTitle.textContent = 'I tuoi dati';
+  
+  let html = '<div class="calendar-content-center">';
+  html += '<form id="calendar-form" style="width:100%;display:flex;flex-direction:column;gap:1.1rem;">';
+  html += '<input type="text" id="calendar-form-nome" name="nome" placeholder="Nome" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">';
+  html += '<input type="number" id="calendar-form-eta" name="eta" placeholder="Età" min="1" max="120" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">';
+  html += '<input type="tel" id="calendar-form-tel" name="tel" placeholder="Telefono" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">';
+  html += '<div class="calendar-times-actions" style="margin-top:0.5rem;">'
+    + '<button type="button" class="calendar-times-btn" id="calendar-form-back">Indietro</button>'
+    + '<button type="submit" class="calendar-times-btn" id="calendar-form-send">Invia richiesta</button>'
+    + '</div>';
+  html += '</form>';
+  html += '</div>';
+  calendarTableWrapper.innerHTML = html;
+  // Voltar para horários
+  document.getElementById('calendar-form-back').onclick = function() {
+    calendarStep = 'times';
+    renderTimes();
+  };
+  // Enviar pedido
+  document.getElementById('calendar-form').onsubmit = function(e) {
+    e.preventDefault();
+    const nome = document.getElementById('calendar-form-nome').value.trim();
+    const eta = document.getElementById('calendar-form-eta').value.trim();
+    const tel = document.getElementById('calendar-form-tel').value.trim();
+    if (!nome || !eta || !tel) {
+      // Mensagem de erro simples
+      alert('Per favore, compila tutti i campi.');
+      return;
+    }
+    // Tela de sucesso estilizada
+    let successHtml = '<div class="calendar-content-center" style="text-align:center;">';
+    successHtml += '<div style="font-size:3.2rem;color:#18bfef;margin-bottom:1.1rem;">✔️</div>';
+    successHtml += '<div style="font-size:1.35rem;font-weight:700;color:#1e8566;margin-bottom:0.7rem;">Richiesta inviata!</div>';
+    successHtml += '<div style="font-size:1.05rem;color:#717981;margin-bottom:1.5rem;">Grazie, ti ricontatteremo al più presto.<br>Controlla WhatsApp o email per la conferma.</div>';
+    successHtml += '<button id="calendar-success-close" class="calendar-times-btn" style="min-width:120px;">Chiudi</button>';
+    successHtml += '</div>';
+    calendarTableWrapper.innerHTML = successHtml;
+    // Fechar ao clicar em Chiudi
+    document.getElementById('calendar-success-close').onclick = function() {
+      document.getElementById('calendar-modal').style.display = 'none';
+      document.getElementById('calendar-modal-overlay').style.display = 'none';
+    };
+    // Fechar automaticamente após 3 segundos
+    setTimeout(function() {
+      if (document.getElementById('calendar-modal').style.display !== 'none') {
+        document.getElementById('calendar-modal').style.display = 'none';
+        document.getElementById('calendar-modal-overlay').style.display = 'none';
+      }
+    }, 3000);
+  };
+}
+
+calendarPrev.onclick = function() {
+  if (calendarIndex > 0) {
+    calendarIndex--;
+    renderCalendar();
+  }
+};
+calendarNext.onclick = function() {
+  if (calendarIndex < calendarMonths.length - 1) {
+    calendarIndex++;
+    renderCalendar();
+  }
+};
+// Modal open/close
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('open-calendar-modal').onclick = function(e) {
+    e.preventDefault();
+    document.getElementById('calendar-modal').style.display = 'block';
+    document.getElementById('calendar-modal-overlay').style.display = 'block';
+    calendarStep = 'days';
+    renderCalendar();
+  };
+  document.getElementById('close-calendar-modal').onclick = function() {
+    document.getElementById('calendar-modal').style.display = 'none';
+    document.getElementById('calendar-modal-overlay').style.display = 'none';
+  };
+  document.getElementById('calendar-modal-overlay').onclick = function() {
+    document.getElementById('calendar-modal').style.display = 'none';
+    document.getElementById('calendar-modal-overlay').style.display = 'none';
+  };
+});
+</script>
+<script>
+document.getElementById('calendar-modal').style.display = 'none';
+document.getElementById('calendar-modal-overlay').style.display = 'none';
+</script>
+
+	<!-- Lightbox para imagens da seção LA PAGAIA -->
+<script>
+// Lightbox para imagens da seção LA PAGAIA
+function setupPagaiaLightbox() {
+  document.querySelectorAll('#pagaia .coluna-esquerda img, #pagaia .coluna-direita img').forEach(function(img) {
+    img.onclick = function() {
+      // Cria overlay
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      // Cria imagem expandida
+      const bigImg = document.createElement('img');
+      bigImg.src = img.src;
+      bigImg.alt = img.alt;
+      bigImg.className = 'lightbox-img';
+      // Botão de fechar
+      const closeBtn = document.createElement('button');
+      closeBtn.className = 'lightbox-close';
+      closeBtn.innerHTML = '&times;';
+      closeBtn.onclick = function(e) {
+        e.stopPropagation();
+        document.body.removeChild(overlay);
+      };
+      overlay.appendChild(bigImg);
+      overlay.appendChild(closeBtn);
+      overlay.onclick = function(e) {
+        if (e.target === overlay) document.body.removeChild(overlay);
+      };
+      document.body.appendChild(overlay);
+    };
+  });
+}
+document.addEventListener('DOMContentLoaded', setupPagaiaLightbox);
+</script>
+
+	<!-- Bandeiras de idioma no topo direito -->
+<style>
+  .language-flags {
+    position: fixed;
+    top: 18px;
+    right: 32px;
+    z-index: 10001;
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+  }
+  .language-flag-btn {
+    background: #fff;
+    border: 2px solid #e0f4fa;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(24,191,239,0.10);
+    cursor: pointer;
+    transition: box-shadow 0.18s, border 0.18s, transform 0.18s;
+    padding: 0;
+    outline: none;
+  }
+  .language-flag-btn:hover, .language-flag-btn:focus {
+    box-shadow: 0 4px 16px rgba(24,191,239,0.18);
+    border: 2px solid #18bfef;
+    transform: scale(1.08);
+  }
+  .language-flag-btn.active {
+    border: 2px solid #18bfef;
+    box-shadow: 0 4px 16px rgba(24,191,239,0.18);
+  }
+  .language-flag-btn svg {
+    width: 26px;
+    height: 26px;
+    display: block;
+  }
+  @media (max-width: 600px) {
+    .language-flags {
+      top: 8px;
+      right: 8px;
+      gap: 0.4rem;
+    }
+    .language-flag-btn {
+      width: 32px;
+      height: 32px;
+    }
+    .language-flag-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+</style>
+<div class="language-flags">
+  <button class="language-flag-btn" id="lang-en" title="English" aria-label="English">
+    <!-- Bandeira do Reino Unido (Inglês) -->
+    <svg viewBox="0 0 32 32"><clipPath id="uk"><rect width="32" height="32" rx="16"/></clipPath><g clip-path="url(#uk)"><rect width="32" height="32" fill="#00247d"/><path d="M0 0l32 32M32 0L0 32" stroke="#fff" stroke-width="6"/><path d="M0 0l32 32M32 0L0 32" stroke="#cf142b" stroke-width="3"/><rect x="13" width="6" height="32" fill="#fff"/><rect y="13" width="32" height="6" fill="#fff"/><rect x="14.5" width="3" height="32" fill="#cf142b"/><rect y="14.5" width="32" height="3" fill="#cf142b"/></g></svg>
+  </button>
+  <button class="language-flag-btn" id="lang-it" title="Italiano" aria-label="Italiano">
+    <!-- Bandeira da Itália -->
+    <svg viewBox="0 0 32 32"><clipPath id="it"><rect width="32" height="32" rx="16"/></clipPath><g clip-path="url(#it)"><rect width="32" height="32" fill="#fff"/><rect width="10.67" height="32" fill="#009246"/><rect x="21.33" width="10.67" height="32" fill="#ce2b37"/></g></svg>
+  </button>
+</div>
+<!-- Fim das bandeiras de idioma -->
+
+<!-- Sistema de Internacionalização -->
+<script>
+// Traduções
+const translations = {
+  en: {
+    // Intro
+    intro_title: "Stand Up Paddle Experience",
+    intro_subtitle: "From theory on shore to relaxation on hidden coves: everything included.",
+    
+    // Navigation
+    nav_home: "Home",
+    nav_theory_practice: "Theory & Practice",
+    nav_paddle: "The Paddle",
+    nav_calendar: "Calendar",
+    
+    // Featured Post
+    info_label: "Information:",
+    featured_title: "A unique experience between sea, sport and nature!",
+    featured_text: `Our SUP lessons begin with an introductory briefing of about 10 minutes, during which we'll talk about sea safety, the fundamentals of Stand Up Paddle and the anatomy of board and paddle.<br>
+    Immediately after, we move on to the most fun part: sea practice!<br><br>
+
+    During the tour, we'll make a relaxing stop on one of the nearby beaches, perfect for recharging energy and enjoying the landscape.<br>
+    Upon advance request, a marine biologist can accompany us to tell us curiosities about the flora and fauna of the wonderful Ionian coast.<br><br>
+
+    The experience lasts about 1 hour and 30 minutes and includes all necessary equipment: board, paddle, life jacket, refreshing drinks, snacks and lots of souvenir photos!<br><br>
+
+    Activities are suitable for everyone, starting from 8 years old, with groups up to a maximum of 10 participants.<br>
+    Lessons are available in Italian, English, Portuguese and Spanish.`,
+    book_now: "Book Now",
+    
+    // Theory & Practice Section
+    theory_practice_title: "THEORETICAL and PRACTICAL PART",
+    theory_title: "THEORETICAL part on land",
+    theory_points: `• Anatomy of the board, anatomy of the paddle and their usage methods<br>
+    • Use of the leash<br>
+    • Considerations on weather, sea conditions, winds, coastal breezes and sea entry points before entering the water<br>
+    • Main ordinances of the port authority that regulate rider conduct in inland waters`,
+    practice_title: "PRACTICAL part at sea",
+    practice_points: `• Review of technical topics<br>
+    • After adjusting the paddle and fastening the leash, we proceed to acclimatization, exit against wind/current and return with favor<br>
+    • First paddle movements on knees<br>
+    • Basic paddling in standing position on the board<br>
+    • Basic maneuver to turn<br>
+    • Return by kneeling near the shore`,
+    
+    // Paddle Section
+    paddle_title: "THE PADDLE",
+    paddle_description: "A paddle differs from an oar in that, unlike the latter, the paddle does not have a support (oarlock) that ties it to the hull. The paddle is actually held in the rider's hands.",
+    
+    // Footer
+    footer_name: "Name",
+    footer_email: "Email",
+    footer_message: "Message",
+    footer_send: "Send message",
+    footer_address: "Address",
+    footer_address_value: "Viale dei Micenei, 124, 74026 Marina di Pulsano TA",
+    footer_phone: "Phone",
+    footer_phone_value: "+39 3463446699",
+    footer_email_value: "Silvanalocalsup@virgilio.it",
+    footer_social: "Social",
+    
+    // Calendar Modal
+    calendar_title: "June 2024",
+    calendar_choose_time: "Choose time",
+    calendar_your_data: "Your data",
+    calendar_free: "Free",
+    calendar_selected: "Selected",
+    calendar_next: "Next",
+    calendar_back: "Back",
+    calendar_confirm: "Confirm",
+    calendar_form_name: "Name",
+    calendar_form_age: "Age",
+    calendar_form_phone: "Phone",
+    calendar_form_send: "Send request",
+    calendar_form_error: "Please fill in all fields.",
+    calendar_success_title: "Request sent!",
+    calendar_success_message: "Thank you, we'll get back to you soon.<br>Check WhatsApp or email for confirmation.",
+    calendar_close: "Close",
+    
+    // Days of week
+    mon: "Mon",
+    tue: "Tue", 
+    wed: "Wed",
+    thu: "Thu",
+    fri: "Fri",
+    sat: "Sat",
+    sun: "Sun"
+  },
+  
+  it: {
+    // Intro
+    intro_title: "Stand Up Paddle Experience",
+    intro_subtitle: "Dalla teoria in riva al relax su calette nascoste: tutto l'occorrente incluso.",
+    
+    // Navigation
+    nav_home: "Home",
+    nav_theory_practice: "Teoria e Pratica",
+    nav_paddle: "La Pagaia",
+    nav_calendar: "Calendario",
+    
+    // Featured Post
+    info_label: "Informazioni:",
+    featured_title: "Un'esperienza unica tra mare, sport e natura!",
+    featured_text: `Le nostre lezioni di SUP iniziano con un briefing introduttivo di circa 10 minuti, durante il quale parleremo della sicurezza in mare, dei fondamenti dello Stand Up Paddle e dell'anatomia di tavola e pagaia.<br>
+    Subito dopo, si passa alla parte più divertente: la pratica in mare!<br><br>
+
+    Durante il tour, faremo una sosta rilassante su una delle spiagge limitrofe, perfetta per ricaricare le energie e godersi il paesaggio.<br>
+    Su richiesta anticipata, un biologo marino potrà accompagnarci per raccontarci curiosità su flora e fauna della meravigliosa costa ionica.<br><br>
+
+    L'esperienza dura circa 1 ora e 30 minuti ed è comprensiva di tutta l'attrezzatura necessaria: tavola, pagaia, giubbotto salvagente, bevande rinfrescanti, snack e tante foto ricordo!<br><br>
+
+    Le attività sono adatte a tutti, a partire dagli 8 anni, con gruppi fino a un massimo di 10 partecipanti.<br>
+    Le lezioni sono disponibili in italiano, inglese, portoghese e spagnolo.`,
+    book_now: "Prenota Ora",
+    
+    // Theory & Practice Section
+    theory_practice_title: "PARTE TEORICA e PRATICA",
+    theory_title: "PARTE TEORICA a terra",
+    theory_points: `• Anatomia della tavola, anatomia della pagaia e loro modalità di utilizzo<br>
+    • Uso del leash<br>
+    • Considerazioni sul meteo, sulle condizioni del mare, sui venti, sulle brezze costiere e sui punti di ingresso in mare prima di entrare in acqua<br>
+    • Principali ordinanze della capitaneria di porto che regolano la condotta del rider nelle acque interne`,
+    practice_title: "PARTE PRATICA in mare",
+    practice_points: `• Ripresa degli argomenti tecnici<br>
+    • Dopo aver regolato la pagaia ed allacciato il leash si procede all'ambientamento, uscita contro vento/corrente e ritorno a favore<br>
+    • Primi movimenti di pagaiata in ginocchio<br>
+    • Pagaiata base in posizione eretta sulla tavola<br>
+    • Manovra base per virare<br>
+    • Ritorno inginocchiandosi in prossimità della riva`,
+    
+    // Paddle Section
+    paddle_title: "LA PAGAIA (paddle)",
+    paddle_description: "Una pagaia si distingue da un remo per il fatto che, diversamente da quest'ultimo, la pagaia non ha un appoggio (scalmo) che la lega allo scafo. La pagaia infatti è tenuta nelle mani del rider.",
+    
+    // Footer
+    footer_name: "Nome",
+    footer_email: "Email",
+    footer_message: "Messaggio",
+    footer_send: "Invia messaggio",
+    footer_address: "Indirizzo",
+    footer_address_value: "Viale dei Micenei, 124, 74026 Marina di Pulsano TA",
+    footer_phone: "Telefono",
+    footer_phone_value: "+39 3463446699",
+    footer_email_value: "Silvanalocalsup@virgilio.it",
+    footer_social: "Social",
+    
+    // Calendar Modal
+    calendar_title: "Giugno 2024",
+    calendar_choose_time: "Scegli orario",
+    calendar_your_data: "I tuoi dati",
+    calendar_free: "Libero",
+    calendar_selected: "Selezionato",
+    calendar_next: "Avanti",
+    calendar_back: "Indietro",
+    calendar_confirm: "Conferma",
+    calendar_form_name: "Nome",
+    calendar_form_age: "Età",
+    calendar_form_phone: "Telefono",
+    calendar_form_send: "Invia richiesta",
+    calendar_form_error: "Per favore, compila tutti i campi.",
+    calendar_success_title: "Richiesta inviata!",
+    calendar_success_message: "Grazie, ti ricontatteremo al più presto.<br>Controlla WhatsApp o email per la conferma.",
+    calendar_close: "Chiudi",
+    
+    // Days of week
+    mon: "Lun",
+    tue: "Mar", 
+    wed: "Mer",
+    thu: "Gio",
+    fri: "Ven",
+    sat: "Sab",
+    sun: "Dom"
+  }
+};
+
+// Estado atual do idioma
+let currentLanguage = localStorage.getItem('language') || 'it';
+
+// Função para trocar idioma
+function changeLanguage(lang) {
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+  
+  // Atualizar botões de idioma
+  document.querySelectorAll('.language-flag-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  document.getElementById(`lang-${lang}`).classList.add('active');
+  
+  // Atualizar todos os textos
+  updateAllTexts();
+  
+  // Re-renderizar calendário se estiver aberto
+  if (calendarStep === 'days') {
+    renderCalendar();
+  }
+}
+
+// Função para atualizar todos os textos
+function updateAllTexts() {
+  const t = translations[currentLanguage];
+  
+  // Intro
+  document.querySelector('#intro h1').innerHTML = t.intro_title.replace('<br />', '<br />');
+  document.querySelector('#intro p').textContent = t.intro_subtitle;
+  
+  // Navigation
+  document.querySelector('.links li.active a').textContent = t.nav_home;
+  document.querySelector('.links li:nth-child(2) a').textContent = t.nav_theory_practice;
+  document.querySelector('.links li:nth-child(3) a').textContent = t.nav_paddle;
+  document.querySelector('.links li:nth-child(4) a').textContent = t.nav_calendar;
+  
+  // Featured Post
+  document.querySelector('.post.featured .date').textContent = t.info_label;
+  document.querySelector('.post.featured h2').textContent = t.featured_title;
+  document.querySelector('.post.featured p').innerHTML = t.featured_text;
+  document.querySelector('.post.featured .button').textContent = t.book_now;
+  
+  // Theory & Practice Section
+  document.querySelector('#teorica-pratica h2').textContent = t.theory_practice_title;
+  document.querySelector('#teorica-pratica .coluna-esquerda strong').textContent = t.theory_title;
+  document.querySelector('#teorica-pratica .coluna-esquerda').innerHTML = document.querySelector('#teorica-pratica .coluna-esquerda').innerHTML.replace(
+    /<strong>.*?<\/strong>.*?<\/div>/s,
+    `<strong>${t.theory_title}</strong><br>${t.theory_points}</div>`
+  );
+  document.querySelector('#teorica-pratica .coluna-direita strong').textContent = t.practice_title;
+  document.querySelector('#teorica-pratica .coluna-direita').innerHTML = document.querySelector('#teorica-pratica .coluna-direita').innerHTML.replace(
+    /<strong>.*?<\/strong>.*?<\/div>/s,
+    `<strong>${t.practice_title}</strong><br>${t.practice_points}</div>`
+  );
+  
+  // Paddle Section
+  document.querySelector('#pagaia h2').textContent = t.paddle_title;
+  document.querySelector('#pagaia p').textContent = t.paddle_description;
+  
+  // Footer
+  document.querySelector('label[for="name"]').textContent = t.footer_name;
+  document.querySelector('label[for="email"]').textContent = t.footer_email;
+  document.querySelector('label[for="message"]').textContent = t.footer_message;
+  document.querySelector('input[type="submit"]').value = t.footer_send;
+  document.querySelector('section.alt h3').textContent = t.footer_address;
+  document.querySelector('section:nth-child(2) h3').textContent = t.footer_phone;
+  document.querySelector('section:nth-child(3) h3').textContent = t.footer_email;
+  document.querySelector('section:nth-child(4) h3').textContent = t.footer_social;
+}
+
+// Event listeners para os botões de idioma
+document.addEventListener('DOMContentLoaded', function() {
+  // Configurar botões de idioma
+  document.getElementById('lang-en').addEventListener('click', () => changeLanguage('en'));
+  document.getElementById('lang-it').addEventListener('click', () => changeLanguage('it'));
+  
+  // Aplicar idioma inicial
+  changeLanguage(currentLanguage);
+  
+  // Configurar calendário com traduções
+  const calendarMonths = [
+    { name: currentLanguage === 'en' ? 'May' : 'Maggio', year: 2025, month: 4 },
+    { name: currentLanguage === 'en' ? 'June' : 'Giugno', year: 2025, month: 5 },
+    { name: currentLanguage === 'en' ? 'July' : 'Luglio', year: 2025, month: 6 },
+    { name: currentLanguage === 'en' ? 'August' : 'Agosto', year: 2025, month: 7 },
+    { name: currentLanguage === 'en' ? 'September' : 'Settembre', year: 2025, month: 8 }
+  ];
+  
+  // Atualizar função renderCalendar para usar traduções
+  window.renderCalendar = function() {
+    if (calendarStep !== 'days') return;
+    const { name, year, month } = calendarMonths[calendarIndex];
+    calendarTitle.textContent = `${name} ${year}`;
+    
+    calendarPrev.disabled = calendarIndex === 0;
+    calendarNext.disabled = calendarIndex === calendarMonths.length - 1;
+    calendarPrev.style.display = 'block';
+    calendarNext.style.display = 'block';
+
+    const t = translations[currentLanguage];
+    const daysOfWeek = [t.mon, t.tue, t.wed, t.thu, t.fri, t.sat, t.sun];
+    let firstDay = new Date(year, month, 1).getDay();
+    firstDay = firstDay === 0 ? 6 : firstDay - 1;
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    let lastDay = daysInMonth;
+    if (month === 8) lastDay = 10;
+
+    let html = '<div class="calendar-content-center">';
+    html += '<table class="calendar-table"><thead><tr>';
+    for (let d = 0; d < 7; d++) html += `<th>${daysOfWeek[d]}</th>`;
+    html += '</tr></thead><tbody>';
+    let day = 1;
+    for (let w = 0; w < 6 && day <= lastDay; w++) {
+      html += '<tr>';
+      for (let d = 0; d < 7; d++) {
+        if ((w === 0 && d < firstDay) || day > lastDay) {
+          html += '<td></td>';
+        } else {
+          let free = (d !== 0) ? 'free' : '';
+          html += `<td class="${free}" data-day="${day}">${day}</td>`;
+          day++;
+        }
+      }
+      html += '</tr>';
+    }
+    html += '</tbody></table>';
+    html += '</div>';
+    html += `<button id="calendar-next-btn" class="calendar-next-btn" disabled>${t.calendar_next} <span class="icon">&#8594;</span></button>`;
+    calendarTableWrapper.innerHTML = html;
+    
+    const calendarNextBtn = document.getElementById('calendar-next-btn');
+    document.querySelectorAll('.calendar-table td').forEach(function(td) {
+      td.addEventListener('click', function(e) {
+        if (!td.textContent.trim()) return;
+        document.querySelectorAll('.calendar-table td.selected').forEach(function(sel) {
+          sel.classList.remove('selected');
+        });
+        td.classList.add('selected');
+        calendarNextBtn.disabled = false;
+      });
+    });
+    calendarNextBtn.onclick = function() {
+      if (!calendarNextBtn.disabled) {
+        calendarStep = 'times';
+        renderTimes();
+      }
+    };
+  };
+  
+  // Atualizar função renderTimes para usar traduções
+  window.renderTimes = function() {
+    calendarTableWrapper.innerHTML = '';
+    calendarPrev.style.display = 'none';
+    calendarNext.style.display = 'none';
+    calendarTitle.textContent = translations[currentLanguage].calendar_choose_time;
+    
+    const times = ['10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
+    const t = translations[currentLanguage];
+    let html = '<div class="calendar-content-center">';
+    html += '<div class="calendar-times-grid">';
+    times.forEach(time => {
+      html += `<button class="calendar-time-btn" data-time="${time}">${time}</button>`;
+    });
+    html += '</div>';
+    html += `<div class="calendar-legend-small" style="margin-top:1.2rem;">`
+      + `<span><span class="calendar-legend-sample free"></span>${t.calendar_free}</span>`
+      + `<span><span class="calendar-legend-sample selected"></span>${t.calendar_selected}</span>`
+      + '</div>';
+    html += '<div class="calendar-times-actions">'
+      + `<button class="calendar-times-btn" id="calendar-back-btn">${t.calendar_back}</button>`
+      + `<button class="calendar-times-btn" id="calendar-confirm-btn" disabled>${t.calendar_confirm}</button>`
+      + '</div>';
+    html += '</div>';
+    calendarTableWrapper.innerHTML = html;
+    
+    selectedTime = null;
+    document.querySelectorAll('.calendar-time-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.calendar-time-btn.selected').forEach(function(sel) {
+          sel.classList.remove('selected');
+        });
+        btn.classList.add('selected');
+        selectedTime = btn.getAttribute('data-time');
+        document.getElementById('calendar-confirm-btn').disabled = false;
+      });
+    });
+    
+    document.getElementById('calendar-back-btn').onclick = function() {
+      calendarStep = 'days';
+      renderCalendar();
+    };
+    
+    document.getElementById('calendar-confirm-btn').onclick = function() {
+      calendarStep = 'form';
+      renderForm();
+    };
+  };
+  
+  // Atualizar função renderForm para usar traduções
+  window.renderForm = function() {
+    calendarTableWrapper.innerHTML = '';
+    calendarPrev.style.display = 'none';
+    calendarNext.style.display = 'none';
+    calendarTitle.textContent = translations[currentLanguage].calendar_your_data;
+    
+    const t = translations[currentLanguage];
+    let html = '<div class="calendar-content-center">';
+    html += '<form id="calendar-form" style="width:100%;display:flex;flex-direction:column;gap:1.1rem;">';
+    html += `<input type="text" id="calendar-form-nome" name="nome" placeholder="${t.calendar_form_name}" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">`;
+    html += `<input type="number" id="calendar-form-eta" name="eta" placeholder="${t.calendar_form_age}" min="1" max="120" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">`;
+    html += `<input type="tel" id="calendar-form-tel" name="tel" placeholder="${t.calendar_form_phone}" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">`;
+    html += '<div class="calendar-times-actions" style="margin-top:0.5rem;">'
+      + `<button type="button" class="calendar-times-btn" id="calendar-form-back">${t.calendar_back}</button>`
+      + `<button type="submit" class="calendar-times-btn" id="calendar-form-send">${t.calendar_form_send}</button>`
+      + '</div>';
+    html += '</form>';
+    html += '</div>';
+    calendarTableWrapper.innerHTML = html;
+    
+    document.getElementById('calendar-form-back').onclick = function() {
+      calendarStep = 'times';
+      renderTimes();
+    };
+    
+    document.getElementById('calendar-form').onsubmit = function(e) {
+      e.preventDefault();
+      const nome = document.getElementById('calendar-form-nome').value.trim();
+      const eta = document.getElementById('calendar-form-eta').value.trim();
+      const tel = document.getElementById('calendar-form-tel').value.trim();
+      if (!nome || !eta || !tel) {
+        alert(t.calendar_form_error);
+        return;
+      }
+      
+      let successHtml = '<div class="calendar-content-center" style="text-align:center;">';
+      successHtml += '<div style="font-size:3.2rem;color:#18bfef;margin-bottom:1.1rem;">✔️</div>';
+      successHtml += `<div style="font-size:1.35rem;font-weight:700;color:#1e8566;margin-bottom:0.7rem;">${t.calendar_success_title}</div>`;
+      successHtml += `<div style="font-size:1.05rem;color:#717981;margin-bottom:1.5rem;">${t.calendar_success_message}</div>`;
+      successHtml += `<button id="calendar-success-close" class="calendar-times-btn" style="min-width:120px;">${t.calendar_close}</button>`;
+      successHtml += '</div>';
+      calendarTableWrapper.innerHTML = successHtml;
+      
+      document.getElementById('calendar-success-close').onclick = function() {
+        document.getElementById('calendar-modal').style.display = 'none';
+        document.getElementById('calendar-modal-overlay').style.display = 'none';
+      };
+      
+      setTimeout(function() {
+        if (document.getElementById('calendar-modal').style.display !== 'none') {
+          document.getElementById('calendar-modal').style.display = 'none';
+          document.getElementById('calendar-modal-overlay').style.display = 'none';
+        }
+      }, 3000);
+    };
+  };
+});
+</script>
+
+	</body>
+</html>

@@ -1,0 +1,956 @@
+
+I (4407) CoreBD: Starting data at /sdcard/db/F412FA8170CC/data_F412FA8170CC_v11.db with size: 569344 bytes 
+I (4421) CoreBD: Opened database successfully
+
+I (4422) CoreBD: Starting failed messages at /spiffs/unsent_v11.db with size: 1024 bytes 
+I (4440) CoreBD: Opened database successfully
+
+I (4440) CoreBD: Database opened, creating tables now
+I (4516) CoreBD: CREATION SENSOR DATA TABLE :0
+I (4516) CoreBD: Database started
+I (4518) CORE: Current boot count: 2
+I (4519) WAKEUPREASONS: No lp_reboot_count recorded
+I (4519) CORE: Low energy shutdown count: 0 (excluding current one)
+W (4531) CHECKPOINT: Storing checkpoint: 11 at 4531
+W (4540) #####: ###############################################
+W (4543) CS: [VERSION]4.135
+W (4546) CS: [BATTERYVOLTAGE]4.069000
+W (4551) CS: [BATTERYPERCENTAGE]95
+W (4555) CS: [DEVICEID]F412FA8170CC
+W (4559) CS: [LORA]1
+W (4562) CS: [LTE]1
+W (4565) CS: [BLE]1
+W (4567) CS: [WIFI]1
+W (4570) CORE: Device last checkpoint: 26
+W (4575) CORE: Device last checkpoint time: 12368
+W (4580) CORE: Lora Device EUI: 
+W (4584) CORE: Lora Join EUI: 6060606060606060
+W (4590) CORE: Lora Application key: ac63e8292f9aeca88310436872948858
+W (4597) CORE: Lora Network key: ac63e8292f9aeca88310436872948858
+I (4604) CORE: Wakeup Log:
+W (4607) CORE: Wakeup reason detected by ESP: Reset by USB peripheral
+W (4614) CORE: Defining main wake up reason: 0  & 11 has insufficient voltage: 0
+I (4623) CORE: Last normal working mode timestamp: 1750956740, current timestamp: 1750956754, defined interval: 870, time difference: 14
+W (4614) CORE: Main wakeup source reason: 111
+I (4641) WAKEUPREASONS: No lp_reboot_count recorded
+W (4647) CORE: Current working mode: Normal
+W (4651) CORE: SD Card: Detected
+W (4654) CORE: Overcharge voltage: 4200mv
+W (4659) CORE: Discharge voltage: 3300mv
+W (4664) CORE: Charge ready voltage: 3550mv
+W (4668) CORE: Calculated charge ready voltage: 3550mv
+W (4674) CORE: Minimum voltage to operate: 100mv
+W (4680) CORE: Minimum voltage above discharge to be ready: 250mv
+W (4686) CORE: Sleep when done: 1 Interval: 15
+W (4692) CORE: RTC alarm interrupt from last session(nvs): 0
+I (4699) POWER: EVI status: 0
+I (4702) POWER: alarmInterruptFlag status: 0
+I (4707) NFC: Data read from NFC memory config byte 2: 7 byte 0: 1
+I (4713) POWER: edStatus: 7
+W (4717) CORE: NFC flag from last session(nvs)::: 0
+W (4723) #####: ###############################################
+
+I (4729) CORE: Current Time: 2025-06-26 16:52:34
+W (4734) CHECKPOINT: Storing checkpoint: 12 at 4734
+I (4743) WAKEUPREASONS: Last saved time is older than current time by 14625 ms
+W (4748) TIME-CHECK: Current device time: 1750956754 s
+W (4754) TIME-CHECK: Last saved time    : 1750956740 s
+I (4762) WAKEUPREASONS: No lp_reboot_count recorded
+I (4762) SYSTEM: Battery voltage is above the minimum voltage to operate: 3400.000000v currently:4069.000000v low power shutdown count: 0
+I (4778) main_task: Returned from app_main()
+W (4778) CORE: Defining main wake up reason: 0  & 11 has insufficient voltage: 0
+I (4792) CORE: Last normal working mode timestamp: 1750956754, current timestamp: 1750956754, defined interval: 870, time difference: 0
+I (4805) BASETASK: Start Task WATCHDOG_TASK priority: 5
+I (4810) BASETASK: Task WATCHDOG_TASK created successfully. Handle: 0x3fcc397c
+I (4818) SYSTEM TASKS: Task created and added to list
+I (4823) COMMAND_MANAGER: Command queue created with max size: 5
+W (4830) NVS_MANAGER: Key not found, returning default: 0
+I (4836) COMMAND_MANAGER: Loaded queue state - max size: 10
+W (4843) NVS_MANAGER: Key not found, returning default: 0
+I (4849) COMMAND_MANAGER: No commands to restore from NVS
+I (4855) BASETASK: Start Task POWER_REFRESH_TASK priority: 2
+I (4862) BASETASK: Task POWER_REFRESH_TASK created successfully. Handle: 0x3fcc3b68
+I (4869) SYSTEM TASKS: Task created and added to list
+I (4875) BASETASK: Start Task CORE_DUMP_TASK priority: 3
+I (4881) BASETASK: Task CORE_DUMP_TASK created successfully. Handle: 0x3fcc3cd4
+I (4889) SYSTEM TASKS: Task created and added to list
+I (4895) SYSTEM: Current voltage: 4069.000000, voltage ready: 3544.000000, has Insufficient Voltage: 0
+W (4905) CHECKPOINT: Storing checkpoint: 25 at 4905
+W (4911) TIME-WATCHDOG: System time whatchdog is ON, the system will be off in 7 minutes
+W (4914) TASKS: AUTO START TASK IS RUNNING
+I (4924) BASETASK: Start Task MOTION_TASK priority: 16
+I (4930) BASETASK: Task MOTION_TASK created successfully. Handle: 0x3fce9330
+I (4937) TASKMANAGER: Task created and added to list
+I (4943) BASETASK: Start Task MICROPHONE_TASK priority: 24
+I (4949) MICROPHONE: Task Started
+I (4953) BASETASK: Task MICROPHONE_TASK created successfully. Handle: 0x3fce949c
+I (4961) TASKMANAGER: Task created and added to list
+I (4967) BASETASK: Start Task CLIMATE_TASK priority: 19
+I (4973) BASETASK: Task CLIMATE_TASK created successfully. Handle: 0x3fcc3e40
+I (4981) TASKMANAGER: Task created and added to list
+W (4986) CHECKPOINT: Storing checkpoint: 13 at 4986
+I (4992) BHY2: Initializing BHI runner
+I (4996) BASETASK: Start Task LORA_TASK priority: 21
+I (5002) BASETASK: Task LORA_TASK created successfully. Handle: 0x3fcc3fac
+I (5004) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (5009) SYSTEM TASKS: Task created and added to list
+I (5019) gpio: GPIO[14]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (5025) BASETASK: Start Task WIFI_TASK priority: 23
+I (5034) gpio: GPIO[21]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (5040) BASETASK: Task WIFI_TASK created successfully. Handle: 0x3fcc4118
+I (5041) pp: pp rom version: e7ae62f
+I (5057) SYSTEM TASKS: Task created and added to list
+I (5061) net80211: net80211 rom version: e7ae62f
+E (5067) TASKMANAGER: Task "BLUETOOTH_TASK"  not allowed to run in mode Normal
+I (5073) wifi:wifi driver task: 3fccf48c, prio:23, stack:3072, core=0
+I (5080) COMMUNICATIONS: Current battery level: 95%
+I (5010) BHY2: Normal mode received
+I (5010) COREDUMP: Processing core dump
+I (5098) BASETASK: Start Task LTE_TASK priority: 9
+I (5098) wifi:wifi firmware version: 3e0076f
+I (5106) BASETASK: Task LTE_TASK created successfully. Handle: 0x3fccf5f8
+I (5109) wifi:I (5117) SYSTEM TASKS: Task created and added to list
+wifi certification version: v7.0W (5124) CHECKPOINT: Storing checkpoint: 14 at 5124
+
+I (5132) wifi:config NVS flash: enabled
+I (5136) wifi:config nano formating: enabled
+W (5137) CHECKPOINT: Storing checkpoint: 15 at 5137
+I (5140) wifi:Init data frame dynamic rx buffer num: 16
+I (5106) BHY2: BHI found. Product ID read 89
+I (5151) wifi:Init static rx mgmt buffer num: 5
+I (5157) BHY2: BOOT STATUS: HOST FW VERIFY DONE (0x20)
+I (5160) wifi:Init management short buffer num: 32I (5165) BHY2: Boot successful (Attempt 1)
+
+I (5176) wifi:Init static tx buffer num: 16
+I (5180) wifi:Init tx cache buffer num: 32
+I (5181) COREDUMP: No core dump found (no error happened): ESP_FAIL
+I (5182) wifi:Init static tx FG buffer num: 2
+W (5190) COREDUMP: Deleting core dump task
+I (5194) wifi:Init static rx buffer size: 1600
+W (5198) BASETASK: Deleting existing Task CORE_DUMP_TASK
+I (5203) wifi:Init static rx buffer num: 8
+I (5010) POWER MANAGER: handling epeas interrupt
+I (5212) wifi:Init dynamic rx buffer num: 16
+I (5218) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 
+I (5222) wifi_init: rx ba win: 16
+I (5235) wifi_init: tcpip mbox: 32
+I (5239) wifi_init: udp mbox: 6
+I (5243) wifi_init: tcp mbox: 6
+I (5246) wifi_init: tcp tx win: 64000
+I (5251) wifi_init: tcp rx win: 64000
+I (5255) wifi_init: tcp mss: 1440
+I (5259) wifi_init: WiFi/LWIP prefer SPIRAM
+I (5264) wifi_init: WiFi IRAM OP enabled
+I (5269) wifi_init: WiFi RX IRAM OP enabled
+W (5274) WiFi Sta: Not starting AP wifi mode since we are not in maintenance mode
+I (5282) WiFi Sta: ESP_WIFI_MODE_STA
+I (5099) BRD: SyncWord = 2414
+I (5289) WiFi Sta: wifi_init_sta finished.
+I (5295) phy_init: phy_version 670,b7bc9b9,Apr 30 2024,10:54:13
+I (5365) wifi:mode : sta (f4:12:fa:81:70:cc)
+I (5366) wifi:enable tsf
+I (5294) LORA: INIT DONE
+I (5426) BASETASK: Start Task LORA_CONSUMER_TASK priority: 21
+W (5427) TIME-CHECK: Time since last boot: 14 s correct:1
+I (5427) BASETASK: Task LORA_CONSUMER_TASK created successfully. Handle: 0x3fcd5590
+I (5431) WiFi Sta: Station started
+I (5441) SYSTEM TASKS: Task created and added to list
+I (5110) LTE_DOWNLOAD_MGR: LTE Download Manager initialized
+I (5452) LTE: Initializing nRF9151
+I (5457) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 
+I (5466) LTE_NRF9151: Set power state
+I (6470) LTE_NRF9151: Process
+I (6520) LTE_NRF9151: Clear app buf
+I (6520) LTE_NRF9151: Send AT cmd
+I (6894) LTE: nrf9151 application init ok
+I (7838) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1
+I (7839) wifi:state: init -> auth (b0)
+I (7842) wifi:state: auth -> assoc (0)
+I (7847) wifi:state: assoc -> run (10)
+I (7881) wifi:connected with AVANCEEIOT, aid = 8, channel 11, BW20, bssid = 6e:d7:9a:27:6a:da
+I (7882) wifi:security: WPA2-PSK, phy: bgn, rssi: -57
+I (7885) wifi:pm start, type: 1
+
+I (7886) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (7894) wifi:set rx beacon pti, rx_bcn_pti: 14, bcn_timeout: 25000, mt_pti: 14, mt_time: 10000
+I (7903) wifi:AP's beacon interval = 102400 us, DTIM period = 3
+I (7916) wifi:<ba-add>idx:0 (ifx:0, 6e:d7:9a:27:6a:da), tid:6, ssn:2, winSize:64
+I (8910) WiFi Sta: Got IP:192.168.122.103
+W (8911) CHECKPOINT: Storing checkpoint: 16 at 8911
+I (8911) WiFi Sta: connected to ap SSID:AVANCEEIOT password:avancee@@
+W (8915) TASKMANAGER: Task not found 2
+W (8918) WiFi Sta: Not starting webserver since we are not in maintenance mode
+I (8922) CORE TASK MANAGER: WiFi connected, starting MQTT task
+W (8930) BASETASK: Deleting existing Task WIFI_TASK
+I (8936) BASETASK: Start Task MQTT_TASK priority: 22
+I (8911) esp_netif_handlers: sta ip: 192.168.122.103, mask: 255.255.255.0, gw: 192.168.122.1
+I (8948) BASETASK: Task MQTT_TASK created successfully. Handle: 0x3fcc757c
+I (8964) SYSTEM TASKS: Task created and added to list
+W (8970) CHECKPOINT: Storing checkpoint: 17 at 8970
+I (8979) SYSTEM: WAITING FOR COMUNICATIONS START 240000
+W (8981) CHECKPOINT: Storing checkpoint: 18 at 8981
+W (8989) CHECKPOINT: Storing checkpoint: 20 at 8989
+I (8995) SYSTEM: Communications started correctly
+W (8998) CHECKPOINT: Storing checkpoint: 21 at 8998
+W (9007) CHECKPOINT: Storing checkpoint: 21 at 9007
+W (9011) CHECKPOINT: Storing checkpoint: 22 at 9010
+I (9018) CONFIG ULP: Before timer setup - Current time: 2025-06-26 16:52:38 
+I (9023) CONFIG ULP: Current interval is 15 minutes, delay due to low power:0 seconds, total:900 seconds
+I (9134) CONFIG ULP: Timer registers - CTRL1: 0x86, Timer value: 900 (0x0384)
+I (9135) CONFIG ULP: CurrentTimer configuration:
+- Enabled: Yes
+- Repeat mode: Yes
+- Frequency: 1/3600 Hz
+- Interval: 900 ticks
+I (9144) CONFIG ULP: Setting timer: repeat=1, freq=1 Hz,  value thicks=900, new value thicks=900 ticks, 15 minutes (900 seconds)
+W (9156) CONFIG ULP: Timer value is the same, not setting it
+W (9163) SYSTEM: POWER CHECK DONE, STARTING TASKS
+I (9168) BASETASK: Start Task COMMS_HANDLER_TASK priority: 1
+I (9175) BASETASK: Task COMMS_HANDLER_TASK created successfully. Handle: 0x3fcc76e8
+I (9183) SYSTEM TASKS: Task created and added to list
+I (9189) BASETASK: Start Task SYSTEM_EVENTS_TASK priority: 7
+I (9195) CoreBD: Starting to synch nvs storage
+I (9195) BASETASK: Task SYSTEM_EVENTS_TASK created successfully. Handle: 0x3fcc7854
+I (9208) SYSTEM TASKS: Task created and added to list
+I (9214) BASETASK: Start Task RESPOND_TO_QUERY_TASK priority: 4
+I (9221) BASETASK: Task RESPOND_TO_QUERY_TASK created successfully. Handle: 0x3fccc1ac
+I (9229) SYSTEM TASKS: Task created and added to list
+I (9222) CoreBD: Ready to respond to query
+W (9235) CHECKPOINT: Storing checkpoint: 26 at 9235
+I (9251) CONFIG: Session duration: 146s (Session duration with bonus: 146s, without bonus: 112s) (Batt: 95%, Hour: 16, Month: 6, TimeBonus: 0%, MonthBonus: 30%, TotalBonus: 30%)
+I (9263) CORE TASK MANAGER: Active tasks: 3, Sleep mode: 1, BLE: 0, Wifi: 0, LTE: 0, OTA mode: 0, GNSS:(Initialized: 0, Acquisition finished: 0), Commands to process: 0, Force shutdown: 0, Max session duration exceeded: 0, config fields: 1, 9262/5000  | Expected features processed: 5, Current features: 0
+I (9326) LTE_NRF9151: nRF9151 modem firmware version: 
+mfw_nrf91x1_2.0.2
+
+OK
+
+I (9397) LTE_NRF9151: nRF9151 firmware version : 
+FWVER: 1.3
+OK
+
+I (9398) LTE: [PRECONNECT] >>> Entering applySelectSimPreference()
+I (9401) LTE: [PRECONNECT] Retrieved cmdRaw from NVS_KEY_SELECT_SIM = 255
+I (9408) LTE: [PRECONNECT] No valid priority command found
+I (9414) LTE: [PRECONNECT] Retrieved overrideRaw from NVS_KEY_SIM_FALLBACK = 255
+W (9422) LTE: [PRECONNECT] No command or override → using compile-time default
+I (9430) LTE: [PRECONNECT] Compile-time default → nano-SIM
+I (9436) LTE: [PRECONNECT] Final selected SIM slot = Physical nano-SIM
+I (9443) LTE_NRF9151: [SIM PREFER] Selecting physical nano-SIM slot
+E (10312) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('cal_data', '9E 02 00 00 F4 12 FA 81 70 CC 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7F 7F 7F 7F 7F 6F 5F 4F 3F 2F 1F 0F 0B 07 03 02 01 00 A0 00 20 00 00 01 80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 38 00 30 00 28 00 22 00 1A 00 15 00 0F 00 08 00 00 00 F8 FF EA FF D2 FF C8 FF B9 FF A1 FF 98 FF 90 FF 73 FF 7F 6F 5F 4F 3F 2F 1F 0F 0B 07 03 02 01 00 2B 00 28 00 23 00 1D 00 16 00 0D 00 00 00 E9 FF DE FF D0 FF B8 FF B0 FF A4 FF 8C FF 21 00 21 00 21 00 64 00 00 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 D8 FF 5F 00 D8 FF 55 00 E9 E9 E9 25 25 25 00 19 3A 08 A4 0A 08 5F 0A 74 05 7F 00 F0 02 3F A8 F3 91 44 26 AF 01 00 31 31 31 31 33 00 7B 04 6B 07 14 07 00 00 00 00 30 00 00 00 00 00 00 00 00 00 00 00 00 FE 00 00 50 50 50 4C 4C 48 4C 48 48 44 4A 46 46 42 00 00 00 FF FF FF FF FF FF FF FF FF 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 20 DE DD 01 ED 00 F2 00 01 01 FF 00 EC 00 F4 00 00 01 FF 00 EB 00 F6 00 FF 00 FF 00 EB 00 F8 00 FF 00 FF 00 EA 00 F9 00 FF 00 00 01 C1 06 00 00 3D 00 7D 00 00 00 00 00 0B 0D 04 0B 0B 03 09 0A 03 00 02 07 80 FE 21 1E 1E 09 09 14 0F 1C 0F 0F 14 16 21 26 28 4A 23 2A 2D 23 2A 2D 38 00 00 00 04 07 01 01 FA 00 FA 00 FA 00 00 01 00 01 00 01 00 01 00 01 00 01 00 01 00 01 00 00 00 00 00 01 02 03 03 07 0B 0F 0F 1F 2F 3F C0 C0 CA D6 E2 D6 D6 DA E6 DA D8 D9 E5 DA D9 DC F0 F0 F0 EC EC F0 EC F0 F0 EC EA EE EE EA 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 3F 3F 3F 3F 3F 2F 3F 2F 2F 2F 3F 2F 2F 2F 0B 00 00 4C 52 00 80 FE 00 00 00 00 00 00 00 00 81 0D 00 00 00 00 00 00 21 00 08 00 00 00 11 01 D4 00 0F 01 D3 00 0F 01 D4 00 0E 01 D7 00 0C 01 D6 00 0B 01 D8 00 0B 01 D8 00 07 01 DA 00 07 01 DA 00 04 01 D9 00 02 01 DB 00 02 01 D8 00 FE 00 D9 00 FD 00 DC 00 FA 00 C0 00 FA 00 C0 00 01 01 BC 00 FF 00 BD 00 02 01 BA 00 FD 00 C2 00 FB 00 C7 00 07 01 C8 00 0A 01 D8 00 F3 00 C4 00 F3 00 C4 00 F3 00 C4 00 F6 00 C1 00 F7 00 C1 00 FB 00 BF 00 F4 00 C7 00 06 01 C4 00 FD 00 DA 00 FD 00 0B 01 FD 00 0B 01 FB 00 03 01 F9 00 01 01 00 80 00 00 00 00 01 01 01 00 B4 00 00 03 04 06 07 0E 0F 11 12 14 15 16 17 1A 1B 1D 1E 25 26 28 29 2B 2C 2D C2 6B 98 E2 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ','blob','phy','F412FA8170CC','2'); 
+I (10791) LTE_NRF9151: [SIM SELECT] AT+CFUN=0 -> ESP_OK
+I (10820) LTE_NRF9151: [SIM SELECT] Response:
+
+OK
+
+I (10826) LTE: [PRECONNECT] nrf9151_select_preferred_sim_card returned ESP_OK
+I (10834) LTE: [PRECONNECT] <<< Exiting applySelectSimPreference()
+E (10844) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('cal_mac', 'F4 12 FA 81 70 CC ','blob','phy','F412FA8170CC','2'); 
+E (10861) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('cal_version', '670','uint32_t','phy','F412FA8170CC','2'); 
+E (10878) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('sta.chan', '11','uint8_t','nvs.net80211','F412FA8170CC','2'); 
+E (10908) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('sta.apinfo', '0A 00 00 00 41 56 41 4E 43 45 45 49 4F 54 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 61 76 61 6E 63 65 65 40 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FF FF FF FF FF 29 2E 51 6E E8 0E A2 AF 6A 91 D5 2D 82 65 1E A2 B6 1A 06 5C AF 02 27 C2 60 C1 EA 9F 09 41 12 9E 0B FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF FF ','blob','nvs.net80211','F412FA8170CC','2'); 
+I (11041) LTE: [SIM PREFER] Current simCard: 0
+I (11102) LTE_NRF9151: ========== INIT nrf9151_pre_connect_and_attach() ==========
+I (11111) LTE_NRF9151: [PRECONNECT] Initial modem reset: set to Minimum Functionality (CFUN=0)
+E (11123) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('lte.sim.type', '255','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11140) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('lte.sim.fb', '255','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11157) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('micEn', '1','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11175) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('micFrq', 'CD CC 8C 3F ','blob','nvs_cfg','F412FA8170CC','2'); 
+E (11192) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('micTh', '00 00 C3 42 ','blob','nvs_cfg','F412FA8170CC','2'); 
+E (11209) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('bhiAnyMtnEn', '1','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11227) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('bhiAnyMtnDur', 'CD CC CC 3E ','blob','nvs_cfg','F412FA8170CC','2'); 
+E (11244) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('bhiAnyMtnX', '1','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11262) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('bhiAnyMtnY', '1','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11279) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('bhiAnyMtnZ', '1','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+I (11291) CORE TASK MANAGER: Active tasks: 3, Sleep mode: 1, BLE: 0, Wifi: 0, LTE: 0, OTA mode: 0, GNSS:(Initialized: 0, Acquisition finished: 0), Commands to process: 0, Force shutdown: 0, Max session duration exceeded: 0, config fields: 1, 11290/5000  | Expected features processed: 5, Current features: 0
+E (11297) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('bhiAnyMtnTh', '51 A1 16 40 ','blob','nvs_cfg','F412FA8170CC','2'); 
+E (11342) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('boot_count', '2','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11359) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('lastNWKTime', '1750956754','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11377) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('last_time', 'lu','uint64_t','nvs_cfg','F412FA8170CC','2'); 
+E (11395) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('checkpoint_time', '9235','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+E (11413) CoreBD: Error inserting config INSERT OR REPLACE INTO nvsconfig (key,value,type,namespace,deviceid,session) VALUES ('checkpoint', '26','uint32_t','nvs_cfg','F412FA8170CC','2'); 
+I (11428) CoreBD: Done synch nvs storage
+I (11432) CoreBD: Ready to collect events
+I (11515) CoreBD: Batch saving data for 50 statements logs
+E (11517) CoreBD: Error executing statement: database disk image is malformed
+E (11519) CoreBD: Failed to finalize statement
+I (11608) CoreBD: Batch saving data for 50 statements logs
+E (11610) CoreBD: Error executing statement: database disk image is malformed
+E (11612) CoreBD: Failed to finalize statement
+I (11626) CoreBD: Batch saving data for 2 statements logs
+E (11628) CoreBD: Error executing statement: database disk image is malformed
+E (11631) CoreBD: Failed to finalize statement
+I (11638) CoreBD: Batch saving data for 2 statements logs
+E (11643) CoreBD: Error executing statement: database disk image is malformed
+E (11650) CoreBD: Failed to finalize statement
+I (11657) CoreBD: Batch saving data for 2 statements logs
+E (11662) CoreBD: Error executing statement: database disk image is malformed
+E (11669) CoreBD: Failed to finalize statement
+I (11676) CoreBD: Batch saving data for 2 statements logs
+E (11681) CoreBD: Error executing statement: database disk image is malformed
+E (11688) CoreBD: Failed to finalize statement
+I (11695) CoreBD: Batch saving data for 2 statements logs
+E (11700) CoreBD: Error executing statement: database disk image is malformed
+E (11707) CoreBD: Failed to finalize statement
+I (11714) CoreBD: Batch saving data for 2 statements logs
+E (11719) CoreBD: Error executing statement: database disk image is malformed
+E (11728) CoreBD: Failed to finalize statement
+I (11727) LORA: === TX Data Completion ===
+I (11735) LORA: Status: 4
+I (11739) LORA: ACK Received: NO
+I (11743) LORA: Uplink Counter: 0
+I (11747) LORA: ❌ NO SERVER CONFIRMATION - Message may not have reached server
+I (11773) CoreBD: Batch saving data for 8 statements logs
+E (11775) CoreBD: Error executing statement: database disk image is malformed
+E (11778) CoreBD: Failed to finalize statement
+I (11785) CoreBD: Batch saving data for 2 statements logs
+E (11789) CoreBD: Error executing statement: database disk image is malformed
+E (11797) CoreBD: Failed to finalize statement
+I (11803) CoreBD: Batch saving data for 2 statements logs
+E (11808) CoreBD: Error executing statement: database disk image is malformed
+E (11816) CoreBD: Failed to finalize statement
+I (11822) CoreBD: Batch saving data for 2 statements logs
+E (11827) CoreBD: Error executing statement: database disk image is malformed
+E (11835) CoreBD: Failed to finalize statement
+I (11841) CoreBD: Batch saving data for 2 statements logs
+E (11846) CoreBD: Error executing statement: database disk image is malformed
+E (11854) CoreBD: Failed to finalize statement
+I (11860) CoreBD: Batch saving data for 2 statements logs
+E (11865) CoreBD: Error executing statement: database disk image is malformed
+E (11873) CoreBD: Failed to finalize statement
+I (11879) CoreBD: Batch saving data for 2 statements logs
+W (11887) AEM13920: Epeas current temperature 36
+W (11889) AEM13920: Initial IRQ Status, skipping any actions EPEAS Initial Status: outOfReset:0, chargeReady:0, discharge:0, overcharge:0, sleepThresh:0, tempChThresh:0, tempDisThresh:0, src1MPPTStart:0, src1MPPTDone:0, src2MPPTStart:0, src2MPPTDone:0, tempDone:1, APMError:0, APMDone:0, storageDone:0
+E (11917) CoreBD: Error executing statement: database disk image is malformed
+E (11924) CoreBD: Failed to finalize statement
+I (11932) CoreBD: Batch saving data for 4 statements logs
+E (11936) CoreBD: Error executing statement: database disk image is malformed
+E (11943) CoreBD: Failed to finalize statement
+I (11950) CoreBD: Batch saving data for 2 statements logs
+E (11955) CoreBD: Error executing statement: database disk image is malformed
+E (11962) CoreBD: Failed to finalize statement
+I (11969) CoreBD: Batch saving data for 2 statements logs
+E (11974) CoreBD: Error executing statement: database disk image is malformed
+E (11981) CoreBD: Failed to finalize statement
+I (11988) CoreBD: Batch saving data for 2 statements logs
+E (11993) CoreBD: Error executing statement: database disk image is malformed
+E (12000) CoreBD: Failed to finalize statement
+I (12007) CoreBD: Batch saving data for 2 statements logs
+E (12012) CoreBD: Error executing statement: database disk image is malformed
+E (12019) CoreBD: Failed to finalize statement
+I (12026) CoreBD: Batch saving data for 2 statements logs
+E (12031) CoreBD: Error executing statement: database disk image is malformed
+E (12038) CoreBD: Failed to finalize statement
+I (12045) CoreBD: Batch saving data for 2 statements logs
+E (12050) CoreBD: Error executing statement: database disk image is malformed
+E (12057) CoreBD: Failed to finalize statement
+I (12064) CoreBD: Batch saving data for 2 statements logs
+E (12069) CoreBD: Error executing statement: database disk image is malformed
+E (12076) CoreBD: Failed to finalize statement
+I (12083) CoreBD: Batch saving data for 2 statements logs
+E (12088) CoreBD: Error executing statement: database disk image is malformed
+E (12096) CoreBD: Failed to finalize statement
+I (12102) CoreBD: Batch saving data for 2 statements logs
+E (12107) CoreBD: Error executing statement: database disk image is malformed
+E (12114) CoreBD: Failed to finalize statement
+I (12121) CoreBD: Batch saving data for 2 statements logs
+E (12126) CoreBD: Error executing statement: database disk image is malformed
+E (12133) CoreBD: Failed to finalize statement
+I (12140) CoreBD: Batch saving data for 2 statements logs
+E (12145) CoreBD: Error executing statement: database disk image is malformed
+E (12152) CoreBD: Failed to finalize statement
+I (12159) CoreBD: Batch saving data for 2 statements logs
+E (12164) CoreBD: Error executing statement: database disk image is malformed
+E (12171) CoreBD: Failed to finalize statement
+I (12178) CoreBD: Batch saving data for 2 statements logs
+E (12183) CoreBD: Error executing statement: database disk image is malformed
+E (12190) CoreBD: Failed to finalize statement
+I (12197) CoreBD: Batch saving data for 2 statements logs
+I (12202) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ESP_OK
+I (12207) LTE_NRF9151: [PRECONNECT] Setting permanent band-lock to Band 20 only
+E (12215) CoreBD: Error executing statement: database disk image is malformed
+E (12223) CoreBD: Failed to finalize statement
+I (12230) CoreBD: Batch saving data for 2 statements logs
+E (12235) CoreBD: Error executing statement: database disk image is malformed
+E (12242) CoreBD: Failed to finalize statement
+I (12249) CoreBD: Batch saving data for 2 statements logs
+E (12254) CoreBD: Error executing statement: database disk image is malformed
+E (12261) CoreBD: Failed to finalize statement
+I (12268) CoreBD: Batch saving data for 2 statements logs
+E (12273) CoreBD: Error executing statement: database disk image is malformed
+E (12280) CoreBD: Failed to finalize statement
+I (12287) CoreBD: Batch saving data for 2 statements logs
+E (12292) CoreBD: Error executing statement: database disk image is malformed
+E (12299) CoreBD: Failed to finalize statement
+I (12306) CoreBD: Batch saving data for 2 statements logs
+E (12311) CoreBD: Error executing statement: database disk image is malformed
+E (12318) CoreBD: Failed to finalize statement
+I (12325) CoreBD: Batch saving data for 2 statements logs
+E (12330) CoreBD: Error executing statement: database disk image is malformed
+E (12337) CoreBD: Failed to finalize statement
+I (12344) CoreBD: Batch saving data for 2 statements logs
+E (12349) CoreBD: Error executing statement: database disk image is malformed
+E (12356) CoreBD: Failed to finalize statement
+I (12363) CoreBD: Batch saving data for 2 statements logs
+E (12368) CoreBD: Error executing statement: database disk image is malformed
+E (12375) CoreBD: Failed to finalize statement
+I (12382) CoreBD: Batch saving data for 2 statements logs
+E (12387) CoreBD: Error executing statement: database disk image is malformed
+E (12394) CoreBD: Failed to finalize statement
+I (12401) CoreBD: Batch saving data for 2 statements logs
+E (12406) CoreBD: Error executing statement: database disk image is malformed
+E (12413) CoreBD: Failed to finalize statement
+I (12420) CoreBD: Batch saving data for 2 statements logs
+E (12425) CoreBD: Error executing statement: database disk image is malformed
+E (12432) CoreBD: Failed to finalize statement
+I (12439) CoreBD: Batch saving data for 2 statements logs
+E (12444) CoreBD: Error executing statement: database disk image is malformed
+E (12451) CoreBD: Failed to finalize statement
+I (12458) CoreBD: Batch saving data for 2 statements logs
+E (12463) CoreBD: Error executing statement: database disk image is malformed
+E (12470) CoreBD: Failed to finalize statement
+I (12477) CoreBD: Batch saving data for 2 statements logs
+E (12482) CoreBD: Error executing statement: database disk image is malformed
+E (12489) CoreBD: Failed to finalize statement
+I (12496) CoreBD: Batch saving data for 2 statements logs
+E (12501) CoreBD: Error executing statement: database disk image is malformed
+E (12508) CoreBD: Failed to finalize statement
+I (12515) CoreBD: Batch saving data for 2 statements logs
+E (12520) CoreBD: Error executing statement: database disk image is malformed
+E (12527) CoreBD: Failed to finalize statement
+I (12534) CoreBD: Batch saving data for 2 statements logs
+E (12539) CoreBD: Error executing statement: database disk image is malformed
+E (12546) CoreBD: Failed to finalize statement
+I (12553) CoreBD: Batch saving data for 2 statements logs
+E (12558) CoreBD: Error executing statement: database disk image is malformed
+E (12565) CoreBD: Failed to finalize statement
+I (12572) CoreBD: Batch saving data for 2 statements logs
+E (12577) CoreBD: Error executing statement: database disk image is malformed
+E (12584) CoreBD: Failed to finalize statement
+I (12591) CoreBD: Batch saving data for 2 statements logs
+E (12596) CoreBD: Error executing statement: database disk image is malformed
+E (12603) CoreBD: Failed to finalize statement
+I (12610) CoreBD: Batch saving data for 2 statements logs
+E (12615) CoreBD: Error executing statement: database disk image is malformed
+E (12622) CoreBD: Failed to finalize statement
+I (12629) CoreBD: Batch saving data for 2 statements logs
+E (12634) CoreBD: Error executing statement: database disk image is malformed
+E (12641) CoreBD: Failed to finalize statement
+I (12648) CoreBD: Batch saving data for 2 statements logs
+E (12653) CoreBD: Error executing statement: database disk image is malformed
+E (12660) CoreBD: Failed to finalize statement
+I (12667) CoreBD: Batch saving data for 2 statements logs
+E (12672) CoreBD: Error executing statement: database disk image is malformed
+E (12679) CoreBD: Failed to finalize statement
+I (12686) CoreBD: Batch saving data for 2 statements logs
+E (12691) CoreBD: Error executing statement: database disk image is malformed
+E (12699) CoreBD: Failed to finalize statement
+I (12707) CoreBD: Batch saving data for 2 statements logs
+E (12710) CoreBD: Error executing statement: database disk image is malformed
+E (12718) CoreBD: Failed to finalize statement
+I (12724) CoreBD: Batch saving data for 2 statements logs
+E (12729) CoreBD: Error executing statement: database disk image is malformed
+E (12736) CoreBD: Failed to finalize statement
+I (12743) CoreBD: Batch saving data for 2 statements logs
+E (12748) CoreBD: Error executing statement: database disk image is malformed
+E (12755) CoreBD: Failed to finalize statement
+I (12762) CoreBD: Batch saving data for 2 statements logs
+E (12767) CoreBD: Error executing statement: database disk image is malformed
+E (12774) CoreBD: Failed to finalize statement
+I (12781) CoreBD: Batch saving data for 2 statements logs
+E (12786) CoreBD: Error executing statement: database disk image is malformed
+E (12793) CoreBD: Failed to finalize statement
+I (12800) CoreBD: Batch saving data for 2 statements logs
+E (12805) CoreBD: Error executing statement: database disk image is malformed
+E (12812) CoreBD: Failed to finalize statement
+I (12819) CoreBD: Batch saving data for 2 statements logs
+E (12824) CoreBD: Error executing statement: database disk image is malformed
+E (12832) CoreBD: Failed to finalize statement
+I (12838) CoreBD: Batch saving data for 2 statements logs
+E (12843) CoreBD: Error executing statement: database disk image is malformed
+E (12851) CoreBD: Failed to finalize statement
+I (12857) CoreBD: Batch saving data for 2 statements logs
+E (12862) CoreBD: Error executing statement: database disk image is malformed
+E (12870) CoreBD: Failed to finalize statement
+I (12876) CoreBD: Batch saving data for 2 statements logs
+E (12881) CoreBD: Error executing statement: database disk image is malformed
+E (12889) CoreBD: Failed to finalize statement
+I (12895) CoreBD: Batch saving data for 2 statements logs
+E (12900) CoreBD: Error executing statement: database disk image is malformed
+E (12908) CoreBD: Failed to finalize statement
+I (12914) CoreBD: Batch saving data for 2 statements logs
+E (12919) CoreBD: Error executing statement: database disk image is malformed
+E (12927) CoreBD: Failed to finalize statement
+I (12933) CoreBD: Batch saving data for 2 statements logs
+E (12938) CoreBD: Error executing statement: database disk image is malformed
+E (12946) CoreBD: Failed to finalize statement
+I (12952) CoreBD: Batch saving data for 2 statements logs
+E (12957) CoreBD: Error executing statement: database disk image is malformed
+E (12965) CoreBD: Failed to finalize statement
+I (12971) CoreBD: Batch saving data for 2 statements logs
+E (12976) CoreBD: Error executing statement: database disk image is malformed
+E (12984) CoreBD: Failed to finalize statement
+I (12990) CoreBD: Batch saving data for 2 statements logs
+E (12995) CoreBD: Error executing statement: database disk image is malformed
+E (13003) CoreBD: Failed to finalize statement
+I (13009) CoreBD: Batch saving data for 2 statements logs
+E (13014) CoreBD: Error executing statement: database disk image is malformed
+E (13022) CoreBD: Failed to finalize statement
+I (13028) CoreBD: Batch saving data for 2 statements logs
+E (13033) CoreBD: Error executing statement: database disk image is malformed
+E (13041) CoreBD: Failed to finalize statement
+I (13047) CoreBD: Batch saving data for 2 statements logs
+E (13052) CoreBD: Error executing statement: database disk image is malformed
+E (13060) CoreBD: Failed to finalize statement
+I (13066) CoreBD: Batch saving data for 2 statements logs
+E (13071) CoreBD: Error executing statement: database disk image is malformed
+E (13079) CoreBD: Failed to finalize statement
+I (13085) CoreBD: Batch saving data for 2 statements logs
+E (13090) CoreBD: Error executing statement: database disk image is malformed
+E (13098) CoreBD: Failed to finalize statement
+I (13104) CoreBD: Batch saving data for 2 statements logs
+E (13109) CoreBD: Error executing statement: database disk image is malformed
+E (13117) CoreBD: Failed to finalize statement
+I (13123) CoreBD: Batch saving data for 2 statements logs
+E (13128) CoreBD: Error executing statement: database disk image is malformed
+E (13136) CoreBD: Failed to finalize statement
+I (13142) CoreBD: Batch saving data for 2 statements logs
+E (13147) CoreBD: Error executing statement: database disk image is malformed
+E (13155) CoreBD: Failed to finalize statement
+I (13161) CoreBD: Batch saving data for 2 statements logs
+E (13166) CoreBD: Error executing statement: database disk image is malformed
+E (13174) CoreBD: Failed to finalize statement
+I (13180) CoreBD: Batch saving data for 2 statements logs
+E (13185) CoreBD: Error executing statement: database disk image is malformed
+E (13193) CoreBD: Failed to finalize statement
+I (13199) CoreBD: Batch saving data for 2 statements logs
+E (13204) CoreBD: Error executing statement: database disk image is malformed
+E (13212) CoreBD: Failed to finalize statement
+I (13218) CoreBD: Batch saving data for 2 statements logs
+E (13223) CoreBD: Error executing statement: database disk image is malformed
+E (13231) CoreBD: Failed to finalize statement
+I (13237) CoreBD: Batch saving data for 2 statements logs
+E (13242) CoreBD: Error executing statement: database disk image is malformed
+E (13250) CoreBD: Failed to finalize statement
+I (13256) CoreBD: Batch saving data for 2 statements logs
+E (13261) CoreBD: Error executing statement: database disk image is malformed
+E (13269) CoreBD: Failed to finalize statement
+I (13275) CoreBD: Batch saving data for 2 statements logs
+E (13280) CoreBD: Error executing statement: database disk image is malformed
+E (13288) CoreBD: Failed to finalize statement
+I (13281) LTE_NRF9151: [PRECONNECT] AT%XBANDLOCK -> ESP_OK
+I (13298) LTE_NRF9151: [PRECONNECT] Initial modem reset: Enabling modem (CFUN=1)
+I (13309) CoreBD: Batch saving data for 2 statements logs
+E (13313) CoreBD: Error executing statement: database disk image is malformed
+E (13321) CoreBD: Failed to finalize statement
+I (13323) CORE TASK MANAGER: Active tasks: 3, Sleep mode: 1, BLE: 0, Wifi: 0, LTE: 0, OTA mode: 0, GNSS:(Initialized: 0, Acquisition finished: 0), Commands to process: 0, Force shutdown: 0, Max session duration exceeded: 0, config fields: 1, 13322/5000  | Expected features processed: 5, Current features: 0
+I (13329) CoreBD: Batch saving data for 2 statements logs
+E (13360) CoreBD: Error executing statement: database disk image is malformed
+E (13368) CoreBD: Failed to finalize statement
+I (13375) CoreBD: Batch saving data for 3 statements logs
+E (13379) CoreBD: Error executing statement: database disk image is malformed
+E (13387) CoreBD: Failed to finalize statement
+I (13393) CoreBD: Batch saving data for 2 statements logs
+E (13398) CoreBD: Error executing statement: database disk image is malformed
+E (13406) CoreBD: Failed to finalize statement
+I (13412) CoreBD: Batch saving data for 2 statements logs
+E (13417) CoreBD: Error executing statement: database disk image is malformed
+E (13425) CoreBD: Failed to finalize statement
+I (13431) CoreBD: Batch saving data for 2 statements logs
+E (13436) CoreBD: Error executing statement: database disk image is malformed
+E (13444) CoreBD: Failed to finalize statement
+I (13450) CoreBD: Batch saving data for 2 statements logs
+E (13455) CoreBD: Error executing statement: database disk image is malformed
+E (13463) CoreBD: Failed to finalize statement
+I (13469) CoreBD: Batch saving data for 2 statements logs
+E (13474) CoreBD: Error executing statement: database disk image is malformed
+E (13482) CoreBD: Failed to finalize statement
+I (13488) CoreBD: Batch saving data for 2 statements logs
+E (13493) CoreBD: Error executing statement: database disk image is malformed
+E (13501) CoreBD: Failed to finalize statement
+I (13507) CoreBD: Batch saving data for 2 statements logs
+E (13512) CoreBD: Error executing statement: database disk image is malformed
+E (13520) CoreBD: Failed to finalize statement
+I (13526) CoreBD: Batch saving data for 2 statements logs
+E (13531) CoreBD: Error executing statement: database disk image is malformed
+E (13539) CoreBD: Failed to finalize statement
+I (13545) CoreBD: Batch saving data for 2 statements logs
+E (13550) CoreBD: Error executing statement: database disk image is malformed
+E (13558) CoreBD: Failed to finalize statement
+I (13564) CoreBD: Batch saving data for 2 statements logs
+E (13569) CoreBD: Error executing statement: database disk image is malformed
+E (13577) CoreBD: Failed to finalize statement
+I (13586) wifi:<ba-add>idx:1 (ifx:0, 6e:d7:9a:27:6a:da), tid:0, ssn:0, winSize:64
+I (13592) CoreBD: Batch saving data for 2 statements logs
+E (13596) CoreBD: Error executing statement: database disk image is malformed
+E (13603) CoreBD: Failed to finalize statement
+I (13609) CoreBD: Batch saving data for 2 statements logs
+I (13611) NTP SERVER: Notification of a time synchronization event, time 1750956766
+I (13622) NFC: Setting NFC URL to: F412FA8170CC
+E (13629) CoreBD: Error executing statement: database disk image is malformed
+E (13636) CoreBD: Failed to finalize statement
+I (13644) CoreBD: Batch saving data for 4 statements logs
+E (13647) CoreBD: Error executing statement: database disk image is malformed
+E (13655) CoreBD: Failed to finalize statement
+I (13662) CoreBD: Batch saving data for 2 statements logs
+E (13666) CoreBD: Error executing statement: database disk image is malformed
+E (13674) CoreBD: Failed to finalize statement
+I (13680) CoreBD: Batch saving data for 2 statements logs
+E (13685) CoreBD: Error executing statement: database disk image is malformed
+E (13693) CoreBD: Failed to finalize statement
+I (13699) CoreBD: Batch saving data for 2 statements logs
+E (13704) CoreBD: Error executing statement: database disk image is malformed
+E (13712) CoreBD: Failed to finalize statement
+I (13718) CoreBD: Batch saving data for 2 statements logs
+E (13723) CoreBD: Error executing statement: database disk image is malformed
+E (13731) CoreBD: Failed to finalize statement
+I (13737) CoreBD: Batch saving data for 2 statements logs
+E (13742) CoreBD: Error executing statement: database disk image is malformed
+E (13750) CoreBD: Failed to finalize statement
+I (13756) CoreBD: Batch saving data for 2 statements logs
+E (13761) CoreBD: Error executing statement: database disk image is malformed
+E (13769) CoreBD: Failed to finalize statement
+I (13775) CoreBD: Batch saving data for 2 statements logs
+E (13780) CoreBD: Error executing statement: database disk image is malformed
+E (13788) CoreBD: Failed to finalize statement
+I (13794) CoreBD: Batch saving data for 2 statements logs
+E (13799) CoreBD: Error executing statement: database disk image is malformed
+E (13807) CoreBD: Failed to finalize statement
+I (13813) CoreBD: Batch saving data for 2 statements logs
+E (13818) CoreBD: Error executing statement: database disk image is malformed
+E (13826) CoreBD: Failed to finalize statement
+I (13832) CoreBD: Batch saving data for 2 statements logs
+E (13837) CoreBD: Error executing statement: database disk image is malformed
+E (13845) CoreBD: Failed to finalize statement
+I (13851) CoreBD: Batch saving data for 2 statements logs
+E (13856) CoreBD: Error executing statement: database disk image is malformed
+E (13864) CoreBD: Failed to finalize statement
+I (13870) CoreBD: Batch saving data for 2 statements logs
+E (13875) CoreBD: Error executing statement: database disk image is malformed
+E (13883) CoreBD: Failed to finalize statement
+I (13889) CoreBD: Batch saving data for 2 statements logs
+E (13894) CoreBD: Error executing statement: database disk image is malformed
+E (13902) CoreBD: Failed to finalize statement
+I (13908) CoreBD: Batch saving data for 2 statements logs
+E (13913) CoreBD: Error executing statement: database disk image is malformed
+E (13921) CoreBD: Failed to finalize statement
+I (13929) CoreBD: Batch saving data for 2 statements logs
+E (13933) CoreBD: Error executing statement: database disk image is malformed
+E (13940) CoreBD: Failed to finalize statement
+I (13946) CoreBD: Batch saving data for 2 statements logs
+E (13951) CoreBD: Error executing statement: database disk image is malformed
+E (13959) CoreBD: Failed to finalize statement
+I (13965) CoreBD: Batch saving data for 2 statements logs
+E (13970) CoreBD: Error executing statement: database disk image is malformed
+E (13978) CoreBD: Failed to finalize statement
+I (13984) CoreBD: Batch saving data for 2 statements logs
+E (13989) CoreBD: Error executing statement: database disk image is malformed
+E (13997) CoreBD: Failed to finalize statement
+I (14003) CoreBD: Batch saving data for 2 statements logs
+E (14008) CoreBD: Error executing statement: database disk image is malformed
+E (14016) CoreBD: Failed to finalize statement
+I (14022) CoreBD: Batch saving data for 2 statements logs
+E (14027) CoreBD: Error executing statement: database disk image is malformed
+E (14035) CoreBD: Failed to finalize statement
+I (14041) CoreBD: Batch saving data for 2 statements logs
+E (14046) CoreBD: Error executing statement: database disk image is malformed
+E (14054) CoreBD: Failed to finalize statement
+I (14060) CoreBD: Batch saving data for 2 statements logs
+E (14065) CoreBD: Error executing statement: database disk image is malformed
+E (14073) CoreBD: Failed to finalize statement
+I (14079) CoreBD: Batch saving data for 2 statements logs
+E (14084) CoreBD: Error executing statement: database disk image is malformed
+E (14092) CoreBD: Failed to finalize statement
+I (14098) CoreBD: Batch saving data for 2 statements logs
+E (14103) CoreBD: Error executing statement: database disk image is malformed
+E (14111) CoreBD: Failed to finalize statement
+I (14117) CoreBD: Batch saving data for 2 statements logs
+E (14122) CoreBD: Error executing statement: database disk image is malformed
+E (14130) CoreBD: Failed to finalize statement
+I (14136) CoreBD: Batch saving data for 2 statements logs
+E (14141) CoreBD: Error executing statement: database disk image is malformed
+E (14149) CoreBD: Failed to finalize statement
+I (14155) CoreBD: Batch saving data for 2 statements logs
+E (14160) CoreBD: Error executing statement: database disk image is malformed
+E (14168) CoreBD: Failed to finalize statement
+I (14174) CoreBD: Batch saving data for 2 statements logs
+E (14179) CoreBD: Error executing statement: database disk image is malformed
+E (14187) CoreBD: Failed to finalize statement
+I (14193) CoreBD: Batch saving data for 2 statements logs
+E (14198) CoreBD: Error executing statement: database disk image is malformed
+E (14206) CoreBD: Failed to finalize statement
+I (14212) CoreBD: Batch saving data for 2 statements logs
+E (14217) CoreBD: Error executing statement: database disk image is malformed
+E (14225) CoreBD: Failed to finalize statement
+I (14228) NFC: Successfully wrote URL to NFC tag
+I (14231) CoreBD: Batch saving data for 2 statements logs
+W (14236) TIME: Time from rtc         : Thu Jun 26 16:52:44 2025 
+W (14248) TIME: Time from NTP_WIFI : Thu Jun 26 16:52:46 2025
+W (14254) TIME: No Update Needed! NTP_WIFI:1750956766 CURRENT:1750956764 DIFF: 2
+I (14263) MQTT_TASK: START
+I (14265) SENSOR: getLastWillTestamentData - Type: 3 
+I (14271) CAYENNE: Message size: 9 bytes
+W (14276) MQTT_TASK: MQTT URL: mqtt://37.27.43.234
+E (14284) CoreBD: Error executing statement: database disk image is malformed
+E (14290) CoreBD: Failed to finalize statement
+I (14299) CoreBD: Batch saving data for 5 statements logs
+E (14301) CoreBD: Error executing statement: database disk image is malformed
+E (14309) CoreBD: Failed to finalize statement
+I (14315) CoreBD: Batch saving data for 2 statements logs
+I (14319) MICROPHONE: Config and setup TDK, Enable: 1, LPF: 1.1kHz, TH: 97.5dBSPL
+E (14320) CoreBD: Error executing statement: database disk image is malformed
+I (14327) MICROPHONE: States: AAD A:1 D1:0 D2:0
+E (14336) CoreBD: Failed to finalize statement
+I (14340) MICROPHONE: AADA_LPF_FREQUENCY_VALUE: 7
+I (14351) MICROPHONE: AADA_THRESHOLD_VALUE: 15
+I (14350) CoreBD: Batch saving data for 4 statements logs
+E (14363) CoreBD: Error executing statement: database disk image is malformed
+E (14371) CoreBD: Failed to finalize statement
+I (14377) CoreBD: Batch saving data for 2 statements logs
+E (14382) CoreBD: Error executing statement: database disk image is malformed
+E (14389) CoreBD: Failed to finalize statement
+I (14396) CoreBD: Batch saving data for 2 statements logs
+I (14330) BHY2: startLoop() initiated for BHI360 at time: 2025-06-26 16:52:47
+I (14402) MICROPHONE: Trying WS pin: 0
+I (14402) LTE_NRF9151: [PRECONNECT] AT+CFUN=1 -> ESP_OK
+I (14415) BHY2: Successfully allocated memory in PSRAM for work_buffer.
+E (14401) CoreBD: Error executing statement: database disk image is malformed
+I (14321) MQTT_TASK: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+E (14435) CoreBD: Failed to finalize statement
+I (14460) CoreBD: Batch saving data for 7 statements logs
+E (14462) CoreBD: Error executing statement: database disk image is malformed
+E (14465) CoreBD: Failed to finalize statement
+W (14469) FEATURES: Reporting data for: BME280
+I (14471) CoreBD: Batch saving data for 2 statements logs
+E (14481) CoreBD: Error executing statement: database disk image is malformed
+E (14489) CoreBD: Failed to finalize statement
+I (14500) CoreBD: Batch saving data for 2 statements logs
+E (14503) CoreBD: Error executing statement: database disk image is malformed
+E (14508) CoreBD: Failed to finalize statement
+W (14514) MICROPHONE: Microphone returning all zeros
+I (14515) CoreBD: Batch saving data for 2 statements logs
+W (14517) MICROPHONE: Microphone test failed with WS pin: 0, trying next pin
+E (14524) CoreBD: Error executing statement: database disk image is malformed
+I (14532) MICROPHONE: Trying WS pin: 35
+E (14540) CoreBD: Failed to finalize statement
+I (14555) CoreBD: Batch saving data for 2 statements logs
+E (14557) CoreBD: Error executing statement: database disk image is malformed
+E (14565) CoreBD: Failed to finalize statement
+I (14570) CoreBD: Batch saving data for 2 statements logs
+E (14575) CoreBD: Error executing statement: database disk image is malformed
+E (14583) CoreBD: Failed to finalize statement
+I (14590) CoreBD: Batch saving data for 2 statements logs
+E (14594) CoreBD: Error executing statement: database disk image is malformed
+E (14601) CoreBD: Failed to finalize statement
+I (14608) CoreBD: Batch saving data for 2 statements logs
+E (14613) CoreBD: Error executing statement: database disk image is malformed
+E (14621) CoreBD: Failed to finalize statement
+I (14627) CoreBD: Batch saving data for 2 statements logs
+E (14632) CoreBD: Error executing statement: database disk image is malformed
+E (14639) CoreBD: Failed to finalize statement
+I (14645) MICROPHONE: Microphone test successful, read 2048 bytes
+I (14646) CoreBD: Batch saving data for 2 statements logs
+I (14650) MICROPHONE: Microphone successfully initialized with WS pin: 35
+E (14658) CoreBD: Error executing statement: database disk image is malformed
+I (14664) MICROPHONE: Using WS pin: 35
+E (14673) CoreBD: Failed to finalize statement
+I (14684) CoreBD: Batch saving data for 3 statements logs
+E (14688) CoreBD: Error executing statement: database disk image is malformed
+E (14696) CoreBD: Failed to finalize statement
+I (14703) CoreBD: Batch saving data for 2 statements logs
+E (14708) CoreBD: Error executing statement: database disk image is malformed
+E (14715) CoreBD: Failed to finalize statement
+I (14723) CoreBD: Batch saving data for 3 statements logs
+E (14727) CoreBD: Error executing statement: database disk image is malformed
+E (14734) CoreBD: Failed to finalize statement
+I (14741) CoreBD: Batch saving data for 2 statements logs
+E (14746) CoreBD: Error executing statement: database disk image is malformed
+E (14753) CoreBD: Failed to finalize statement
+I (14760) CoreBD: Batch saving data for 2 statements logs
+E (14764) CoreBD: Error executing statement: database disk image is malformed
+E (14772) CoreBD: Failed to finalize statement
+I (14779) CoreBD: Batch saving data for 2 statements logs
+E (14784) CoreBD: Error executing statement: database disk image is malformed
+E (14791) CoreBD: Failed to finalize statement
+I (14798) CoreBD: Batch saving data for 2 statements logs
+E (14803) CoreBD: Error executing statement: database disk image is malformed
+E (14810) CoreBD: Failed to finalize statement
+I (14817) CoreBD: Batch saving data for 2 statements logs
+E (14822) CoreBD: Error executing statement: database disk image is malformed
+E (14829) CoreBD: Failed to finalize statement
+I (14836) CoreBD: Batch saving data for 2 statements logs
+E (14841) CoreBD: Error executing statement: database disk image is malformed
+E (14849) CoreBD: Failed to finalize statement
+I (14858) CoreBD: Batch saving data for 2 statements logs
+E (14862) CoreBD: Error executing statement: database disk image is malformed
+E (14867) CoreBD: Failed to finalize statement
+I (14874) CoreBD: Batch saving data for 2 statements logs
+E (14879) CoreBD: Error executing statement: database disk image is malformed
+E (14887) CoreBD: Failed to finalize statement
+I (14889) MQTT_TASK: Event dispatched from event loop base=MQTT_EVENTS, event_id=1
+I (14900) MQTT_TASK: MQTT_EVENT_CONNECTED
+I (14893) CoreBD: Batch saving data for 2 statements logs
+E (14912) CoreBD: Error executing statement: database disk image is malformed
+I (14913) MQTT_TASK: sent subscribe successful, msg_id=13524 topic=F412FA8170CC/command/exec
+I (14918) LTE_NRF9151: [PRECONNECT] Entering pre-connect loop, max retries = 6
+I (14934) LTE_NRF9151: [PRECONNECT] Attempt 1/6 start
+I (14940) LTE_NRF9151: [PRECONNECT] Enabling CMEE
+E (14918) CoreBD: Failed to finalize statement
+W (14945) BHY2: Activate Any Motion
+I (14954) CoreBD: Batch saving data for 3 statements logs
+W (14958) BHY2: Any Motion Config: Duration=0.40s 0x14, Threshold=2.35m/s2 0x1eb, Enable=1, axis_X=1 , axis_Y=1, axis_Z=1
+E (14962) CoreBD: Error executing statement: database disk image is malformed
+I (14974) BHY2: Enable Orientation wake up.
+E (14981) CoreBD: Failed to finalize statement
+I (14989) MQTT_TASK: Event dispatched from event loop base=MQTT_EVENTS, event_id=3
+I (14997) CoreBD: Batch saving data for 7 statements logs
+E (15005) CoreBD: Error executing statement: database disk image is malformed
+E (15013) CoreBD: Failed to finalize statement
+I (15020) CoreBD: Batch saving data for 2 statements logs
+E (15024) CoreBD: Error executing statement: database disk image is malformed
+E (15032) CoreBD: Failed to finalize statement
+I (15039) CoreBD: Batch saving data for 2 statements logs
+E (15043) CoreBD: Error executing statement: database disk image is malformed
+E (15051) CoreBD: Failed to finalize statement
+I (15057) CoreBD: Batch saving data for 2 statements logs
+E (15062) CoreBD: Error executing statement: database disk image is malformed
+E (15070) CoreBD: Failed to finalize statement
+I (15076) CoreBD: Batch saving data for 2 statements logs
+E (15081) CoreBD: Error executing statement: database disk image is malformed
+E (15089) CoreBD: Failed to finalize statement
+I (15095) CoreBD: Batch saving data for 2 statements logs
+E (15100) CoreBD: Error executing statement: database disk image is malformed
+E (15108) CoreBD: Failed to finalize statement
+W (15110) BHY2: Motion detected
+I (15115) CoreBD: Batch saving data for 2 statements logs
+W (15118) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1750956768387 ms, reporting to server: 0 
+I (15130) MICROPHONE: dB Level: 57.93
+E (15123) CoreBD: Error executing statement: database disk image is malformed
+W (15141) FEATURES: Reporting data for: MICROPHONE
+E (15150) CoreBD: Failed to finalize statement
+I (15166) CoreBD: Batch saving data for 5 statements logs
+E (15168) CoreBD: Error executing statement: database disk image is malformed
+E (15174) CoreBD: Failed to finalize statement
+I (15177) MICROPHONE: dB Level: 58.34
+I (15181) CoreBD: Batch saving data for 2 statements logs
+W (15183) FEATURES: Reporting data for: MICROPHONE
+E (15190) CoreBD: Error executing statement: database disk image is malformed
+E (15203) CoreBD: Failed to finalize statement
+I (15213) CoreBD: Batch saving data for 5 statements logs
+E (15214) CoreBD: Error executing statement: database disk image is malformed
+E (15222) CoreBD: Failed to finalize statement
+I (15224) MICROPHONE: dB Level: 57.82
+I (15229) CoreBD: Batch saving data for 2 statements logs
+W (15231) FEATURES: Reporting data for: MICROPHONE
+E (15237) CoreBD: Error executing statement: database disk image is malformed
+E (15250) CoreBD: Failed to finalize statement
+I (15260) CoreBD: Batch saving data for 3 statements logs
+E (15262) CoreBD: Error executing statement: database disk image is malformed
+E (15269) CoreBD: Failed to finalize statement
+I (15271) MICROPHONE: dB Level: 57.45
+I (15276) CoreBD: Batch saving data for 2 statements logs
+W (15279) FEATURES: Reporting data for: MICROPHONE
+E (15285) CoreBD: Error executing statement: database disk image is malformed
+E (15298) CoreBD: Failed to finalize statement
+I (15307) CoreBD: Batch saving data for 3 statements logs
+E (15310) CoreBD: Error executing statement: database disk image is malformed
+E (15318) CoreBD: Failed to finalize statement
+I (15324) CoreBD: Batch saving data for 2 statements logs
+E (15329) CoreBD: Error executing statement: database disk image is malformed
+E (15336) CoreBD: Failed to finalize statement
+I (15343) CoreBD: Batch saving data for 2 statements logs
+E (15348) CoreBD: Error executing statement: database disk image is malformed
+I (15354) CORE TASK MANAGER: Active tasks: 2, Sleep mode: 1, BLE: 0, Wifi: 0, LTE: 0, OTA mode: 0, GNSS:(Initialized: 0, Acquisition finished: 0), Commands to process: 0, Force shutdown: 0, Max session duration exceeded: 0, config fields: 1, 15354/5000  | Expected features processed: 5, Current features: 2
+E (15355) CoreBD: Failed to finalize statement
+I (15391) CoreBD: Batch saving data for 3 statements logs
+E (15395) CoreBD: Error executing statement: database disk image is malformed
+E (15402) CoreBD: Failed to finalize statement
+I (15409) CoreBD: Batch saving data for 2 statements logs
+E (15414) CoreBD: Error executing statement: database disk image is malformed
+E (15421) CoreBD: Failed to finalize statement
+I (15428) CoreBD: Batch saving data for 2 statements logs
+E (15433) CoreBD: Error executing statement: database disk image is malformed
+E (15440) CoreBD: Failed to finalize statement
+I (15447) CoreBD: Batch saving data for 2 statements logs
+E (15452) CoreBD: Error executing statement: database disk image is malformed
+E (15459) CoreBD: Failed to finalize statement
+I (15466) CoreBD: Batch saving data for 2 statements logs
+E (15472) CoreBD: Error executing statement: database disk image is malformed
+E (15478) CoreBD: Failed to finalize statement
+I (15485) CoreBD: Batch saving data for 2 statements logs
+E (15490) CoreBD: Error executing statement: database disk image is malformed
+E (15497) CoreBD: Failed to finalize statement
+I (15504) CoreBD: Batch saving data for 2 statements logs
+E (15509) CoreBD: Error executing statement: database disk image is malformed
+I (15512) LTE_NRF9151: [PRECONNECT] AT+CMEE=1 -> ESP_OK
+I (15521) LTE_NRF9151: [PRECONNECT] Enabling CNEC
+E (15517) CoreBD: Failed to finalize statement
+I (15535) CoreBD: Batch saving data for 3 statements logs
+E (15539) CoreBD: Error executing statement: database disk image is malformed
+W (15541) FEATURES: Reporting data for: BME280
+E (15547) CoreBD: Failed to finalize statement
+I (15562) CoreBD: Batch saving data for 2 statements logs
+E (15564) CoreBD: Error executing statement: database disk image is malformed
+E (15571) CoreBD: Failed to finalize statement
+I (15577) CoreBD: Batch saving data for 2 statements logs
+E (15582) CoreBD: Error executing statement: database disk image is malformed
+E (15590) CoreBD: Failed to finalize statement
+I (15596) CoreBD: Batch saving data for 2 statements logs
+E (15601) CoreBD: Error executing statement: database disk image is malformed
+E (15609) CoreBD: Failed to finalize statement
+I (15615) CoreBD: Batch saving data for 2 statements logs
+E (15620) CoreBD: Error executing statement: database disk image is malformed
+E (15628) CoreBD: Failed to finalize statement
+I (15634) CoreBD: Batch saving data for 2 statements logs
+E (15639) CoreBD: Error executing statement: database disk image is malformed
+E (15647) CoreBD: Failed to finalize statement
+I (15653) CoreBD: Batch saving data for 2 statements logs
+E (15658) CoreBD: Error executing statement: database disk image is malformed
+E (15666) CoreBD: Failed to finalize statement
+I (15673) CoreBD: Batch saving data for 2 statements logs
+E (15677) CoreBD: Error executing statement: database disk image is malformed
+E (15685) CoreBD: Failed to finalize statement
+I (15691) CoreBD: Batch saving data for 2 statements logs
+E (15696) CoreBD: Error executing statement: database disk image is malformed
+E (15704) CoreBD: Failed to finalize statement
+I (15710) CoreBD: Batch saving data for 2 statements logs
+E (15715) CoreBD: Error executing statement: database disk image is malformed
+E (15723) CoreBD: Failed to finalize statement
+I (15730) CoreBD: Batch saving data for 2 statements logs
+E (15734) CoreBD: Error executing statement: database disk image is malformed
+E (15742) CoreBD: Failed to finalize statement
+I (15748) CoreBD: Batch saving data for 2 statements logs
+E (15753) CoreBD: Error executing statement: database disk image is malformed
+W (15759) FEATURES: Reporting data for: BHI_MAGNETOMETER
+E (15761) CoreBD: Failed to finalize statement
+W (15766) FEATURES: Reporting data for: BHI_ACCELEROMETER
+I (15773) CoreBD: Batch saving data for 2 statements logs
+W (15778) FEATURES: Reporting data for: BHI_MOTION
+E (15785) CoreBD: Error executing statement: database disk image is malformed
+W (15791) FEATURES: Reporting data for: BHI_MAGNETOMETER
+E (15798) CoreBD: Failed to finalize statement
+W (15803) FEATURES: Reporting data for: BHI_ACCELEROMETER
+W (15814) FEATURES: Reporting data for: BHI_MOTION
+W (15822) FEATURES: Reporting data for: BHI_MAGNETOMETER
+W (15825) FEATURES: Reporting data for: BHI_ACCELEROMETER
+W (15831) FEATURES: Reporting data for: BHI_MOTION
+W (15839) FEATURES: Reporting data for: BHI_MAGNETOMETER
+W (15843) FEATURES: Reporting data for: BHI_ACCELEROMETER
+I (15849) SensorDataParser: [MOTION] Maximum motion readings reached: 4
+W (15857) FEATURES: Reporting data for: BHI_MOTION
+W (15864) FEATURES: Reporting data for: BHI_MAGNETOMETER
+W (15868) FEATURES: Reporting data for: BHI_ACCELEROMETER
+I (15874) SensorDataParser: [MAG] Maximum number of magnetometer readings reached: 6
+W (15883) FEATURES: Reporting data for: BHI_MAGNETOMETER
+I (15888) SensorDataParser: [ACC] Maximum number of accelerometer readings reached: 6
+W (15897) FEATURES: Reporting data for: BHI_ACCELEROMETER
+I (15908) SensorDataParser: Gyroscope WU sensor accuracy set to 3
+I (16097) LTE_NRF9151: [PRECONNECT] AT+CNEC=24 -> ESP_OK
+I (16225) CoreBD: Batch saving data for 9 statements logs
+I (16501) CoreBD: Batch saving data for 2 statements logs
+I (16552) TASKMANAGER: Starting to remove task CLIMATE_TASK
+I (16553) TASKMANAGER: Task removed from list
+I (16554) CoreBD: Batch saving data for 1 statements logs
+I (16598) LTE_NRF9151: [PRECONNECT] Subscribing to packet-domain notifications
+I (16912) CoreBD: Batch saving data for 1 statements logs
+--- Error: read failed: [Errno 6] Device not configured
+--- Waiting for the device to reconnect....................................................................................................................

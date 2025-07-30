@@ -1,0 +1,1001 @@
+I (505) esp_psram: Found 8MB PSRAM device
+I (505) esp_psram: Speed: 80MHz
+I (764) mmu_psram: Instructions copied and mapped to SPIRAM
+I (847) mmu_psram: Read only data copied and mapped to SPIRAM
+I (1500) esp_psram: SPI SRAM memory test OK
+I (1509) cpu_start: Pro cpu start user code
+I (1509) cpu_start: cpu freq: 80000000 Hz
+I (1509) cpu_start: Application information:
+I (1512) cpu_start: Project name:     PRO100
+I (1517) cpu_start: App version:      Localbuild
+I (1522) cpu_start: Compile time:     Jun 11 2025 21:20:49
+I (1529) cpu_start: ELF file SHA256:  3da5a3bdd...
+I (1534) cpu_start: ESP-IDF:          v5.2.2-dirty
+I (1540) cpu_start: Min chip rev:     v0.1
+I (1544) cpu_start: Max chip rev:     v0.99 
+I (1549) cpu_start: Chip rev:         v0.1
+I (1554) heap_init: Initializing. RAM available for dynamic allocation:
+I (1561) heap_init: At 3FCBBD90 len 0002D980 (182 KiB): RAM
+I (1568) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (1574) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (1580) heap_init: At 600FE010 len 00001FC8 (7 KiB): RTCRAM
+I (1587) esp_psram: Adding pool of 5824K of PSRAM memory to heap allocator
+I (1595) spi_flash: detected chip: gd
+I (1598) spi_flash: flash io: dio
+W (1603) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h
+W (1615) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+W (1655) CORECONFIG: Running partition date: 2025-06-11T21:20:49Z
+I (1655) INTERNAL_TEMPERATURE: Initializing Temperature sensor 
+I (1658) temperature_sensor: Range [-10°C ~ 80°C], error < 1°C
+I (1667) I2C_BUS: Starting I2CBus
+I (1669) SPI_BUS: Starting SPIBus
+I (1676) sleep: Configure to isolate all GPIO pins in sleep state
+I (1679) sleep: Enable automatic switching of GPIO sleep configuration
+I (1686) esp_core_dump_flash: Init core dump to flash
+I (1692) esp_core_dump_flash: Found partition 'coredump' @ 794000 65536 bytes
+I (1700) coexist: coex firmware version: d96c1e51f
+I (1705) coexist: coexist rom version e7ae62f
+I (1711) main_task: Started on CPU0
+I (1715) esp_psram: Reserving pool of 128K of internal memory for DMA/internal allocations
+I (1724) main_task: Calling app_main()
+I (1728) CORE: Device with ID: F412FA817108 started.
+I (1734) CORE: Last checkpoint at init : 18, last checkpoint time: 5323
+W (1741) CHECKPOINT: Storing checkpoint: 1 at 1741
+I (1750) WAKEUPREASONS: Current boot count: 1213
+I (1752) WAKEUPREASONS: Incrementing boot count to: 1214
+I (1759) WAKEUPREASONS: Successfully saved boot count: 1214
+W (1764) CHECKPOINT: Storing checkpoint: 3 at 1764
+W (1773) CHECKPOINT: Storing checkpoint: 4 at 1773
+I (1777) I2C SCAN: Started
+W (2811) I2C SCAN: Found 6 Sensors
+W (2814) CS: [SENSORSFOUND]6
+W (2815) CS: [SENSOR]IMU [BHI360]
+W (2815) I2C SCAN: [0x28] Found IMU [BHI360] - Feature 10 motion_sensor
+W (2820) CS: [SENSOR]Epeas AEM13920 Power managament
+I (2825) I2C SCAN: [0x41] Found Epeas AEM13920 Power managament
+I (2852) AEM13920_CONFIG: Chip version: 1
+I (2853) AEM13920: Status chargeReady 1, discharge 0, overcharge 0, src1Sleep 0, src2Sleep 0, tempColdCharge 0, tempColdDischarge 0, tempHotCharge 0, tempHotDischarge 0
+I (2862) AEM13920_CONFIG: Overdischarge voltage (V_OVDIS) 3.300000V | Charge ready voltage(V_CHRDY) 3.544000V | Overcharge voltage (V_OVCH) 4.200000V 
+I (2922) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+I (2936) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+W (2941) CS: [SENSOR]EPEAS
+W (2942) CS: [SENSOR]RTC RV3028C7
+I (2944) I2C SCAN: [0x52] Found RTC RV3028C7
+W (2949) CS: [SENSOR]RTC
+W (2952) CS: [SENSOR]NFC [NTAG5LINK]
+I (2956) I2C SCAN: [0x54] Found NFC [NTAG5LINK]
+I (3462) NFC:  Setting connection availability
+I (3562) NFC:  "1" availability status has been written to  0x0075
+W (3562) CS: [SENSOR]NFC
+W (3562) CS: [SENSOR]Temperature, Humidity and Pressure Sensor [BME280]
+W (3568) I2C SCAN: [0x76] Found Temperature, Humidity and Pressure Sensor [BME280] - Feature 16 climate_sensor
+W (3579) CS: [SENSOR]Gas Sensor [BME688]
+W (3583) I2C SCAN: [0x77] Found Gas Sensor [BME688] - Feature 20 air_sensor
+I (3591) NFC: Read NFC config data - networks config
+I (3698) NFC: Data read from NFC networks config command: 255
+I (3698) NFC: NFC config was already used, skipping
+I (3699) NFC: Read NFC config data - boot mode
+I (3805) NFC: Data read from NFC boot mode command: 255
+I (3805) NFC: NFC boot mode not defined, skipping
+I (4114) RTC: Finished
+W (4115) CHECKPOINT: Storing checkpoint: 5 at 4115
+W (4119) WAKEUPREASONS: Nfc boot mode: 255 nfcWakeup: 0
+I (4123) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (4127) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (4137) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (4146) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (4155) WAKEUPREASONS: Pin status - Microphone: 0, Anemometer: 0
+W (4162) CORE: Wake up reason:   reported:Source: 1, Reason: 1, Description: EVI Triggered, Timestamp: 1749687487047 ms, reporting to server: 0 
+I (4185) WAKEUPREASONS: FLAGS AT startup, evi: 1 por: 0 alarm: 0 nfc: 0 rtc: 1 esp: 11
+W (4186) CORE: Wake up reason: REPORT  reported:Source: 0, Reason: 11, Description: Reset by USB peripheral, Timestamp: 1749687487072 ms, reporting to server: 1 
+I (4199) WAKEUPREASONS: #########################UPDATED WAKEUP REASON######################
+W (4208) CHECKPOINT: Storing checkpoint: 6 at 4209
+I (4226) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+W (4231) CHECKPOINT: Storing checkpoint: 7 at 4231
+I (4284) STORAGE: SPIFFS mount successful
+W (4285) CHECKPOINT: Storing checkpoint: 8 at 4285
+W (4289) CHECKPOINT: Storing checkpoint: 9 at 4289
+W (4292) SYSTEM: notifyWorkeMode(): Normal
+W (4294) CHECKPOINT: Storing checkpoint: 10 at 4294
+I (4302) Storage: Initializing SD card
+I (4304) Storage: Using SDMMC peripheral
+I (4309) Storage: Mounting filesystem
+I (4313) gpio: GPIO[48]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (4323) gpio: GPIO[37]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (4332) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+E (4369) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107
+E (4370) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).
+E (4372) Storage: Failed to mount filesystem. If you want the card to be formatted, set the FORMAT_IF_MOUNT_FAILED menuconfig option.
+E (4384) CoreBD: Error creating directory: /sdcard. errno: 2 (No such file or directory)
+I (4393) CoreBD: Cannot determine size of /sdcard/db/F412FA817108/F412FA817108_v10.db
+
+I (4442) CoreBD: Cannot determine size of /spiffs/unsent_v10.db
+
+I (4402) CoreBD: Starting failed messages at /spiffs/unsent_v10.db with size: -1 bytes 
+I (4585) CoreBD: Opened database successfully
+
+I (4585) CoreBD: Database opened, creating tables now
+I (4755) CoreBD: Database started
+I (4756) CORE: Current boot count: 1214
+I (4757) WAKEUPREASONS: No lp_reboot_count recorded
+I (4757) CORE: Low energy shutdown count: 0 (excluding current one)
+W (4765) CHECKPOINT: Storing checkpoint: 11 at 4765
+W (4774) #####: ###############################################
+W (4777) CS: [VERSION]Localbuild
+W (4781) CS: [BATTERYVOLTAGE]4.125000
+W (4785) CS: [BATTERYPERCENTAGE]95
+W (4789) CS: [DEVICEID]F412FA817108
+W (4794) CS: [LORA]0
+W (4796) CS: [LTE]1
+W (4799) CS: [BLE]0
+W (4802) CS: [WIFI]0
+W (4805) CORE: Device last checkpoint: 18
+W (4810) CORE: Device last checkpoint time: 5323
+W (4815) CORE: Device EUI: 0283F412FA817108
+W (4820) CORE: Join EUI: 6060606060606060
+W (4824) CORE: Application key: ac63e8292f9aeca88310436872948858
+W (4831) CORE: Network key: ac63e8292f9aeca88310436872948858
+I (4837) CORE: Wakeup Log:
+W (4841) CORE: Wakeup reason detected by ESP: Reset by USB peripheral
+W (4848) CORE: Defining main wake up reason: 0  & 11 has insufficient voltage: 0
+I (4857) CORE: Last normal working mode timestamp: 1749687188, current timestamp: 1749687487, defined interval: 870, time difference: 299
+W (4848) CORE: Main wakeup source reason: 111
+I (4874) WAKEUPREASONS: No lp_reboot_count recorded
+W (4880) CORE: Current working mode: Normal
+W (4884) CORE: SD Card: Not Detected
+W (4889) CORE: Overcharge voltage: 4200mv
+W (4893) CORE: Discharge voltage: 3300mv
+W (4898) CORE: Charge ready voltage: 3550mv
+W (4903) CORE: Calculated charge ready voltage: 3550mv
+W (4909) CORE: Minimum voltage to operate: 100mv
+W (4914) CORE: Minimum voltage above discharge to be ready: 250mv
+W (4921) CORE: Sleep when done: 1 Interval: 15
+W (4926) CORE: RTC alarm interrupt from last session(nvs): 0
+I (4934) POWER: EVI status: 0
+I (4936) POWER: alarmInterruptFlag status: 0
+I (4942) NFC: Data read from NFC memory config byte 2: 7 byte 0: 1
+I (4948) POWER: edStatus: 7
+W (4951) CORE: NFC flag from last session(nvs)::: 0
+W (4957) #####: ###############################################
+
+I (4964) CORE: Current Time: 2025-06-12 00:18:07
+W (4969) CHECKPOINT: Storing checkpoint: 12 at 4969
+I (4978) WAKEUPREASONS: Last saved time is older than current time by 298995 ms
+W (4983) TIME-CHECK: Current device time: 1749687487 s
+W (4988) TIME-CHECK: Last saved time    : 1749687188 s
+I (4996) WAKEUPREASONS: No lp_reboot_count recorded
+I (4996) SYSTEM: Battery voltage is above the minimum voltage to operate: 3400.000000v currently:4125.000000v low power shutdown count: 0
+W (5013) CORE: Defining main wake up reason: 0  & 11 has insufficient voltage: 0
+I (5013) main_task: Returned from app_main()
+I (5022) CORE: Last normal working mode timestamp: 1749687487, current timestamp: 1749687487, defined interval: 870, time difference: 0
+I (5039) BASETASK: Start Task WATCHDOG_TASK priority: 5
+I (5044) BASETASK: Task WATCHDOG_TASK created successfully. Handle: 0x3fcc398c
+I (5052) SYSTEM TASKS: Task created and added to list
+I (5058) BASETASK: Start Task POWER_REFRESH_TASK priority: 2
+I (5064) BASETASK: Task POWER_REFRESH_TASK created successfully. Handle: 0x3fcc3af8
+I (5073) SYSTEM TASKS: Task created and added to list
+I (5078) BASETASK: Start Task CORE_DUMP_TASK priority: 3
+I (5084) BASETASK: Task CORE_DUMP_TASK created successfully. Handle: 0x3fcc3c64
+I (5092) SYSTEM TASKS: Task created and added to list
+I (5098) SYSTEM: Current voltage: 4125.000000, voltage ready: 3544.000000, has Insufficient Voltage: 0
+W (5108) CHECKPOINT: Storing checkpoint: 25 at 5109
+W (5114) TIME-WATCHDOG: System time whatchdog is ON, the system will be off in 7 minutes
+W (5117) TASKS: AUTO START TASK IS RUNNING
+I (5127) BASETASK: Start Task MOTION_TASK priority: 16
+I (5133) BASETASK: Task MOTION_TASK created successfully. Handle: 0x3fcc3dd0
+I (5141) TASKMANAGER: Task created and added to list
+I (5146) BASETASK: Start Task MICROPHONE_TASK priority: 24
+I (5153) MICROPHONE: Task Started
+I (5156) BASETASK: Task MICROPHONE_TASK created successfully. Handle: 0x3fcc3f3c
+I (5165) TASKMANAGER: Task created and added to list
+I (5170) BASETASK: Start Task CLIMATE_TASK priority: 19
+I (5176) BASETASK: Task CLIMATE_TASK created successfully. Handle: 0x3fcc40a8
+I (5184) TASKMANAGER: Task created and added to list
+W (5190) CHECKPOINT: Storing checkpoint: 13 at 5190
+W (5198) COMMUNICATIONS: LORA DISABLED
+W (5200) COMMUNICATIONS: WIFI DISABLED
+W (5204) COMMUNICATIONS: BLE DISABLED
+I (5209) COMMUNICATIONS: Current battery level: 95%
+I (5214) BASETASK: Start Task LTE_TASK priority: 9
+I (5219) BASETASK: Task LTE_TASK created successfully. Handle: 0x3fcc4214
+I (5219) LTE: Initializing nRF9151
+I (5227) SYSTEM TASKS: Task created and added to list
+W (5237) CHECKPOINT: Storing checkpoint: 14 at 5237
+I (5232) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 
+I (5247) SYSTEM: WAITING FOR COMUNICATIONS START 360000
+W (5257) CHECKPOINT: Storing checkpoint: 18 at 5257
+I (5252) LTE_NRF9151: Set power state
+I (5227) BHY2: Initializing BHI runner
+I (5272) BHY2: Normal mode received
+I (5227) COREDUMP: Processing core dump
+I (5277) BHY2: BHI found. Product ID read 89
+I (5287) BHY2: BOOT STATUS: HOST FW VERIFY DONE (0x20)
+I (5291) BHY2: Boot successful (Attempt 1)
+I (5312) COREDUMP: No core dump found (no error happened): ESP_FAIL
+W (5313) COREDUMP: Deleting core dump task
+W (5313) BASETASK: Deleting existing Task CORE_DUMP_TASK
+I (5227) POWER MANAGER: handling epeas interrupt
+I (5324) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 
+I (6267) LTE_NRF9151: Process
+I (6317) LTE_NRF9151: Clear app buf
+I (6317) LTE_NRF9151: Send AT cmd
+I (6695) LTE: nrf9151 application init ok
+W (8983) AEM13920: Epeas current temperature 36
+W (8983) AEM13920: Initial IRQ Status, skipping any actions EPEAS Initial Status: outOfReset:0, chargeReady:0, discharge:0, overcharge:0, sleepThresh:0, tempChThresh:0, tempDisThresh:0, src1MPPTStart:0, src1MPPTDone:0, src2MPPTStart:0, src2MPPTDone:0, tempDone:1, APMError:0, APMDone:0, storageDone:0
+I (9124) LTE_NRF9151: nRF9151 modem firmware version: 
+mfw_nrf91x1_2.0.2
+
+OK
+
+I (9194) LTE_NRF9151: nRF9151 firmware version : 
+FWVER: 1.3
+OK
+
+I (9194) LTE_NRF9151: ========== INIT nrf9151_start_pre_connect2() ==========
+I (9762) LTE_NRF9151: [PRECONNECT] AT+CEREG=5 -> ESP_OK
+I (11855) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ESP_OK
+I (12950) LTE_NRF9151: [PRECONNECT] AT+CFUN=1 -> ESP_OK
+I (12950) LTE_NRF9151: [PRECONNECT] elapsed 0ms
+I (13110) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (13110) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (13612) LTE_NRF9151: [PRECONNECT] elapsed 662ms
+I (13772) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (13772) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (14274) LTE_NRF9151: [PRECONNECT] elapsed 1324ms
+I (14434) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (14434) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (14936) LTE_NRF9151: [PRECONNECT] elapsed 1986ms
+I (15096) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (15096) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (15598) LTE_NRF9151: [PRECONNECT] elapsed 2648ms
+I (15758) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (15758) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+W (16103) AEM13920: Epeas current temperature 36
+I (16104) AEM13920: Temperature ADC Done
+I (16260) LTE_NRF9151: [PRECONNECT] elapsed 3310ms
+I (16420) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (16420) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (16922) LTE_NRF9151: [PRECONNECT] elapsed 3972ms
+I (17082) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (17082) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (17584) LTE_NRF9151: [PRECONNECT] elapsed 4634ms
+I (17744) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (17744) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (18246) LTE_NRF9151: [PRECONNECT] elapsed 5296ms
+I (18406) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (18406) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (18408) LTE_NRF9151: [PLMN_SCAN] Clearing app buffer
+I (18414) LTE_NRF9151: [PLMN_SCAN] Sending AT%COPS=?
+W (23221) AEM13920: Epeas current temperature 36
+I (23222) AEM13920: Temperature ADC Done
+W (30338) AEM13920: Epeas current temperature 36
+I (30339) AEM13920: Temperature ADC Done
+I (35212) MICROPHONE: Config and setup TDK, Enable: 1, LPF: 1.1kHz, TH: 97.5dBSPL
+I (35213) MICROPHONE: States: AAD A:1 D1:0 D2:0
+I (35215) MICROPHONE: AADA_LPF_FREQUENCY_VALUE: 7
+I (35221) MICROPHONE: AADA_THRESHOLD_VALUE: 15
+I (35272) MICROPHONE: Trying WS pin: 0
+I (35296) BHY2: startLoop() initiated for BHI360 at time: 2025-06-12 00:18:38
+I (35297) BHY2: Successfully allocated memory in PSRAM for work_buffer.
+W (35374) MICROPHONE: Microphone returning all zeros
+W (35375) MICROPHONE: Microphone test failed with WS pin: 0, trying next pin
+I (35377) MICROPHONE: Trying WS pin: 35
+I (35482) MICROPHONE: Microphone test successful, read 2048 bytes
+I (35483) MICROPHONE: Microphone successfully initialized with WS pin: 35
+I (35486) MICROPHONE: Using WS pin: 35
+I (35497) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.173000V SOURCE 2: 0.233000V Coulomb Counter 0 APM1:0 APM2:0
+W (35681) BHY2: Activate Any Motion
+W (35685) BHY2: Any Motion Config: Duration=0.40s 0x14, Threshold=2.35m/s2 0x1eb, Enable=1, axis_X=1 , axis_Y=1, axis_Z=1
+I (35688) BHY2: Enable Orientation wake up.
+I (35968) MICROPHONE: dB Level: 47.66
+I (36008) SensorDataParser: Gyroscope WU sensor accuracy set to 3
+I (36010) SensorDataParser: Magnetometer WU sensor accuracy set to 1
+I (36013) SensorDataParser: Accelerometer WU sensor accuracy set to 1
+I (36015) MICROPHONE: dB Level: 57.40
+I (36025) SensorDataParser: Linear Acceleration WU sensor accuracy set to 3
+I (36032) SensorDataParser: Orientation WU sensor accuracy set to 0
+I (36039) SensorDataParser: [MOTION] Maximum motion readings reached: 4
+I (36045) SensorDataParser: [ACC] Maximum number of accelerometer readings reached: 6
+I (36061) MICROPHONE: dB Level: 58.17
+I (36108) MICROPHONE: dB Level: 51.22
+I (37390) TASKMANAGER: Starting to remove task CLIMATE_TASK
+I (37391) TASKMANAGER: Task removed from list
+W (37454) AEM13920: Epeas current temperature 36
+I (37455) AEM13920: Temperature ADC Done
+W (44570) AEM13920: Epeas current temperature 36
+I (44571) AEM13920: Temperature ADC Done
+W (51684) AEM13920: Epeas current temperature 36
+I (51685) AEM13920: Temperature ADC Done
+W (58799) AEM13920: Epeas current temperature 36
+I (58800) AEM13920: Temperature ADC Done
+I (65516) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.143000V SOURCE 2: 0.203000V Coulomb Counter 0 APM1:0 APM2:0
+W (65916) AEM13920: Epeas current temperature 36
+I (65917) AEM13920: Temperature ADC Done
+W (73031) AEM13920: Epeas current temperature 36
+I (73032) AEM13920: Temperature ADC Done
+W (80146) AEM13920: Epeas current temperature 36
+I (80147) AEM13920: Temperature ADC Done
+W (87260) AEM13920: Epeas current temperature 36
+I (87261) AEM13920: Temperature ADC Done
+I (89042) LTE_NRF9151: [PLMN_SCAN] app_buf contents:
+
+%COPS: 
+
+OK
+
+I (89042) LTE_NRF9151: [PLMN_SCAN] Result code: ESP_OK
+I (89044) LTE_NRF9151: [PLMN_SELECT] Clearing app buffer
+I (89050) LTE_NRF9151: [PLMN_SELECT] Sending manual COPS command → AT+COPS=1,2,"26806"
+
+W (94374) AEM13920: Epeas current temperature 36
+I (94375) AEM13920: Temperature ADC Done
+I (95530) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+W (101491) AEM13920: Epeas current temperature 36
+I (101492) AEM13920: Temperature ADC Done
+W (108606) AEM13920: Epeas current temperature 36
+I (108607) AEM13920: Temperature ADC Done
+W (115720) AEM13920: Epeas current temperature 36
+I (115721) AEM13920: Temperature ADC Done
+W (122834) AEM13920: Epeas current temperature 36
+I (122835) AEM13920: Temperature ADC Done
+I (125544) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.233000V Coulomb Counter 0 APM1:0 APM2:0
+W (126145) BHY2: Motion detected
+W (126146) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687609032 ms, reporting to server: 0 
+W (126668) BHY2: Motion detected
+W (126670) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687609555 ms, reporting to server: 0 
+W (127310) BHY2: Motion detected
+W (127311) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687610197 ms, reporting to server: 0 
+W (129950) AEM13920: Epeas current temperature 36
+I (129951) AEM13920: Temperature ADC Done
+W (137063) AEM13920: Epeas current temperature 36
+I (137064) AEM13920: Temperature ADC Done
+W (144178) AEM13920: Epeas current temperature 36
+I (144179) AEM13920: Temperature ADC Done
+W (151293) AEM13920: Epeas current temperature 36
+I (151294) AEM13920: Temperature ADC Done
+
+augustodelara@MBP-de-Augusto firmware_corex % 
+augustodelara@MBP-de-Augusto firmware_corex % 
+augustodelara@MBP-de-Augusto firmware_corex % export IDF_PATH='/Users/augustodelara/esp/v5.2.2/esp-idf'
+'/Users/augustodelara/Documents/python_env/idf5.2_%                                                                        
+augustodelara@MBP-de-Augusto firmware_corex % '/Users/augustodelara/Documents/python_env/idf5.2_py3.9_env/bin/python' '/Use
+rs/augustodelara/esp/v5.2.2/esp-idf/tools/idf_monitor.py' -p /dev/tty.usbmodem1101 -b 115200 --toolchain-prefix xtensa-esp3
+2s3-elf- --make ''/Users/augustodelara/Documents/python_env/idf5.2_py3.9_env/bin/python' '/Users/augustodelara/esp/v5.2.2/e
+sp-idf/tools/idf.py'' --target esp32s3 '/Users/augustodelara/Documents/workplace17/firmware_corex/build/PRO100.elf'
+--- Warning: Serial ports accessed as /dev/tty.* will hang gdb if launched.
+--- Using /dev/cu.usbmodem1101 instead...
+--- esp-idf-monitor 1.5.0 on /dev/cu.usbmodem1101 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+I (1562) cpu_start: ELF file SHA256:  842c6ed5f...
+I (1568) cpu_sESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0x28 (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40048839
+--- 0x40048839: uart_tx_one_char_uart in ROM
+
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3810,len:0x558
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc88
+load:0x403cc700,len:0x2750
+entry 0x403c9898
+I (504) cpu_start: Multicore app
+I (505) esp_psram: Found 8MB PSRAM device
+I (505) esp_psram: Speed: 80MHz
+I (764) mmu_psram: Instructions copied and mapped to SPIRAM
+I (847) mmu_psram: Read only data copied and mapped to SPIRAM
+I (1500) esp_psram: SPI SRAM memory test OK
+I (1509) cpu_start: Pro cpu start user code
+I (1509) cpu_start: cpu freq: 80000000 Hz
+I (1509) cpu_start: Application information:
+I (1512) cpu_start: Project name:     PRO100
+I (1517) cpu_start: App version:      Localbuild
+I (1522) cpu_start: Compile time:     Jun 11 2025 21:20:49
+I (1529) cpu_start: ELF file SHA256:  842c6ed5f...
+I (1534) cpu_start: ESP-IDF:          v5.2.2-dirty
+I (1540) cpu_start: Min chip rev:     v0.1
+I (1544) cpu_start: Max chip rev:     v0.99 
+I (1549) cpu_start: Chip rev:         v0.1
+I (1554) heap_init: Initializing. RAM available for dynamic allocation:
+I (1561) heap_init: At 3FCBBD90 len 0002D980 (182 KiB): RAM
+I (1568) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM
+I (1574) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+I (1580) heap_init: At 600FE010 len 00001FC8 (7 KiB): RTCRAM
+I (1587) esp_psram: Adding pool of 5824K of PSRAM memory to heap allocator
+I (1595) spi_flash: detected chip: gd
+I (1598) spi_flash: flash io: dio
+W (1603) i2s(legacy): legacy i2s driver is deprecated, please migrate to use driver/i2s_std.h, driver/i2s_pdm.h or driver/i2s_tdm.h
+W (1615) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+W (1655) CORECONFIG: Running partition date: 2025-06-11T21:20:49Z
+I (1656) INTERNAL_TEMPERATURE: Initializing Temperature sensor 
+I (1658) temperature_sensor: Range [-10°C ~ 80°C], error < 1°C
+I (1667) I2C_BUS: Starting I2CBus
+I (1669) SPI_BUS: Starting SPIBus
+I (1676) sleep: Configure to isolate all GPIO pins in sleep state
+I (1679) sleep: Enable automatic switching of GPIO sleep configuration
+I (1686) esp_core_dump_flash: Init core dump to flash
+I (1692) esp_core_dump_flash: Found partition 'coredump' @ 794000 65536 bytes
+I (1700) coexist: coex firmware version: d96c1e51f
+I (1706) coexist: coexist rom version e7ae62f
+I (1711) main_task: Started on CPU0
+I (1715) esp_psram: Reserving pool of 128K of internal memory for DMA/internal allocations
+I (1724) main_task: Calling app_main()
+I (1728) CORE: Device with ID: F412FA817108 started.
+I (1734) CORE: Last checkpoint at init : 18, last checkpoint time: 5257
+W (1741) CHECKPOINT: Storing checkpoint: 1 at 1741
+I (1750) WAKEUPREASONS: Current boot count: 1214
+I (1752) WAKEUPREASONS: Incrementing boot count to: 1215
+I (1759) WAKEUPREASONS: Successfully saved boot count: 1215
+W (1764) CHECKPOINT: Storing checkpoint: 3 at 1764
+W (1773) CHECKPOINT: Storing checkpoint: 4 at 1773
+I (1777) I2C SCAN: Started
+W (2811) I2C SCAN: Found 6 Sensors
+W (2814) CS: [SENSORSFOUND]6
+W (2815) CS: [SENSOR]IMU [BHI360]
+W (2816) I2C SCAN: [0x28] Found IMU [BHI360] - Feature 10 motion_sensor
+W (2820) CS: [SENSOR]Epeas AEM13920 Power managament
+I (2825) I2C SCAN: [0x41] Found Epeas AEM13920 Power managament
+I (2853) AEM13920_CONFIG: Chip version: 1
+I (2853) AEM13920: Status chargeReady 1, discharge 0, overcharge 0, src1Sleep 0, src2Sleep 0, tempColdCharge 0, tempColdDischarge 0, tempHotCharge 0, tempHotDischarge 0
+I (2862) AEM13920_CONFIG: Overdischarge voltage (V_OVDIS) 3.300000V | Charge ready voltage(V_CHRDY) 3.544000V | Overcharge voltage (V_OVCH) 4.200000V 
+I (2921) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.158000V SOURCE 2: 0.233000V Coulomb Counter 0 APM1:0 APM2:0
+I (2935) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.158000V SOURCE 2: 0.233000V Coulomb Counter 0 APM1:0 APM2:0
+W (2941) CS: [SENSOR]EPEAS
+W (2941) CS: [SENSOR]RTC RV3028C7
+I (2943) I2C SCAN: [0x52] Found RTC RV3028C7
+W (2949) CS: [SENSOR]RTC
+W (2952) CS: [SENSOR]NFC [NTAG5LINK]
+I (2956) I2C SCAN: [0x54] Found NFC [NTAG5LINK]
+I (3461) NFC:  Setting connection availability
+I (3561) NFC:  "1" availability status has been written to  0x0075
+W (3561) CS: [SENSOR]NFC
+W (3562) CS: [SENSOR]Temperature, Humidity and Pressure Sensor [BME280]
+W (3567) I2C SCAN: [0x76] Found Temperature, Humidity and Pressure Sensor [BME280] - Feature 16 climate_sensor
+W (3578) CS: [SENSOR]Gas Sensor [BME688]
+W (3582) I2C SCAN: [0x77] Found Gas Sensor [BME688] - Feature 20 air_sensor
+I (3590) NFC: Read NFC config data - networks config
+I (3697) NFC: Data read from NFC networks config command: 255
+I (3697) NFC: NFC config was already used, skipping
+I (3698) NFC: Read NFC config data - boot mode
+I (3804) NFC: Data read from NFC boot mode command: 255
+I (3804) NFC: NFC boot mode not defined, skipping
+I (4113) RTC: Finished
+W (4114) CHECKPOINT: Storing checkpoint: 5 at 4114
+W (4118) WAKEUPREASONS: Nfc boot mode: 255 nfcWakeup: 0
+I (4122) gpio: GPIO[8]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (4126) gpio: GPIO[12]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (4136) gpio: GPIO[8]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (4145) gpio: GPIO[12]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 1| Intr:0 
+I (4154) WAKEUPREASONS: Pin status - Microphone: 0, Anemometer: 0
+W (4161) CORE: Wake up reason:   reported:Source: 1, Reason: 1, Description: EVI Triggered, Timestamp: 1749687685047 ms, reporting to server: 0 
+I (4184) WAKEUPREASONS: FLAGS AT startup, evi: 1 por: 0 alarm: 0 nfc: 0 rtc: 1 esp: 11
+W (4185) CORE: Wake up reason: REPORT  reported:Source: 0, Reason: 11, Description: Reset by USB peripheral, Timestamp: 1749687685072 ms, reporting to server: 1 
+I (4198) WAKEUPREASONS: #########################UPDATED WAKEUP REASON######################
+W (4207) CHECKPOINT: Storing checkpoint: 6 at 4208
+I (4225) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.158000V SOURCE 2: 0.233000V Coulomb Counter 0 APM1:0 APM2:0
+W (4230) CHECKPOINT: Storing checkpoint: 7 at 4231
+I (4283) STORAGE: SPIFFS mount successful
+W (4284) CHECKPOINT: Storing checkpoint: 8 at 4284
+W (4288) CHECKPOINT: Storing checkpoint: 9 at 4288
+W (4291) SYSTEM: notifyWorkeMode(): Normal
+W (4293) CHECKPOINT: Storing checkpoint: 10 at 4294
+I (4301) Storage: Initializing SD card
+I (4303) Storage: Using SDMMC peripheral
+I (4308) Storage: Mounting filesystem
+I (4312) gpio: GPIO[48]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (4322) gpio: GPIO[37]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (4331) gpio: GPIO[11]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+E (4368) sdmmc_common: sdmmc_init_ocr: send_op_cond (1) returned 0x107
+E (4369) vfs_fat_sdmmc: sdmmc_card_init failed (0x107).
+E (4371) Storage: Failed to mount filesystem. If you want the card to be formatted, set the FORMAT_IF_MOUNT_FAILED menuconfig option.
+E (4383) CoreBD: Error creating directory: /sdcard. errno: 2 (No such file or directory)
+I (4392) CoreBD: Cannot determine size of /sdcard/db/F412FA817108/F412FA817108_v10.db
+
+I (4441) CoreBD: Cannot determine size of /spiffs/unsent_v10.db
+
+I (4401) CoreBD: Starting failed messages at /spiffs/unsent_v10.db with size: -1 bytes 
+I (4584) CoreBD: Opened database successfully
+
+I (4584) CoreBD: Database opened, creating tables now
+I (4754) CoreBD: Database started
+I (4755) CORE: Current boot count: 1215
+I (4756) WAKEUPREASONS: No lp_reboot_count recorded
+I (4756) CORE: Low energy shutdown count: 0 (excluding current one)
+W (4764) CHECKPOINT: Storing checkpoint: 11 at 4764
+W (4773) #####: ###############################################
+W (4776) CS: [VERSION]Localbuild
+W (4780) CS: [BATTERYVOLTAGE]4.125000
+W (4784) CS: [BATTERYPERCENTAGE]95
+W (4788) CS: [DEVICEID]F412FA817108
+W (4793) CS: [LORA]0
+W (4795) CS: [LTE]1
+W (4798) CS: [BLE]0
+W (4801) CS: [WIFI]0
+W (4804) CORE: Device last checkpoint: 18
+W (4809) CORE: Device last checkpoint time: 5257
+W (4814) CORE: Device EUI: 0283F412FA817108
+W (4819) CORE: Join EUI: 6060606060606060
+W (4823) CORE: Application key: ac63e8292f9aeca88310436872948858
+W (4830) CORE: Network key: ac63e8292f9aeca88310436872948858
+I (4836) CORE: Wakeup Log:
+W (4840) CORE: Wakeup reason detected by ESP: Reset by USB peripheral
+W (4847) CORE: Defining main wake up reason: 0  & 11 has insufficient voltage: 0
+I (4856) CORE: Last normal working mode timestamp: 1749687487, current timestamp: 1749687685, defined interval: 870, time difference: 198
+W (4847) CORE: Main wakeup source reason: 111
+I (4873) WAKEUPREASONS: No lp_reboot_count recorded
+W (4879) CORE: Current working mode: Normal
+W (4883) CORE: SD Card: Not Detected
+W (4888) CORE: Overcharge voltage: 4200mv
+W (4892) CORE: Discharge voltage: 3300mv
+W (4897) CORE: Charge ready voltage: 3550mv
+W (4902) CORE: Calculated charge ready voltage: 3550mv
+W (4908) CORE: Minimum voltage to operate: 100mv
+W (4913) CORE: Minimum voltage above discharge to be ready: 250mv
+W (4920) CORE: Sleep when done: 1 Interval: 15
+W (4925) CORE: RTC alarm interrupt from last session(nvs): 0
+I (4933) POWER: EVI status: 0
+I (4935) POWER: alarmInterruptFlag status: 0
+I (4941) NFC: Data read from NFC memory config byte 2: 7 byte 0: 1
+I (4947) POWER: edStatus: 7
+W (4950) CORE: NFC flag from last session(nvs)::: 0
+W (4956) #####: ###############################################
+
+I (4963) CORE: Current Time: 2025-06-12 00:21:25
+W (4968) CHECKPOINT: Storing checkpoint: 12 at 4968
+I (4977) WAKEUPREASONS: Last saved time is older than current time by 197996 ms
+W (4982) TIME-CHECK: Current device time: 1749687685 s
+W (4987) TIME-CHECK: Last saved time    : 1749687487 s
+I (4995) WAKEUPREASONS: No lp_reboot_count recorded
+I (4995) SYSTEM: Battery voltage is above the minimum voltage to operate: 3400.000000v currently:4125.000000v low power shutdown count: 0
+W (5012) CORE: Defining main wake up reason: 0  & 11 has insufficient voltage: 0
+I (5012) main_task: Returned from app_main()
+I (5021) CORE: Last normal working mode timestamp: 1749687685, current timestamp: 1749687685, defined interval: 870, time difference: 0
+I (5038) BASETASK: Start Task WATCHDOG_TASK priority: 5
+I (5043) BASETASK: Task WATCHDOG_TASK created successfully. Handle: 0x3fcc398c
+I (5051) SYSTEM TASKS: Task created and added to list
+I (5057) BASETASK: Start Task POWER_REFRESH_TASK priority: 2
+I (5063) BASETASK: Task POWER_REFRESH_TASK created successfully. Handle: 0x3fcc3af8
+I (5072) SYSTEM TASKS: Task created and added to list
+I (5077) BASETASK: Start Task CORE_DUMP_TASK priority: 3
+I (5083) BASETASK: Task CORE_DUMP_TASK created successfully. Handle: 0x3fcc3c64
+I (5091) SYSTEM TASKS: Task created and added to list
+I (5097) SYSTEM: Current voltage: 4125.000000, voltage ready: 3544.000000, has Insufficient Voltage: 0
+W (5107) CHECKPOINT: Storing checkpoint: 25 at 5108
+W (5113) TIME-WATCHDOG: System time whatchdog is ON, the system will be off in 7 minutes
+W (5116) TASKS: AUTO START TASK IS RUNNING
+I (5126) BASETASK: Start Task MOTION_TASK priority: 16
+I (5132) BASETASK: Task MOTION_TASK created successfully. Handle: 0x3fcc3dd0
+I (5140) TASKMANAGER: Task created and added to list
+I (5145) BASETASK: Start Task MICROPHONE_TASK priority: 24
+I (5152) MICROPHONE: Task Started
+I (5155) BASETASK: Task MICROPHONE_TASK created successfully. Handle: 0x3fcc3f3c
+I (5164) TASKMANAGER: Task created and added to list
+I (5169) BASETASK: Start Task CLIMATE_TASK priority: 19
+I (5175) BASETASK: Task CLIMATE_TASK created successfully. Handle: 0x3fcc40a8
+I (5183) TASKMANAGER: Task created and added to list
+W (5189) CHECKPOINT: Storing checkpoint: 13 at 5189
+W (5197) COMMUNICATIONS: LORA DISABLED
+W (5199) COMMUNICATIONS: WIFI DISABLED
+W (5203) COMMUNICATIONS: BLE DISABLED
+I (5208) COMMUNICATIONS: Current battery level: 95%
+I (5213) BASETASK: Start Task LTE_TASK priority: 9
+I (5218) BASETASK: Task LTE_TASK created successfully. Handle: 0x3fcc4214
+I (5218) LTE: Initializing nRF9151
+I (5226) SYSTEM TASKS: Task created and added to list
+W (5236) CHECKPOINT: Storing checkpoint: 14 at 5236
+I (5231) gpio: GPIO[4]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 1| Intr:0 
+I (5246) SYSTEM: WAITING FOR COMUNICATIONS START 360000
+W (5256) CHECKPOINT: Storing checkpoint: 18 at 5257
+I (5251) LTE_NRF9151: Set power state
+I (5226) BHY2: Initializing BHI runner
+I (5271) BHY2: Normal mode received
+I (5226) COREDUMP: Processing core dump
+I (5276) BHY2: BHI found. Product ID read 89
+I (5286) BHY2: BOOT STATUS: HOST FW VERIFY DONE (0x20)
+I (5290) BHY2: Boot successful (Attempt 1)
+I (5311) COREDUMP: No core dump found (no error happened): ESP_FAIL
+W (5312) COREDUMP: Deleting core dump task
+W (5312) BASETASK: Deleting existing Task CORE_DUMP_TASK
+I (5226) POWER MANAGER: handling epeas interrupt
+I (5323) gpio: GPIO[38]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:1 
+I (6266) LTE_NRF9151: Process
+I (6316) LTE_NRF9151: Clear app buf
+I (6316) LTE_NRF9151: Send AT cmd
+I (6694) LTE: nrf9151 application init ok
+I (9124) LTE_NRF9151: nRF9151 modem firmware version: 
+mfw_nrf91x1_2.0.2
+
+OK
+
+I (9194) LTE_NRF9151: nRF9151 firmware version : 
+FWVER: 1.3
+OK
+
+I (9194) LTE_NRF9151: ========== INIT nrf9151_start_pre_connect2() ==========
+I (9762) LTE_NRF9151: [PRECONNECT] AT+CEREG=5 -> ESP_OK
+W (10050) AEM13920: Epeas current temperature 36
+W (10051) AEM13920: Initial IRQ Status, skipping any actions EPEAS Initial Status: outOfReset:0, chargeReady:0, discharge:0, overcharge:0, sleepThresh:0, tempChThresh:0, tempDisThresh:0, src1MPPTStart:0, src1MPPTDone:0, src2MPPTStart:0, src2MPPTDone:0, tempDone:1, APMError:0, APMDone:0, storageDone:0
+I (12322) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ESP_OK
+I (13417) LTE_NRF9151: [PRECONNECT] AT+CFUN=1 -> ESP_OK
+I (13417) LTE_NRF9151: [PRECONNECT] elapsed 0ms
+I (13577) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (13577) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (14079) LTE_NRF9151: [PRECONNECT] elapsed 662ms
+I (14239) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (14239) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (14741) LTE_NRF9151: [PRECONNECT] elapsed 1324ms
+I (14901) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (14901) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (15403) LTE_NRF9151: [PRECONNECT] elapsed 1986ms
+I (15563) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (15563) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (16065) LTE_NRF9151: [PRECONNECT] elapsed 2648ms
+I (16225) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (16225) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (16727) LTE_NRF9151: [PRECONNECT] elapsed 3310ms
+I (16887) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (16887) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+W (17169) AEM13920: Epeas current temperature 36
+I (17170) AEM13920: Temperature ADC Done
+I (17389) LTE_NRF9151: [PRECONNECT] elapsed 3972ms
+I (17549) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (17549) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (18051) LTE_NRF9151: [PRECONNECT] elapsed 4634ms
+I (18211) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (18211) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (18713) LTE_NRF9151: [PRECONNECT] elapsed 5296ms
+I (18873) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (18873) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (18875) LTE_NRF9151: [PLMN_SCAN] Clearing app buffer
+I (18881) LTE_NRF9151: [PLMN_SCAN] Sending AT%COPS=?
+W (24285) AEM13920: Epeas current temperature 36
+I (24286) AEM13920: Temperature ADC Done
+W (31401) AEM13920: Epeas current temperature 36
+I (31402) AEM13920: Temperature ADC Done
+I (35211) MICROPHONE: Config and setup TDK, Enable: 1, LPF: 1.1kHz, TH: 97.5dBSPL
+I (35212) MICROPHONE: States: AAD A:1 D1:0 D2:0
+I (35214) MICROPHONE: AADA_LPF_FREQUENCY_VALUE: 7
+I (35220) MICROPHONE: AADA_THRESHOLD_VALUE: 15
+I (35271) MICROPHONE: Trying WS pin: 0
+I (35295) BHY2: startLoop() initiated for BHI360 at time: 2025-06-12 00:21:56
+I (35296) BHY2: Successfully allocated memory in PSRAM for work_buffer.
+W (35373) MICROPHONE: Microphone returning all zeros
+W (35374) MICROPHONE: Microphone test failed with WS pin: 0, trying next pin
+I (35376) MICROPHONE: Trying WS pin: 35
+I (35481) MICROPHONE: Microphone test successful, read 2048 bytes
+I (35481) MICROPHONE: Microphone successfully initialized with WS pin: 35
+I (35484) MICROPHONE: Using WS pin: 35
+I (35498) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.158000V SOURCE 2: 0.233000V Coulomb Counter 0 APM1:0 APM2:0
+W (35669) BHY2: Activate Any Motion
+W (35672) BHY2: Any Motion Config: Duration=0.40s 0x14, Threshold=2.35m/s2 0x1eb, Enable=1, axis_X=1 , axis_Y=1, axis_Z=1
+I (35675) BHY2: Enable Orientation wake up.
+W (35803) BHY2: Motion detected
+W (35805) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687716691 ms, reporting to server: 0 
+I (35967) MICROPHONE: dB Level: 55.33
+I (35999) SensorDataParser: Gyroscope WU sensor accuracy set to 3
+I (36000) SensorDataParser: Magnetometer WU sensor accuracy set to 1
+I (36003) SensorDataParser: Accelerometer WU sensor accuracy set to 1
+I (36011) SensorDataParser: Linear Acceleration WU sensor accuracy set to 3
+I (36014) MICROPHONE: dB Level: 57.91
+I (36022) SensorDataParser: Orientation WU sensor accuracy set to 0
+I (36029) SensorDataParser: [MOTION] Maximum motion readings reached: 4
+I (36035) SensorDataParser: [ACC] Maximum number of accelerometer readings reached: 6
+I (36060) MICROPHONE: dB Level: 57.15
+I (36107) MICROPHONE: dB Level: 52.46
+I (37389) TASKMANAGER: Starting to remove task CLIMATE_TASK
+I (37390) TASKMANAGER: Task removed from list
+W (38515) AEM13920: Epeas current temperature 36
+I (38516) AEM13920: Temperature ADC Done
+W (45629) AEM13920: Epeas current temperature 36
+I (45630) AEM13920: Temperature ADC Done
+W (52743) AEM13920: Epeas current temperature 36
+I (52744) AEM13920: Temperature ADC Done
+W (59858) AEM13920: Epeas current temperature 36
+I (59859) AEM13920: Temperature ADC Done
+I (65514) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.173000V SOURCE 2: 0.233000V Coulomb Counter 0 APM1:0 APM2:0
+W (66973) AEM13920: Epeas current temperature 36
+I (66974) AEM13920: Temperature ADC Done
+W (74086) AEM13920: Epeas current temperature 36
+I (74087) AEM13920: Temperature ADC Done
+W (81199) AEM13920: Epeas current temperature 36
+I (81200) AEM13920: Temperature ADC Done
+W (88313) AEM13920: Epeas current temperature 36
+I (88314) AEM13920: Temperature ADC Done
+W (95428) AEM13920: Epeas current temperature 36
+I (95429) AEM13920: Temperature ADC Done
+I (95528) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+W (102542) AEM13920: Epeas current temperature 36
+I (102543) AEM13920: Temperature ADC Done
+W (109654) AEM13920: Epeas current temperature 36
+I (109655) AEM13920: Temperature ADC Done
+W (116766) AEM13920: Epeas current temperature 36
+I (116767) AEM13920: Temperature ADC Done
+W (123880) AEM13920: Epeas current temperature 36
+I (123881) AEM13920: Temperature ADC Done
+I (125542) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.188000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+W (130994) AEM13920: Epeas current temperature 36
+I (130995) AEM13920: Temperature ADC Done
+W (138107) AEM13920: Epeas current temperature 36
+I (138108) AEM13920: Temperature ADC Done
+W (145219) AEM13920: Epeas current temperature 36
+I (145220) AEM13920: Temperature ADC Done
+W (152331) AEM13920: Epeas current temperature 36
+I (152332) AEM13920: Temperature ADC Done
+I (155556) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+W (159445) AEM13920: Epeas current temperature 36
+I (159446) AEM13920: Temperature ADC Done
+W (166557) AEM13920: Epeas current temperature 36
+I (166558) AEM13920: Temperature ADC Done
+W (173669) AEM13920: Epeas current temperature 36
+I (173670) AEM13920: Temperature ADC Done
+W (180781) AEM13920: Epeas current temperature 36
+I (180782) AEM13920: Temperature ADC Done
+I (185570) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+W (187894) AEM13920: Epeas current temperature 36
+I (187895) AEM13920: Temperature ADC Done
+W (195007) AEM13920: Epeas current temperature 36
+I (195008) AEM13920: Temperature ADC Done
+W (202119) AEM13920: Epeas current temperature 36
+I (202120) AEM13920: Temperature ADC Done
+W (209230) AEM13920: Epeas current temperature 36
+I (209231) AEM13920: Temperature ADC Done
+I (215584) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.143000V SOURCE 2: 0.218000V Coulomb Counter 0 APM1:0 APM2:0
+W (216343) AEM13920: Epeas current temperature 36
+I (216344) AEM13920: Temperature ADC Done
+W (223456) AEM13920: Epeas current temperature 36
+I (223457) AEM13920: Temperature ADC Done
+W (230568) AEM13920: Epeas current temperature 36
+I (230569) AEM13920: Temperature ADC Done
+W (237679) AEM13920: Epeas current temperature 36
+I (237680) AEM13920: Temperature ADC Done
+W (244791) AEM13920: Epeas current temperature 36
+I (244792) AEM13920: Temperature ADC Done
+I (245598) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.203000V SOURCE 2: 0.248000V Coulomb Counter 0 APM1:0 APM2:0
+I (251530) LTE_NRF9151: [PLMN_SCAN] app_buf contents:
+
++COPS: 
+
+OK
+
+I (251530) LTE_NRF9151: [PLMN_SCAN] Result code: ESP_OK
+I (251532) LTE_NRF9151: [PLMN_SELECT] Clearing app buffer
+I (251539) LTE_NRF9151: [PLMN_SELECT] Sending manual COPS command → AT+COPS=1,2,"26806"
+
+W (251904) AEM13920: Epeas current temperature 36
+I (251905) AEM13920: Temperature ADC Done
+W (259017) AEM13920: Epeas current temperature 36
+I (259018) AEM13920: Temperature ADC Done
+W (266128) AEM13920: Epeas current temperature 36
+I (266129) AEM13920: Temperature ADC Done
+W (273238) AEM13920: Epeas current temperature 36
+I (273239) AEM13920: Temperature ADC Done
+I (275612) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.143000V SOURCE 2: 0.218000V Coulomb Counter 0 APM1:0 APM2:0
+W (280352) AEM13920: Epeas current temperature 36
+I (280353) AEM13920: Temperature ADC Done
+W (287464) AEM13920: Epeas current temperature 36
+I (287465) AEM13920: Temperature ADC Done
+W (294575) AEM13920: Epeas current temperature 36
+I (294576) AEM13920: Temperature ADC Done
+W (301685) AEM13920: Epeas current temperature 36
+I (301686) AEM13920: Temperature ADC Done
+I (305626) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.158000V SOURCE 2: 0.128000V Coulomb Counter 0 APM1:0 APM2:0
+W (305661) BHY2: Motion detected
+W (305662) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687986549 ms, reporting to server: 0 
+W (306424) BHY2: Motion detected
+W (306426) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687987312 ms, reporting to server: 0 
+W (308147) BHY2: Motion detected
+W (308148) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687989035 ms, reporting to server: 0 
+W (308798) AEM13920: Epeas current temperature 36
+I (308799) AEM13920: Temperature ADC Done
+W (313589) BHY2: Motion detected
+W (313590) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687994477 ms, reporting to server: 0 
+W (314162) AEM13920: Epeas current temperature 36
+I (314163) AEM13920: Sleep Threshold
+W (314352) BHY2: Motion detected
+W (314354) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687995240 ms, reporting to server: 0 
+W (315910) AEM13920: Epeas current temperature 36
+I (315911) AEM13920: Temperature ADC Done
+W (315956) BHY2: Motion detected
+W (315957) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687996844 ms, reporting to server: 0 
+W (317080) BHY2: Motion detected
+W (317081) CORE: Wake up reason:   reported:Source: 3, Reason: 142, Description: Motion Triggered, Timestamp: 1749687997968 ms, reporting to server: 0 
+I (318680) LTE_NRF9151: [PLMN_SELECT] Result code: ESP_OK
+I (320800) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ESP_OK
+I (321895) LTE_NRF9151: [PRECONNECT] AT+CFUN=1 -> ESP_OK
+I (321895) LTE_NRF9151: [PRECONNECT] elapsed 0ms
+I (322055) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (322055) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+I (322557) LTE_NRF9151: [PRECONNECT] elapsed 662ms
+I (322724) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (322724) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,2,"BCB6","00065B0D",7
+
+OK
+
+W (323022) AEM13920: Epeas current temperature 36
+I (323023) AEM13920: Temperature ADC Done
+I (323227) LTE_NRF9151: [PRECONNECT] elapsed 1332ms
+I (323387) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (323387) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,2,"BCB6","00065B0D",7
+
+OK
+
+I (323890) LTE_NRF9151: [PRECONNECT] elapsed 1995ms
+I (324050) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (324050) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,2,"BCB6","00065B0D",7
+
+OK
+
+I (324553) LTE_NRF9151: [PRECONNECT] elapsed 2658ms
+I (324713) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (324713) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,2,"BCB6","00065B0D",7
+
+OK
+
+I (325216) LTE_NRF9151: [PRECONNECT] elapsed 3321ms
+I (325383) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (325383) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,5,"BCB6","00065B0D",7
+
+OK
+
+I (325552) LTE_NRF9151: [PRECONNECT] AT+CGATT? -> ESP_OK
+I (325552) LTE_NRF9151: [PRECONNECT] CGATT: 
++CEREG: 0,5,"BCB6","00065B0D",7
+
+OK
+
++CGATT: 1
+
+OK
+
+I (325557) LTE_NRF9151: [PRECONNECT] if (registered && attached)
+I (328684) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ESP_OK
+I (329779) LTE_NRF9151: [PRECONNECT] AT+CFUN=1 -> ESP_OK
+I (329779) LTE_NRF9151: [PRECONNECT] elapsed 0ms
+I (329939) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (329939) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+W (330135) AEM13920: Epeas current temperature 36
+I (330136) AEM13920: Temperature ADC Done
+I (330441) LTE_NRF9151: [PRECONNECT] elapsed 662ms
+I (330601) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (330601) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,2,"BCB6","00065B0D",7
+
+OK
+
+I (331104) LTE_NRF9151: [PRECONNECT] elapsed 1325ms
+I (331264) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (331264) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,2,"BCB6","00065B0D",7
+
+OK
+
+I (331767) LTE_NRF9151: [PRECONNECT] elapsed 1988ms
+I (331927) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (331927) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,2,"BCB6","00065B0D",7
+
+OK
+
+I (332430) LTE_NRF9151: [PRECONNECT] elapsed 2651ms
+I (332590) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (332590) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,5,"BCB6","00065B0D",7
+
+OK
+
+I (332753) LTE_NRF9151: [PRECONNECT] AT+CGATT? -> ESP_OK
+I (332753) LTE_NRF9151: [PRECONNECT] CGATT: 
++CEREG: 0,5,"BCB6","00065B0D",7
+
+OK
+
++CGATT: 1
+
+OK
+
+I (332758) LTE_NRF9151: [PRECONNECT] if (registered && attached)
+I (335638) AEM13920: STORAGE Voltage  4.125000V SOURCE 1: 0.158000V SOURCE 2: 0.128000V Coulomb Counter 0 APM1:0 APM2:0
+I (335885) LTE_NRF9151: [PRECONNECT] AT+CFUN=0 -> ESP_OK
+I (336980) LTE_NRF9151: [PRECONNECT] AT+CFUN=1 -> ESP_OK
+I (336980) LTE_NRF9151: [PRECONNECT] elapsed 0ms
+I (337140) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (337140) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,4
+
+OK
+
+W (337248) AEM13920: Epeas current temperature 36
+I (337249) AEM13920: Temperature ADC Done
+I (337642) LTE_NRF9151: [PRECONNECT] elapsed 662ms
+I (337802) LTE_NRF9151: [PRECONNECT] AT+CEREG? -> ESP_OK
+I (337802) LTE_NRF9151: [PRECONNECT] CEREG: 
++CEREG: 0,2,"BCB6","00065B0D",7
+
+OK
+
