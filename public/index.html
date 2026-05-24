@@ -441,7 +441,7 @@
 							  </div>
 							</div>
 							<ul class="actions special" style="margin-top: 2rem; margin-bottom: 0;">
-							  <li><a href="https://wa.me/393463446699?text=Hello!%20I'm%20interested%20in%20booking%20a%20SUP%20lesson%20and%20would%20like%20to%20get%20more%20information.%20Thank%20you!" class="button large" target="_blank">Prenota Ora</a></li>
+							  <li><a href="#" id="book-now-btn" class="button large">Prenota Ora</a></li>
 							</ul>
 						  </article>
 
@@ -972,7 +972,7 @@ function renderTimes() {
   calendarTitle.textContent = 'Scegli orario';
   
   // Horários disponíveis
-  const times = ['10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
+  const times = ['10:00', '12:00', '16:00', '18:00'];
   let html = '<div class="calendar-content-center">';
   html += '<div class="calendar-times-grid">';
   times.forEach(time => {
@@ -1099,13 +1099,17 @@ calendarNext.onclick = function() {
 };
 // Modal open/close
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('open-calendar-modal').onclick = function(e) {
-    e.preventDefault();
+  const openCalendar = function(e) {
+    if (e) e.preventDefault();
     document.getElementById('calendar-modal').style.display = 'block';
     document.getElementById('calendar-modal-overlay').style.display = 'block';
     calendarStep = 'days';
     renderCalendar();
   };
+  ['open-calendar-modal', 'book-now-btn'].forEach(function(id) {
+    const el = document.getElementById(id);
+    if (el) el.onclick = openCalendar;
+  });
   document.getElementById('close-calendar-modal').onclick = function() {
     document.getElementById('calendar-modal').style.display = 'none';
     document.getElementById('calendar-modal-overlay').style.display = 'none';
@@ -1573,7 +1577,7 @@ document.addEventListener('DOMContentLoaded', function() {
     calendarNext.style.display = 'none';
     calendarTitle.textContent = translations[currentLanguage].calendar_choose_time;
     
-    const times = ['10:00', '11:00', '12:00', '14:00', '15:00', '16:00', '17:00', '18:00'];
+    const times = ['10:00', '12:00', '16:00', '18:00'];
     const t = translations[currentLanguage];
     let html = '<div class="calendar-content-center">';
     html += '<div class="calendar-times-grid">';
