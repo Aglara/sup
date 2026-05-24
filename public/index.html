@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <!--
-	Massively by HTML5 UP
+	Pulsano Local SUP - Stand Up Paddle Experience
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Massively by HTML5 UP</title>
+		<title>Pulsano Local SUP - Stand Up Paddle Experience</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -410,7 +410,7 @@
 							<li><a href="#" id="open-calendar-modal">Calendario</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="https://www.instagram.com/king.yancl?igsh=cGhyZTU5dmV2c3Zx" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="https://www.instagram.com/localsup.school?igsh=MXY2NDNhMHd1MTA5Zw==" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 						</ul>
 					</nav>
 
@@ -600,7 +600,7 @@
 								<h3>Social</h3>
 								<ul class="icons alt">
 									<li><a href="https://wa.me/393463446699?text=Hello!%20I'm%20interested%20in%20booking%20a%20SUP%20lesson%20and%20would%20like%20to%20get%20more%20information.%20Thank%20you!" class="icon brands alt fa-whatsapp"><span class="label">WhatsApp</span></a></li>
-									<li><a href="https://www.instagram.com/king.yancl?igsh=cGhyZTU5dmV2c3Zx" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://www.instagram.com/localsup.school?igsh=MXY2NDNhMHd1MTA5Zw==" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 								</ul>
 							</section>
 						</section>
@@ -634,7 +634,7 @@
 </a>
 
 	<!-- Botão flutuante Instagram -->
-<a href="https://www.instagram.com/king.yancl?igsh=cGhyZTU5dmV2c3Zx" target="_blank" id="instagram-float" style="position:fixed;z-index:9999;bottom:104px;right:32px;width:60px;height:60px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;transition:box-shadow 0.2s;">
+<a href="https://www.instagram.com/localsup.school?igsh=MXY2NDNhMHd1MTA5Zw==" target="_blank" id="instagram-float" style="position:fixed;z-index:9999;bottom:104px;right:32px;width:60px;height:60px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.18);display:flex;align-items:center;justify-content:center;transition:box-shadow 0.2s;">
   <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="32" height="32" rx="16" fill="#fff"/>
     <rect x="7" y="7" width="18" height="18" rx="5" stroke="#E1306C" stroke-width="2"/>
@@ -652,14 +652,14 @@
   .calendar-modal {
     display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
     z-index: 9999;
-    width: 520px;
-    min-height: 520px;
+    width: 620px;
+    min-height: 600px;
     max-width: 95vw;
     max-height: 95vh;
     background: #fff;
     border-radius: 1.25rem;
     box-shadow: 0 8px 32px rgba(24,191,239,0.10), 0 2px 16px rgba(0,0,0,0.10);
-    padding: 2.5rem 1rem 2rem 1rem;
+    padding: 2.8rem 1.8rem 2.2rem 1.8rem;
     overflow-x: hidden;
     overflow-y: auto;
     animation: calendarFadeIn 0.25s;
@@ -882,11 +882,11 @@
 <script>
 // Calendar logic
 const calendarMonths = [
-  { name: 'Maggio', year: 2025, month: 4 },
-  { name: 'Giugno', year: 2025, month: 5 },
-  { name: 'Luglio', year: 2025, month: 6 },
-  { name: 'Agosto', year: 2025, month: 7 },
-  { name: 'Settembre', year: 2025, month: 8 }
+  { name: 'Maggio', year: 2026, month: 4 },
+  { name: 'Giugno', year: 2026, month: 5 },
+  { name: 'Luglio', year: 2026, month: 6 },
+  { name: 'Agosto', year: 2026, month: 7 },
+  { name: 'Settembre', year: 2026, month: 8 }
 ];
 let calendarIndex = 1; // Start at Giugno
 const calendarTitle = document.getElementById('calendar-title');
@@ -896,6 +896,8 @@ const calendarNext = document.getElementById('calendar-next');
 
 let calendarStep = 'days'; // 'days' ou 'times'
 let selectedTime = null;
+let selectedDay = null;
+let selectedMonthData = null;
 
 function renderCalendar() {
   if (calendarStep !== 'days') return;
@@ -949,6 +951,8 @@ function renderCalendar() {
         sel.classList.remove('selected');
       });
       td.classList.add('selected');
+      selectedDay = parseInt(td.getAttribute('data-day'), 10);
+      selectedMonthData = calendarMonths[calendarIndex];
       calendarNextBtn.disabled = false;
     });
   });
@@ -1044,11 +1048,25 @@ function renderForm() {
       alert('Per favore, compila tutti i campi.');
       return;
     }
+    // Monta mensagem do WhatsApp e abre em nova aba
+    const dataStr = selectedMonthData
+      ? `${selectedDay} ${selectedMonthData.name} ${selectedMonthData.year}`
+      : '';
+    const message =
+      'Ciao! Vorrei prenotare una lezione SUP.\n' +
+      `📅 Data: ${dataStr}\n` +
+      `🕐 Orario: ${selectedTime || ''}\n` +
+      `👤 Nome: ${nome}\n` +
+      `🎂 Età: ${eta}\n` +
+      `📞 Telefono: ${tel}`;
+    const whatsappUrl = 'https://wa.me/393463446699?text=' + encodeURIComponent(message);
+    window.open(whatsappUrl, '_blank');
+
     // Tela de sucesso estilizada
     let successHtml = '<div class="calendar-content-center" style="text-align:center;">';
-    successHtml += '<div style="font-size:3.2rem;color:#18bfef;margin-bottom:1.1rem;">✔️</div>';
-    successHtml += '<div style="font-size:1.35rem;font-weight:700;color:#1e8566;margin-bottom:0.7rem;">Richiesta inviata!</div>';
-    successHtml += '<div style="font-size:1.05rem;color:#717981;margin-bottom:1.5rem;">Grazie, ti ricontatteremo al più presto.<br>Controlla WhatsApp o email per la conferma.</div>';
+    successHtml += '<div style="font-size:3.2rem;color:#25d366;margin-bottom:1.1rem;">💬</div>';
+    successHtml += '<div style="font-size:1.35rem;font-weight:700;color:#1e8566;margin-bottom:0.7rem;">Apertura WhatsApp...</div>';
+    successHtml += '<div style="font-size:1.05rem;color:#717981;margin-bottom:1.5rem;">Premi <strong>Invia</strong> su WhatsApp per completare la richiesta.<br>Ti ricontatteremo al più presto.</div>';
     successHtml += '<button id="calendar-success-close" class="calendar-times-btn" style="min-width:120px;">Chiudi</button>';
     successHtml += '</div>';
     calendarTableWrapper.innerHTML = successHtml;
@@ -1478,11 +1496,11 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Configurar calendário com traduções
   const calendarMonths = [
-    { name: currentLanguage === 'en' ? 'May' : 'Maggio', year: 2025, month: 4 },
-    { name: currentLanguage === 'en' ? 'June' : 'Giugno', year: 2025, month: 5 },
-    { name: currentLanguage === 'en' ? 'July' : 'Luglio', year: 2025, month: 6 },
-    { name: currentLanguage === 'en' ? 'August' : 'Agosto', year: 2025, month: 7 },
-    { name: currentLanguage === 'en' ? 'September' : 'Settembre', year: 2025, month: 8 }
+    { name: currentLanguage === 'en' ? 'May' : 'Maggio', year: 2026, month: 4 },
+    { name: currentLanguage === 'en' ? 'June' : 'Giugno', year: 2026, month: 5 },
+    { name: currentLanguage === 'en' ? 'July' : 'Luglio', year: 2026, month: 6 },
+    { name: currentLanguage === 'en' ? 'August' : 'Agosto', year: 2026, month: 7 },
+    { name: currentLanguage === 'en' ? 'September' : 'Settembre', year: 2026, month: 8 }
   ];
   
   // Atualizar função renderCalendar para usar traduções
@@ -1535,6 +1553,8 @@ document.addEventListener('DOMContentLoaded', function() {
           sel.classList.remove('selected');
         });
         td.classList.add('selected');
+        selectedDay = parseInt(td.getAttribute('data-day'), 10);
+        selectedMonthData = calendarMonths[calendarIndex];
         calendarNextBtn.disabled = false;
       });
     });
@@ -1595,19 +1615,87 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   };
   
+  // Lista de 40 países (ordenados por capacidade financeira / turismo p/ Itália)
+  const countries = [
+    { code: 'IT', dial: '+39',  flag: '🇮🇹', name: 'Italia' },
+    { code: 'CH', dial: '+41',  flag: '🇨🇭', name: 'Schweiz / Suisse' },
+    { code: 'LU', dial: '+352', flag: '🇱🇺', name: 'Luxembourg' },
+    { code: 'NO', dial: '+47',  flag: '🇳🇴', name: 'Norge' },
+    { code: 'IE', dial: '+353', flag: '🇮🇪', name: 'Ireland' },
+    { code: 'IS', dial: '+354', flag: '🇮🇸', name: 'Ísland' },
+    { code: 'DK', dial: '+45',  flag: '🇩🇰', name: 'Danmark' },
+    { code: 'NL', dial: '+31',  flag: '🇳🇱', name: 'Nederland' },
+    { code: 'SE', dial: '+46',  flag: '🇸🇪', name: 'Sverige' },
+    { code: 'FI', dial: '+358', flag: '🇫🇮', name: 'Suomi' },
+    { code: 'AT', dial: '+43',  flag: '🇦🇹', name: 'Österreich' },
+    { code: 'DE', dial: '+49',  flag: '🇩🇪', name: 'Deutschland' },
+    { code: 'BE', dial: '+32',  flag: '🇧🇪', name: 'België / Belgique' },
+    { code: 'FR', dial: '+33',  flag: '🇫🇷', name: 'France' },
+    { code: 'GB', dial: '+44',  flag: '🇬🇧', name: 'United Kingdom' },
+    { code: 'US', dial: '+1',   flag: '🇺🇸', name: 'United States' },
+    { code: 'CA', dial: '+1',   flag: '🇨🇦', name: 'Canada' },
+    { code: 'AU', dial: '+61',  flag: '🇦🇺', name: 'Australia' },
+    { code: 'NZ', dial: '+64',  flag: '🇳🇿', name: 'New Zealand' },
+    { code: 'JP', dial: '+81',  flag: '🇯🇵', name: '日本 (Japan)' },
+    { code: 'KR', dial: '+82',  flag: '🇰🇷', name: '한국 (Korea)' },
+    { code: 'SG', dial: '+65',  flag: '🇸🇬', name: 'Singapore' },
+    { code: 'AE', dial: '+971', flag: '🇦🇪', name: 'UAE' },
+    { code: 'QA', dial: '+974', flag: '🇶🇦', name: 'Qatar' },
+    { code: 'SA', dial: '+966', flag: '🇸🇦', name: 'Saudi Arabia' },
+    { code: 'KW', dial: '+965', flag: '🇰🇼', name: 'Kuwait' },
+    { code: 'IL', dial: '+972', flag: '🇮🇱', name: 'Israel' },
+    { code: 'ES', dial: '+34',  flag: '🇪🇸', name: 'España' },
+    { code: 'PT', dial: '+351', flag: '🇵🇹', name: 'Portugal' },
+    { code: 'CZ', dial: '+420', flag: '🇨🇿', name: 'Česko' },
+    { code: 'SI', dial: '+386', flag: '🇸🇮', name: 'Slovenija' },
+    { code: 'EE', dial: '+372', flag: '🇪🇪', name: 'Eesti' },
+    { code: 'PL', dial: '+48',  flag: '🇵🇱', name: 'Polska' },
+    { code: 'HU', dial: '+36',  flag: '🇭🇺', name: 'Magyarország' },
+    { code: 'SK', dial: '+421', flag: '🇸🇰', name: 'Slovensko' },
+    { code: 'GR', dial: '+30',  flag: '🇬🇷', name: 'Ελλάδα (Greece)' },
+    { code: 'CN', dial: '+86',  flag: '🇨🇳', name: '中国 (China)' },
+    { code: 'BR', dial: '+55',  flag: '🇧🇷', name: 'Brasil' },
+    { code: 'MX', dial: '+52',  flag: '🇲🇽', name: 'México' },
+    { code: 'AR', dial: '+54',  flag: '🇦🇷', name: 'Argentina' },
+    // Opção "Outro" — digitar DDI manualmente
+    { code: 'OTHER', dial: '',  flag: '🌐', name: '— Other / Altro —' }
+  ];
+  let selectedCountry = countries[0];
+
   // Atualizar função renderForm para usar traduções
   window.renderForm = function() {
     calendarTableWrapper.innerHTML = '';
     calendarPrev.style.display = 'none';
     calendarNext.style.display = 'none';
     calendarTitle.textContent = translations[currentLanguage].calendar_your_data;
-    
+
     const t = translations[currentLanguage];
     let html = '<div class="calendar-content-center">';
     html += '<form id="calendar-form" style="width:100%;display:flex;flex-direction:column;gap:1.1rem;">';
-    html += `<input type="text" id="calendar-form-nome" name="nome" placeholder="${t.calendar_form_name}" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">`;
-    html += `<input type="number" id="calendar-form-eta" name="eta" placeholder="${t.calendar_form_age}" min="1" max="120" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">`;
-    html += `<input type="tel" id="calendar-form-tel" name="tel" placeholder="${t.calendar_form_phone}" required style="padding:0.8rem 1rem;font-size:1.08rem;border-radius:0.7rem;border:2px solid #e0f4fa;outline:none;box-shadow:0 1px 4px rgba(24,191,239,0.08);font-family:inherit;">`;
+    html += `<input type="text" id="calendar-form-nome" name="nome" placeholder="${t.calendar_form_name}" required style="padding:0.85rem 1rem;font-size:1.05rem;border-radius:1.1rem;border:1px solid #e6eef3;outline:none;box-shadow:0 1px 3px rgba(24,191,239,0.05);font-family:inherit;transition:border-color 0.18s, box-shadow 0.18s;">`;
+    html += `<input type="number" id="calendar-form-eta" name="eta" placeholder="${t.calendar_form_age}" min="1" max="120" required style="padding:0.85rem 1rem;font-size:1.05rem;border-radius:1.1rem;border:1px solid #e6eef3;outline:none;box-shadow:0 1px 3px rgba(24,191,239,0.05);font-family:inherit;transition:border-color 0.18s, box-shadow 0.18s;">`;
+
+    // Campo de telefone com seletor de país
+    html += '<div style="position:relative;">';
+    html += '<div style="display:flex;gap:0.5rem;">';
+    html += `<button type="button" id="country-selector-btn" style="display:flex;align-items:center;gap:0.4rem;padding:0.85rem 0.9rem;font-size:1.05rem;border-radius:1.1rem;border:1px solid #e6eef3;background:#fff;cursor:pointer;outline:none;box-shadow:0 1px 3px rgba(24,191,239,0.05);font-family:inherit;white-space:nowrap;transition:border-color 0.18s, box-shadow 0.18s;">`;
+    html += `<span id="country-flag" style="font-size:1.3rem;line-height:1;">${selectedCountry.flag}</span>`;
+    html += `<span id="country-dial" style="font-weight:600;color:#212931;">${selectedCountry.dial}</span>`;
+    html += '<span style="color:#b3dbe7;font-size:0.65rem;margin-left:0.15rem;">▼</span>';
+    html += '</button>';
+    html += `<input type="tel" id="calendar-form-tel" name="tel" placeholder="${t.calendar_form_phone}" required style="flex:1;min-width:0;padding:0.85rem 1rem;font-size:1.05rem;border-radius:1.1rem;border:1px solid #e6eef3;outline:none;box-shadow:0 1px 3px rgba(24,191,239,0.05);font-family:inherit;transition:border-color 0.18s, box-shadow 0.18s;">`;
+    html += '</div>';
+    html += '<div id="country-dropdown" style="display:none;position:absolute;top:calc(100% + 0.35rem);left:0;right:0;max-height:320px;overflow-y:auto;background:#fff;border:1px solid #e6eef3;border-radius:1.1rem;box-shadow:0 6px 20px rgba(24,191,239,0.10);z-index:10;padding:0.3rem;">';
+    html += countries.map(c =>
+      `<button type="button" class="country-option" data-code="${c.code}" style="width:100%;display:flex;align-items:center;gap:0.7rem;padding:0.65rem 0.85rem;background:none;border:none;border-radius:0.7rem;cursor:pointer;font-family:inherit;font-size:0.98rem;text-align:left;color:#212931;transition:background 0.15s;">`
+      + `<span style="font-size:1.25rem;line-height:1;">${c.flag}</span>`
+      + `<span style="flex:1;">${c.name}</span>`
+      + `<span style="color:#8a9099;font-weight:500;font-size:0.92rem;">${c.dial}</span>`
+      + '</button>'
+    ).join('');
+    html += '</div>';
+    html += '</div>';
+
     html += '<div class="calendar-times-actions" style="margin-top:0.5rem;">'
       + `<button type="button" class="calendar-times-btn" id="calendar-form-back">${t.calendar_back}</button>`
       + `<button type="submit" class="calendar-times-btn" id="calendar-form-send">${t.calendar_form_send}</button>`
@@ -1615,12 +1703,61 @@ document.addEventListener('DOMContentLoaded', function() {
     html += '</form>';
     html += '</div>';
     calendarTableWrapper.innerHTML = html;
-    
+
+    // Lógica do dropdown de países
+    const countryBtn = document.getElementById('country-selector-btn');
+    const countryDropdown = document.getElementById('country-dropdown');
+    countryBtn.onclick = function(ev) {
+      ev.stopPropagation();
+      countryDropdown.style.display = countryDropdown.style.display === 'none' ? 'block' : 'none';
+    };
+    document.querySelectorAll('.country-option').forEach(function(opt) {
+      opt.onmouseover = function() { this.style.background = '#f6fafd'; };
+      opt.onmouseout = function() { this.style.background = 'none'; };
+      opt.onclick = function() {
+        const code = this.getAttribute('data-code');
+        if (code === 'OTHER') {
+          const promptMsg = currentLanguage === 'en'
+            ? 'Enter your country dial code (e.g., +966):'
+            : 'Inserisci il prefisso del tuo paese (es. +966):';
+          const userInput = prompt(promptMsg, '+');
+          if (userInput && userInput.trim()) {
+            let dial = userInput.trim().replace(/\s+/g, '');
+            if (!dial.startsWith('+')) dial = '+' + dial.replace(/\D/g, '');
+            selectedCountry = { code: 'CUSTOM', dial: dial, flag: '🌐', name: dial };
+            document.getElementById('country-flag').textContent = '🌐';
+            document.getElementById('country-dial').textContent = dial;
+          }
+          countryDropdown.style.display = 'none';
+          return;
+        }
+        const country = countries.find(c => c.code === code);
+        if (country) {
+          selectedCountry = country;
+          document.getElementById('country-flag').textContent = country.flag;
+          document.getElementById('country-dial').textContent = country.dial;
+          countryDropdown.style.display = 'none';
+        }
+      };
+    });
+    // Fechar dropdown ao clicar fora
+    if (window._countryCloseHandler) {
+      document.removeEventListener('click', window._countryCloseHandler);
+    }
+    window._countryCloseHandler = function(ev) {
+      const btn = document.getElementById('country-selector-btn');
+      const dd = document.getElementById('country-dropdown');
+      if (btn && dd && !btn.contains(ev.target) && !dd.contains(ev.target)) {
+        dd.style.display = 'none';
+      }
+    };
+    document.addEventListener('click', window._countryCloseHandler);
+
     document.getElementById('calendar-form-back').onclick = function() {
       calendarStep = 'times';
       renderTimes();
     };
-    
+
     document.getElementById('calendar-form').onsubmit = function(e) {
       e.preventDefault();
       const nome = document.getElementById('calendar-form-nome').value.trim();
@@ -1631,14 +1768,45 @@ document.addEventListener('DOMContentLoaded', function() {
         alert(t.calendar_form_error);
         return;
       }
-      
-      // Exibe a tela de MANUTENÇÃO com link para o WhatsApp
-      let maintenanceHtml = '<div class="calendar-content-center" style="text-align:center;">';
-      maintenanceHtml += `<div style="font-size:1.45rem;font-weight:700;color:#1e8566;margin-bottom:0.8rem;">${t.maintenance_title}</div>`;
-      maintenanceHtml += `<div style="font-size:1.05rem;color:#717981;margin-bottom:1.8rem;">${t.maintenance_message}</div>`;
-      maintenanceHtml += `<a href="https://wa.me/393463446699?text=Hello!%20I'm%20interested%20in%20booking%20a%20SUP%20lesson%20and%20would%20like%20to%20get%20more%20information.%20Thank%20you!" target="_blank" class="calendar-times-btn" style="min-width:220px;text-decoration:none;">${t.contact_whatsapp}</a>`;
-      maintenanceHtml += '</div>';
-      calendarTableWrapper.innerHTML = maintenanceHtml;
+
+      // Telefone completo com DDI
+      const fullTel = selectedCountry.dial + ' ' + tel;
+
+      // Monta a mensagem do WhatsApp com os dados do agendamento
+      const dataStr = selectedMonthData
+        ? `${selectedDay} ${selectedMonthData.name} ${selectedMonthData.year}`
+        : '';
+      const isEn = currentLanguage === 'en';
+      const header = isEn ? '*New SUP booking* 🏄' : '*Nuova prenotazione SUP* 🏄';
+      const greeting = isEn
+        ? "Hi! I'd like to book a SUP lesson."
+        : 'Ciao! Vorrei prenotare una lezione SUP.';
+      const labels = isEn
+        ? { date: 'Date', time: 'Time', name: 'Name', age: 'Age', phone: 'Phone' }
+        : { date: 'Data', time: 'Orario', name: 'Nome', age: 'Età', phone: 'Telefono' };
+      const message =
+        header + '\n\n' +
+        greeting + '\n\n' +
+        `*${labels.date}:* ${dataStr}\n` +
+        `*${labels.time}:* ${selectedTime || ''}\n` +
+        `*${labels.name}:* ${nome}\n` +
+        `*${labels.age}:* ${eta}\n` +
+        `*${labels.phone}:* ${fullTel}`;
+      const whatsappUrl = 'https://wa.me/393463446699?text=' + encodeURIComponent(message);
+      window.open(whatsappUrl, '_blank');
+
+      // Tela de confirmação após abrir o WhatsApp
+      let successHtml = '<div class="calendar-content-center" style="text-align:center;">';
+      successHtml += '<div style="font-size:3.2rem;color:#25d366;margin-bottom:1.1rem;">💬</div>';
+      successHtml += `<div style="font-size:1.35rem;font-weight:700;color:#1e8566;margin-bottom:0.7rem;">${t.calendar_success_title}</div>`;
+      successHtml += `<div style="font-size:1.05rem;color:#717981;margin-bottom:1.5rem;">${t.calendar_success_message}</div>`;
+      successHtml += `<button id="calendar-success-close" class="calendar-times-btn" style="min-width:120px;">${t.calendar_close}</button>`;
+      successHtml += '</div>';
+      calendarTableWrapper.innerHTML = successHtml;
+      document.getElementById('calendar-success-close').onclick = function() {
+        document.getElementById('calendar-modal').style.display = 'none';
+        document.getElementById('calendar-modal-overlay').style.display = 'none';
+      };
     };
   };
 });
@@ -1650,19 +1818,32 @@ document.addEventListener('DOMContentLoaded', function() {
   const footerForm = document.getElementById('footer-contact-form');
   if (footerForm) {
     footerForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // Impede o envio real do formulário
-      
-      const t = translations[currentLanguage];
-      
-      // Monta a mensagem de manutenção
-      let maintenanceHtml = '<div class="maintenance-message" style="text-align:center; padding: 2rem; background: #f6fafd; border-radius: 1rem; border: 2px solid #e0f4fa;">';
-      maintenanceHtml += `<div style="font-size:1.45rem;font-weight:700;color:#1e8566;margin-bottom:0.8rem;">${t.maintenance_title}</div>`;
-      maintenanceHtml += `<div style="font-size:1.05rem;color:#717981;margin-bottom:1.8rem;">${t.maintenance_message}</div>`;
-      maintenanceHtml += `<a href="https://wa.me/393463446699?text=Hello!%20I'm%20interested%20in%20booking%20a%20SUP%20lesson%20and%20would%20like%20to%20get%20more%20information.%20Thank%20you!" target="_blank" class="button primary" style="text-decoration:none;">${t.contact_whatsapp}</a>`;
-      maintenanceHtml += '</div>';
-      
-      // Substitui o formulário pela mensagem
-      footerForm.innerHTML = maintenanceHtml;
+      e.preventDefault();
+
+      const nome = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+
+      if (!nome || !email || !msg) {
+        alert(currentLanguage === 'en'
+          ? 'Please fill in all fields.'
+          : 'Per favore, compila tutti i campi.');
+        return;
+      }
+
+      const isEn = currentLanguage === 'en';
+      const header = isEn ? '*New contact request* ✉️' : '*Nuova richiesta di contatto* ✉️';
+      const labels = isEn
+        ? { greeting: "Hi! I'd like to get in touch.", name: 'Name', email: 'Email', msg: 'Message' }
+        : { greeting: 'Ciao! Vorrei mettermi in contatto.', name: 'Nome', email: 'Email', msg: 'Messaggio' };
+
+      const text =
+        header + '\n\n' +
+        labels.greeting + '\n\n' +
+        `*${labels.name}:* ${nome}\n` +
+        `*${labels.email}:* ${email}\n` +
+        `*${labels.msg}:* ${msg}`;
+      window.open('https://wa.me/393463446699?text=' + encodeURIComponent(text), '_blank');
     });
   }
 });
