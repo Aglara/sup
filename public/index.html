@@ -1483,10 +1483,11 @@ function updateAllTexts() {
   document.querySelector('label[for="email"]').textContent = t.footer_email;
   document.querySelector('label[for="message"]').textContent = t.footer_message;
   document.querySelector('input[type="submit"]').value = t.footer_send;
-  document.querySelector('section.alt h3').textContent = t.footer_address;
-  document.querySelector('section:nth-child(2) h3').textContent = t.footer_phone;
-  document.querySelector('section:nth-child(3) h3').textContent = t.footer_email;
-  document.querySelector('section:nth-child(4) h3').textContent = t.footer_social;
+  const contactSections = document.querySelectorAll('.contact > section');
+  contactSections[0].querySelector('h3').textContent = t.footer_address;
+  contactSections[1].querySelector('h3').textContent = t.footer_phone;
+  contactSections[2].querySelector('h3').textContent = t.footer_email;
+  contactSections[3].querySelector('h3').textContent = t.footer_social;
 }
 
 // Event listeners para os botões de idioma
