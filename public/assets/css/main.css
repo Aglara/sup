@@ -3240,6 +3240,18 @@ input, select, textarea {
 			background-repeat: repeat,								no-repeat,													no-repeat;
 			background-attachment: scroll,								scroll,														scroll;
 			z-index: -1;
+			transform-origin: center;
+			will-change: transform;
+			animation: bgKenBurns 22s ease-in-out infinite;
+		}
+
+		@keyframes bgKenBurns {
+			0%, 100% { transform: scale(1); }
+			50% { transform: scale(1.05); }
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			#wrapper > .bg { animation: none; }
 		}
 
 			#wrapper > .bg.fixed {
