@@ -435,9 +435,14 @@
 								Le lezioni sono disponibili in italiano, inglese, portoghese e spagnolo.
 							  </p>
 							</header>
+							<style>
+							  @keyframes angeloKenBurns { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.045); } }
+							  #angelo-banner { animation: angeloKenBurns 16s ease-in-out infinite; will-change: transform; }
+							  @media (prefers-reduced-motion: reduce) { #angelo-banner { animation: none; } }
+							</style>
 							<div style="width: 100vw; margin: 2rem 0 2rem 50%; transform: translateX(-50%);">
-							  <div style="width: 100%; max-width: 72rem; margin: 0 auto;">
-							    <img src="images/angelo.png" alt="Scuola SUP" style="width: 100%; aspect-ratio: 16 / 3; box-shadow: 0 2px 16px rgba(0,0,0,0.08); object-fit: cover;" />
+							  <div style="width: 100%; max-width: 72rem; margin: 0 auto; overflow: hidden; box-shadow: 0 2px 16px rgba(0,0,0,0.08);">
+							    <img id="angelo-banner" src="images/angelo.png" alt="Scuola SUP" style="width: 100%; aspect-ratio: 16 / 3; object-fit: cover; display: block;" />
 							  </div>
 							</div>
 							<ul class="actions special" style="margin-top: 2rem; margin-bottom: 0;">
