@@ -1511,7 +1511,12 @@ document.addEventListener('DOMContentLoaded', function() {
     { name: currentLanguage === 'en' ? 'August' : 'Agosto', year: 2026, month: 7 },
     { name: currentLanguage === 'en' ? 'September' : 'Settembre', year: 2026, month: 8 }
   ];
-  
+
+  // Abrir no mês atual (fallback: primeiro mês disponível)
+  const now = new Date();
+  const currentIdx = calendarMonths.findIndex(m => m.year === now.getFullYear() && m.month === now.getMonth());
+  calendarIndex = currentIdx >= 0 ? currentIdx : 0;
+
   // Atualizar função renderCalendar para usar traduções
   window.renderCalendar = function() {
     if (calendarStep !== 'days') return;
