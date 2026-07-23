@@ -1309,6 +1309,8 @@ const translations = {
     calendar_confirm: "Confirm",
     calendar_form_name: "Name",
     calendar_form_age: "Age",
+    calendar_form_participant: "Participant",
+    calendar_form_participant_pl: "Participants",
     calendar_form_phone: "Phone",
     calendar_form_send: "Send request",
     calendar_form_error: "Please fill in all fields.",
@@ -1397,6 +1399,8 @@ const translations = {
     calendar_confirm: "Conferma",
     calendar_form_name: "Nome",
     calendar_form_age: "Età",
+    calendar_form_participant: "Partecipante",
+    calendar_form_participant_pl: "Partecipanti",
     calendar_form_phone: "Telefono",
     calendar_form_send: "Invia richiesta",
     calendar_form_error: "Per favore, compila tutti i campi.",
@@ -1675,10 +1679,20 @@ document.addEventListener('DOMContentLoaded', function() {
     calendarTitle.textContent = translations[currentLanguage].calendar_your_data;
 
     const t = translations[currentLanguage];
+    const inputStyle = 'padding:0.85rem 1rem;font-size:1.05rem;border-radius:1.1rem;border:1px solid #e6eef3;outline:none;box-shadow:0 1px 3px rgba(24,191,239,0.05);font-family:inherit;transition:border-color 0.18s, box-shadow 0.18s;';
     let html = '<div class="calendar-content-center">';
     html += '<form id="calendar-form" style="width:100%;display:flex;flex-direction:column;gap:1.1rem;">';
-    html += `<input type="text" id="calendar-form-nome" name="nome" placeholder="${t.calendar_form_name}" required style="padding:0.85rem 1rem;font-size:1.05rem;border-radius:1.1rem;border:1px solid #e6eef3;outline:none;box-shadow:0 1px 3px rgba(24,191,239,0.05);font-family:inherit;transition:border-color 0.18s, box-shadow 0.18s;">`;
-    html += `<input type="number" id="calendar-form-eta" name="eta" placeholder="${t.calendar_form_age}" min="1" max="120" required style="padding:0.85rem 1rem;font-size:1.05rem;border-radius:1.1rem;border:1px solid #e6eef3;outline:none;box-shadow:0 1px 3px rgba(24,191,239,0.05);font-family:inherit;transition:border-color 0.18s, box-shadow 0.18s;">`;
+    // Seletor de número de participantes (1-10)
+    html += `<select id="calendar-form-count" name="count" style="${inputStyle}background:#fff;cursor:pointer;">`;
+    for (let n = 1; n <= 10; n++) {
+      const word = n === 1 ? t.calendar_form_participant : t.calendar_form_participant_pl;
+      html += `<option value="${n}"${n === 1 ? ' selected' : ''}>${n} ${word}</option>`;
+    }
+    html += '</select>';
+    html += `<input type="text" id="calendar-form-nome" name="nome" placeholder="${t.calendar_form_name}" required style="${inputStyle}">`;
+    html += `<input type="number" id="calendar-form-eta" name="eta" placeholder="${t.calendar_form_age}" min="1" max="120" required style="${inputStyle}">`;
+    // Participantes adicionais (nome + idade), preenchidos dinamicamente
+    html += '<div id="extra-participants" style="display:flex;flex-direction:column;gap:1.1rem;"></div>';
 
     // Campo de telefone com seletor de país
     html += '<div style="position:relative;">';
@@ -1758,6 +1772,19 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     document.addEventListener('click', window._countryCloseHandler);
 
+    // Renderiza campos nome+idade para participantes adicionais (2..N)
+    const countSelect = document.getElementById('calendar-form-count');
+    const extraWrap = document.getElementById('extra-participants');
+    countSelect.onchange = function() {
+      const count = parseInt(countSelect.value, 10) || 1;
+      let ex = '';
+      for (let i = 2; i <= count; i++) {
+        ex += `<input type="text" class="extra-nome" placeholder="${t.calendar_form_name} (${t.calendar_form_participant} ${i})" required style="${inputStyle}">`;
+        ex += `<input type="number" class="extra-eta" min="1" max="120" placeholder="${t.calendar_form_age} (${t.calendar_form_participant} ${i})" required style="${inputStyle}">`;
+      }
+      extraWrap.innerHTML = ex;
+    };
+
     document.getElementById('calendar-form-back').onclick = function() {
       calendarStep = 'times';
       renderTimes();
@@ -1769,7 +1796,13 @@ document.addEventListener('DOMContentLoaded', function() {
       const eta = document.getElementById('calendar-form-eta').value.trim();
       const tel = document.getElementById('calendar-form-tel').value.trim();
       const t = translations[currentLanguage];
-      if (!nome || !eta || !tel) {
+      // Coleta todos os participantes (o 1º + adicionais)
+      const extraNomes = [...document.querySelectorAll('.extra-nome')].map(el => el.value.trim());
+      const extraEtas = [...document.querySelectorAll('.extra-eta')].map(el => el.value.trim());
+      const participants = [{ nome, eta }].concat(
+        extraNomes.map((n, i) => ({ nome: n, eta: extraEtas[i] }))
+      );
+      if (!tel || participants.some(p => !p.nome || !p.eta)) {
         alert(t.calendar_form_error);
         return;
       }
@@ -1787,15 +1820,19 @@ document.addEventListener('DOMContentLoaded', function() {
         ? "Hi! I'd like to book a SUP lesson."
         : 'Ciao! Vorrei prenotare una lezione SUP.';
       const labels = isEn
-        ? { date: 'Date', time: 'Time', name: 'Name', age: 'Age', phone: 'Phone' }
-        : { date: 'Data', time: 'Orario', name: 'Nome', age: 'Età', phone: 'Telefono' };
+        ? { date: 'Date', time: 'Time', name: 'Name', age: 'Age', phone: 'Phone', people: 'Participants', person: 'Participant' }
+        : { date: 'Data', time: 'Orario', name: 'Nome', age: 'Età', phone: 'Telefono', people: 'Partecipanti', person: 'Partecipante' };
+      // Lista de participantes; se só 1, mantém formato simples
+      const peopleText = participants.length === 1
+        ? `*${labels.name}:* ${nome}\n*${labels.age}:* ${eta}\n`
+        : `*${labels.people}:* ${participants.length}\n`
+          + participants.map((p, i) => `*${labels.person} ${i + 1}:* ${p.nome} — ${labels.age} ${p.eta}`).join('\n') + '\n';
       const message =
         header + '\n\n' +
         greeting + '\n\n' +
         `*${labels.date}:* ${dataStr}\n` +
         `*${labels.time}:* ${selectedTime || ''}\n` +
-        `*${labels.name}:* ${nome}\n` +
-        `*${labels.age}:* ${eta}\n` +
+        peopleText +
         `*${labels.phone}:* ${fullTel}`;
       const whatsappUrl = 'https://wa.me/393463446699?text=' + encodeURIComponent(message);
       window.open(whatsappUrl, '_blank');
